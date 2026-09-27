@@ -1,0 +1,12 @@
+flowchart TD
+    A([Start]) --> B[/Student enters item/]
+    B --> C{Item nonblank?}
+    C -- No --> D[/Show required-field error/]
+    D --> B
+    C -- Yes --> E[Read studentId from localStorage]
+    E --> F[Send request]
+    F --> G[Server trusts studentId and item without validation]
+    G --> H[(In-memory requests)]
+    H --> I[/Show success alert/]
+    I --> J([End])
+

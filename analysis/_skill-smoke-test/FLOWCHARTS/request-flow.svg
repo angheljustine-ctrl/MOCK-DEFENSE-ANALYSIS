@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">QuickBorrow actual request flow</title>
+  <desc id="desc">Flowchart showing client validation followed by a server process that trusts caller-provided identity and item data.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .node{fill:#f8fafc;stroke:#334155;stroke-width:2}.risk{fill:#fee2e2;stroke:#b91c1c;stroke-width:3}.store{fill:#e0f2fe;stroke:#0369a1;stroke-width:2}.label{font:16px Arial,sans-serif;fill:#0f172a;text-anchor:middle}.small{font:14px Arial,sans-serif;fill:#334155;text-anchor:middle}.edge{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <ellipse class="node" cx="480" cy="45" rx="90" ry="28"/>
+  <text class="label" x="480" y="51">Start</text>
+
+  <polygon class="node" points="345,95 645,95 615,145 315,145"/>
+  <text class="label" x="480" y="126">Student enters item</text>
+
+  <polygon class="node" points="480,175 590,225 480,275 370,225"/>
+  <text class="label" x="480" y="221">Item</text><text class="label" x="480" y="241">nonblank?</text>
+
+  <polygon class="node" points="65,200 315,200 285,250 35,250"/>
+  <text class="small" x="175" y="220">Show required-field</text><text class="small" x="175" y="239">error</text>
+
+  <rect class="node" x="330" y="310" width="300" height="55" rx="2"/>
+  <text class="label" x="480" y="343">Read studentId from localStorage</text>
+
+  <rect class="node" x="365" y="400" width="230" height="55" rx="2"/>
+  <text class="label" x="480" y="434">Send request</text>
+
+  <rect class="risk" x="280" y="490" width="400" height="70" rx="2"/>
+  <text class="label" x="480" y="518">Server trusts studentId and item</text>
+  <text class="small" x="480" y="542">No server validation or authorization</text>
+
+  <path class="store" d="M365 610 C365 588 595 588 595 610 L595 654 C595 676 365 676 365 654 Z"/>
+  <ellipse class="store" cx="480" cy="610" rx="115" ry="22"/>
+  <text class="label" x="480" y="640">In-memory requests</text>
+
+  <ellipse class="node" cx="800" cy="632" rx="85" ry="28"/>
+  <text class="label" x="800" y="638">End</text>
+
+  <path class="edge" d="M480 73 L480 92"/>
+  <path class="edge" d="M480 145 L480 172"/>
+  <path class="edge" d="M370 225 L317 225"/>
+  <text class="small" x="340" y="213">No</text>
+  <path class="edge" d="M175 200 C175 120 275 120 330 120"/>
+  <path class="edge" d="M480 275 L480 307"/>
+  <text class="small" x="505" y="296">Yes</text>
+  <path class="edge" d="M480 365 L480 397"/>
+  <path class="edge" d="M480 455 L480 487"/>
+  <path class="edge" d="M480 560 L480 585"/>
+  <path class="edge" d="M595 632 L712 632"/>
+</svg>
+
