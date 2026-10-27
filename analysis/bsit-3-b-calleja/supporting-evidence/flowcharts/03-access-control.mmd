@@ -1,0 +1,18 @@
+flowchart TD
+    A([Open protected route]) --> B{Admin route?}
+    B -- Yes --> C{Session role equals admin?}
+    C -- No --> D[/Redirect to login/]
+    C -- Yes --> E{Matching admin account?}
+    E -- Yes --> F[Use matching admin]
+    E -- No --> G[Use admins first item or hardcoded default]
+    F --> H[/Admin dashboard opens/]
+    G --> H
+    B -- No, teacher route --> I[Read session and teacher list]
+    I --> J{Matching teacher?}
+    J -- Yes --> K[Use matching teacher]
+    J -- No --> L{Any teacher exists?}
+    L -- Yes --> M[Use first teacher]
+    L -- No --> N[Use hardcoded demo teacher]
+    K --> O[/Teacher dashboard opens/]
+    M --> O
+    N --> O

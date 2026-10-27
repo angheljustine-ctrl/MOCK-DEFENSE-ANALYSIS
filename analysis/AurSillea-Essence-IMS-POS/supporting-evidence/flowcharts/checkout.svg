@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="490" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 490" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="490"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-490)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="175" y="451" width="160" height="28" rx="12" ry="12" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="216.1" y="465.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,930) scale(1,-1)">Cart / review payment</text>
+			<polygon points="255 425, 330 402, 255 379, 180 402" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="227.656" y="402.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,804) scale(1,-1)">Payment valid?</text>
+			<polygon points="382 415, 505 415, 493 383, 370 383" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="402.15999999999997" y="399.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,798) scale(1,-1)">Error; stay in review</text>
+			<rect x="170" y="316" width="170" height="32" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="211.208" y="332.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,664) scale(1,-1)">Clear saved review state</text>
+			<polygon points="255 289, 345 264, 255 239, 165 264" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="218.316" y="264.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,528) scale(1,-1)">Each line has stock?</text>
+			<polygon points="382 279, 505 279, 493 247, 370 247" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="406.38" y="263.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,526) scale(1,-1)">Error; return false</text>
+			<rect x="145" y="179" width="220" height="34" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="206.316" y="196.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,392) scale(1,-1)">Deduct products / materials</text>
+			<rect x="135" y="108" width="240" height="38" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<ellipse cx="255.0" cy="108.0" rx="120.0" ry="3.0" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<ellipse cx="255.0" cy="146.0" rx="120.0" ry="3.0" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="188.088" y="132.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,264) scale(1,-1)">Save products, materials, movements</text>
+			<text x="205.42000000000002" y="122.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,244) scale(1,-1)">then promo, transaction, log</text>
+			<polygon points="255 86, 330 65, 255 44, 180 65" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="220.768" y="65.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,130) scale(1,-1)">All writes succeed?</text>
+			<polygon points="382 80, 505 80, 493 48, 370 48" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="401.26800000000003" y="64.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,128) scale(1,-1)">Uncaught write error</text>
+			<rect x="180" y="0" width="150" height="24" rx="12" ry="12" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="222.324" y="12.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,24) scale(1,-1)">Clear cart / receipt</text>
+			<path d="M 255,451 L 255,425 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 425, 257.3971 429.3879, 252.6029 429.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 330,402 L 370,399 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="370 399, 365.8037 401.7186, 365.4451 396.9378" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="354.0" y="404.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,809) scale(1,-1)">No</text>
+			<path d="M 255,379 L 255,348 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 348, 257.3971 352.3879, 252.6029 352.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="259.0" y="367.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,735) scale(1,-1)">Yes</text>
+			<path d="M 255,316 L 255,289 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 289, 257.3971 293.3879, 252.6029 293.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 345,264 L 370,263 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="370 263, 365.7114 265.5706, 365.5198 260.7802" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="361.5" y="267.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,535) scale(1,-1)">No</text>
+			<path d="M 255,239 L 255,213 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 213, 257.3971 217.3879, 252.6029 217.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="259.0" y="230.0" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,460) scale(1,-1)">Yes</text>
+			<path d="M 255,179 L 255,149 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 149, 257.3971 153.3879, 252.6029 153.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 255,105 L 255,86 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 86, 257.3971 90.38791, 252.6029 90.38791" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 330,65 L 370,64 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="370 64, 365.6734 66.50604, 365.5535 61.71328" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="354.0" y="68.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,137) scale(1,-1)">No</text>
+			<path d="M 255,44 L 255,24 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="255 24, 257.3971 28.38791, 252.6029 28.38791" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="259.0" y="38.0" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,76) scale(1,-1)">Yes</text>
+			<path d="M 505,399 L 508,399 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 508,399 L 508,486 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 508,486 L 255,486 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 255,486 L 255,479 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="255 479, 252 484, 258 484" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,55%); fill-rule: evenodd;"/>
+			<text x="410" y="486" style="font-family: Helvetica; font-size: 7px;fill: rgb(8%,49%,55%); stroke:none;" transform="translate(0,972) scale(1,-1)">Retry</text>
+			<path d="M 505,263 L 508,263 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 508,263 L 508,399 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<text x="473" y="345" style="font-family: Helvetica; font-size: 7px;fill: rgb(8%,49%,55%); stroke:none;" transform="translate(0,690) scale(1,-1)">Retry</text>
+		</g>
+	</g>
+</svg>

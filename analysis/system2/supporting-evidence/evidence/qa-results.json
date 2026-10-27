@@ -1,0 +1,155 @@
+{
+  "environment": "Headless Microsoft Edge; isolated contexts; Asia/Manila; frozen 2026-10-02 10:00; loopback read-only server",
+  "sourceUnchanged": true,
+  "results": [
+    {
+      "id": "Q01",
+      "title": "Paper example arithmetic",
+      "expected": "Net 26363.95 for basic 28000, allowance1500, no absence",
+      "status": "Passed",
+      "actual": {
+        "gross": 29500,
+        "sss": 1260,
+        "ph": 700,
+        "pi": 200,
+        "tax": 976.05,
+        "net": 26363.95
+      }
+    },
+    {
+      "id": "Q02",
+      "title": "SSS current schedule",
+      "expected": "Employee SSS 1400 at MSC28000 under effective-2025 schedule",
+      "status": "Failed",
+      "actual": 1260
+    },
+    {
+      "id": "Q03",
+      "title": "BIR higher bracket",
+      "expected": "1875 +20% over33333 for monthly taxable within33333-66666",
+      "status": "Failed",
+      "actual": {
+        "taxable": 56950,
+        "tax": 5417.55,
+        "expectedTax": 6598.4
+      }
+    },
+    {
+      "id": "Q04",
+      "title": "Future payroll",
+      "expected": "Block incomplete/future month from final paid payroll",
+      "status": "Failed",
+      "actual": {
+        "month": "2026-11",
+        "absent": 0,
+        "gross": 29500,
+        "uiPaid": true
+      }
+    },
+    {
+      "id": "Q05",
+      "title": "Inactive existing session",
+      "expected": "Deactivate should revoke existing login",
+      "status": "Failed",
+      "actual": {
+        "page": "Dashboard",
+        "url": "employee_dashboard.html"
+      }
+    },
+    {
+      "id": "Q06",
+      "title": "Password recovery",
+      "expected": "Require admin action or independently delivered secret",
+      "status": "Failed",
+      "actual": {
+        "codeShownInSamePage": true,
+        "passwordChanged": true
+      }
+    },
+    {
+      "id": "Q07",
+      "title": "Forged browser role",
+      "expected": "Employee cannot create admin authority by modifying browser storage",
+      "status": "Failed",
+      "actual": {
+        "page": "User Roles"
+      }
+    },
+    {
+      "id": "Q08",
+      "title": "Payroll rerun preservation",
+      "expected": "Released payroll remains locked or versioned",
+      "status": "Failed",
+      "actual": {
+        "oldRecordRetained": false,
+        "oldNet": 26363.95,
+        "newNet": 27154.45,
+        "rows": 9
+      }
+    },
+    {
+      "id": "Q09",
+      "title": "Employment start cutoff",
+      "expected": "No absence charged before date hired",
+      "status": "Failed",
+      "actual": {
+        "hired": "2026-09-30",
+        "absent": 22,
+        "absenceDeduction": 28000
+      }
+    },
+    {
+      "id": "Q10",
+      "title": "Incomplete attendance",
+      "expected": "An unclosed clock record requires review before pay",
+      "status": "Failed",
+      "actual": {
+        "allClockoutsMissing": true,
+        "absent": 0
+      }
+    },
+    {
+      "id": "Q11",
+      "title": "Own payslip history filter",
+      "expected": "Other employee record does not render through normal history URL",
+      "status": "Passed",
+      "actual": "Other employee payslip absent in normal employee history UI"
+    },
+    {
+      "id": "Q12",
+      "title": "Reversed leave dates",
+      "expected": "End before start rejected",
+      "status": "Passed",
+      "actual": {
+        "savedRequests": 0,
+        "message": "End date is before start date"
+      }
+    },
+    {
+      "id": "Q13",
+      "title": "Pending login",
+      "expected": "Pending account denied login",
+      "status": "Passed",
+      "actual": "Your account is waiting for admin approval."
+    },
+    {
+      "id": "Q14",
+      "title": "Shared workplace records",
+      "expected": "A new employee is visible to a second browser client",
+      "status": "Failed",
+      "actual": {
+        "recordSeenInSecondContext": false
+      }
+    },
+    {
+      "id": "Q15",
+      "title": "Registration and approval",
+      "expected": "Pending registration becomes linked employee after approval",
+      "status": "Passed",
+      "actual": {
+        "approved": "Approved",
+        "linked": true
+      }
+    }
+  ]
+}

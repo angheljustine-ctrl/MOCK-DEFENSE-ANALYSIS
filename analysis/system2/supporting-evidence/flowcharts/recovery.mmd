@@ -1,0 +1,12 @@
+flowchart TD
+ A([Start]) --> B[/Enter account email/]
+ B --> C{Email exists?}
+ C -- No --> D[/Account not found/]
+ C -- Yes --> E[/Display code in same page/]
+ E --> F[/Enter code and new password/]
+ F --> G{Code matches and length at least 6?}
+ G -- No --> H[/Error/]
+ H -- Retry --> F
+ G -- Yes --> I[(Replace stored password)]
+ I --> J([End])
+ 

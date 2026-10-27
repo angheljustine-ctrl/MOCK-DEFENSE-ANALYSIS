@@ -1,0 +1,302 @@
+[
+  {
+    "path": "app.js",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "dashboard.html",
+    "size": 5120,
+    "sha256": "ed84b053c50b3d0b0ebeca78c2a3348e3b3299beb1802194e5242b0dba444f58"
+  },
+  {
+    "path": "index.html",
+    "size": 355,
+    "sha256": "c311f6313a1dfeb8490f2b363c7fe8e8789c39c0d51982d5cc03dee02764ca47"
+  },
+  {
+    "path": "inventory.html",
+    "size": 3545,
+    "sha256": "787c81f6bf3410840ca44f817bd35848efeda5463378ea6a374c95dec1ae8aec"
+  },
+  {
+    "path": "login.html",
+    "size": 1651,
+    "sha256": "5d3d025b1d1e32c4416a1334af003cc166a6d8422dee872fa7e60b838b6b5222"
+  },
+  {
+    "path": "pos.html",
+    "size": 3926,
+    "sha256": "722e9f79ff5b8bda0aa5d151f9c38eb6924d15078605c62d073d73a563a93bc1"
+  },
+  {
+    "path": "products.html",
+    "size": 2429,
+    "sha256": "9b1bd895858c3b6980c7cb77c9af858c53da67d15d667d0a02a6e9722bb0a721"
+  },
+  {
+    "path": "reports.html",
+    "size": 5057,
+    "sha256": "8a9f072d956e8d9688cf7cd43e17c0816dcd547814853c139cdb4936c7026571"
+  },
+  {
+    "path": "settings.html",
+    "size": 6533,
+    "sha256": "970c488a2e57d2fa35f4ef38e56086f019039491bed064ee502bfd90d90b9dde"
+  },
+  {
+    "path": "support-center.html",
+    "size": 2752,
+    "sha256": "098b564774ccde261de75f7159448ed31ebf7c2de097f3f100acb6e9fa8a1176"
+  },
+  {
+    "path": "transactions.html",
+    "size": 2267,
+    "sha256": "c30e6a8648ae7d1f9575a8312e8025266aada9f00ee29e4a46ac661f4eebba7a"
+  },
+  {
+    "path": "users.html",
+    "size": 2188,
+    "sha256": "a41db04a65b53de2d626d230d62b3c3e2f9ccaf7e2923ba43f71509814a10043"
+  },
+  {
+    "path": ".vscode/launch.json",
+    "size": 484,
+    "sha256": "f7ddd7ebbe3dd28a5398e8b54722537b7f799298817f217932286833d4254f77"
+  },
+  {
+    "path": "css/dashboard.css",
+    "size": 8575,
+    "sha256": "ab0440cfe5ebd106a19713caf0093cb86a3a4ce4d085bf3ad8b33687067c6bb5"
+  },
+  {
+    "path": "css/inventory.css",
+    "size": 12586,
+    "sha256": "51a6229b060546eca56e820cb99d5d476056e05c64ed9e2256ce7127f74e2db5"
+  },
+  {
+    "path": "css/login.css",
+    "size": 2083,
+    "sha256": "8653ece26ebd0d1b8863cc656cb41409a9159fc7c0ae23f2f15875f9fcbbe156"
+  },
+  {
+    "path": "css/pos.css",
+    "size": 16517,
+    "sha256": "5b0e75175fa38bc0e44894816ae96590ca598159842714ac140d50fa884dc798"
+  },
+  {
+    "path": "css/products.css",
+    "size": 7445,
+    "sha256": "3decc3316643909a54270989f186ce129d1bc7d85deefedc3a4b1c703f311131"
+  },
+  {
+    "path": "css/reports.css",
+    "size": 6754,
+    "sha256": "5611f376155d200b2d732762ec0f01f724e6e23cc8114659c0eeaf188283d00d"
+  },
+  {
+    "path": "css/settings.css",
+    "size": 5240,
+    "sha256": "acbc004567c96426850cd45fdad2ceface099d1c2b5cdba7bad64ba747797c1f"
+  },
+  {
+    "path": "css/style.css",
+    "size": 30203,
+    "sha256": "e404501b554df1aee7bf394ccb1df7d49181deb08d3aba568551affdb349222b"
+  },
+  {
+    "path": "css/support-center.css",
+    "size": 4504,
+    "sha256": "10c75d79194cb37eb0f4fcf959a5bfca67c15d1d33f0ce9415afda7756ffb694"
+  },
+  {
+    "path": "css/transactions.css",
+    "size": 3143,
+    "sha256": "ad7af984d4430ea815015119478b57338bca0a89533adc4e4196172f442196b3"
+  },
+  {
+    "path": "css/users.css",
+    "size": 2711,
+    "sha256": "574c95f1c50ed1c19bb2ce02701f63cc9aafa767e485d4d3deeae2af34ebc5e6"
+  },
+  {
+    "path": "images/logo.png",
+    "size": 517400,
+    "sha256": "27dafeb011b4b94c1416095a3b6addb8221a97e5c4e417a82621aaac7686f32f"
+  },
+  {
+    "path": "images/products/air freshener/euca.png",
+    "size": 475912,
+    "sha256": "f96d819ea4cb39ed7073885cc040b38b4f92710485e869ca5ad08aac9bf17697"
+  },
+  {
+    "path": "images/products/air freshener/linen.png",
+    "size": 467479,
+    "sha256": "43a551292782a8fdd484b22d50528f7afa52a9a8e0cf82bd8f0c3cda52091f5a"
+  },
+  {
+    "path": "images/products/air freshener/sweet.png",
+    "size": 463966,
+    "sha256": "ef7ba74fe57603db61f357a5577d483494dd0d3597b5a0c298ae7ae3badcbb88"
+  },
+  {
+    "path": "images/products/body mist/flor.png",
+    "size": 465305,
+    "sha256": "eb5cd94f8be5895e13460fa099f732cffb661aa05d051ce84116943c344faa3d"
+  },
+  {
+    "path": "images/products/body mist/lum.png",
+    "size": 478963,
+    "sha256": "d469ee4bc09b8ca7a64047f3efcb4202bf71a752cca5b46c5a18e71b46582680"
+  },
+  {
+    "path": "images/products/body mist/van.png",
+    "size": 468702,
+    "sha256": "f9415c81dafc421e69dca5f286dc6053a9a29156aaf277dc90c5f9f696d0e078"
+  },
+  {
+    "path": "images/products/men's/azur100ml.png",
+    "size": 764182,
+    "sha256": "cbf147663a3962a39b59ed5b9e7a82e73d6d124eb571ccafa738d4f666e2b184"
+  },
+  {
+    "path": "images/products/men's/azur50ml.png",
+    "size": 827365,
+    "sha256": "837f83ad58ae403186057c4d66bcef124b0776d00485f6bfa42202d3623fdef1"
+  },
+  {
+    "path": "images/products/men's/l'ombre100ml.png",
+    "size": 761512,
+    "sha256": "a6931a8630a9844672e75dfb3ca0cd4ddddac4b452c23c03d8a683e8d81a5061"
+  },
+  {
+    "path": "images/products/men's/l'ombre50ml.png",
+    "size": 806862,
+    "sha256": "2b02361f726c4cafcdf66d64c2b76ae9b3bf6df4b85029a82c72515f6cd6ab78"
+  },
+  {
+    "path": "images/products/men's/san100ml.png",
+    "size": 757765,
+    "sha256": "f00fe68a781f1b23487992c2d7b8dfa8a2c58c2b3aee98498597a58a3932dc8e"
+  },
+  {
+    "path": "images/products/men's/san50ml.png",
+    "size": 820458,
+    "sha256": "e693d6259791c1cac614bd81d9eed47da59d025492dce408aa6784de83544b9f"
+  },
+  {
+    "path": "images/products/reed/coast.png",
+    "size": 660355,
+    "sha256": "2d8ef8448e10929c26b4245f545d3dfae20e5cb65bcb1d60b2e16062148e8db3"
+  },
+  {
+    "path": "images/products/reed/jas.png",
+    "size": 668614,
+    "sha256": "feb66e4ac08cd416c938eaf7758a72539c1c6aa64fe743bb3254554ca3b11dd6"
+  },
+  {
+    "path": "images/products/reed/royal.png",
+    "size": 669589,
+    "sha256": "4ac0261ded55bab18272cc147eae693c261586454a970227806b83a02fd0b805"
+  },
+  {
+    "path": "images/products/scented/fig.png",
+    "size": 624273,
+    "sha256": "2a9f922042e5fee2ccc1903e3a52f12c669fa8c84b127d8b3fba9b051db5be23"
+  },
+  {
+    "path": "images/products/scented/lav.png",
+    "size": 634022,
+    "sha256": "cc605abee35bbb40a1858090ee057f619fae875c586de22d0417e4c621598673"
+  },
+  {
+    "path": "images/products/scented/mid.png",
+    "size": 664709,
+    "sha256": "ba9d57f0156054f7eaaae08e020e65efce5b20f8b27d5c568ffc28fddc76291a"
+  },
+  {
+    "path": "images/products/women's/nuit100ml.png",
+    "size": 688676,
+    "sha256": "126be871417c3e69222f82f17f92eb23f1730edc35adbf5a6fd0f60ac6e087fe"
+  },
+  {
+    "path": "images/products/women's/nuit50ml.png",
+    "size": 700873,
+    "sha256": "7216de7f5b26b996b4ca792a302295cedf147356e90a6787749fc3430c3eb421"
+  },
+  {
+    "path": "images/products/women's/sol100ml.png",
+    "size": 698379,
+    "sha256": "80b9b144461362c59daef6d45d33ee43736c5e60581c5aabbab862d45dbfa212"
+  },
+  {
+    "path": "images/products/women's/sol50ml.png",
+    "size": 707741,
+    "sha256": "7154d93bcb6fafaed9d767a84466038975d26c7815f6fb10695e15bc4c8f3368"
+  },
+  {
+    "path": "images/products/women's/vel100ml.png",
+    "size": 697291,
+    "sha256": "1bd9ab27bea11e0b6d3d64ada781c5b18fef6bc1787ce568898966c8b8da7d68"
+  },
+  {
+    "path": "images/products/women's/vel50ml.png",
+    "size": 707659,
+    "sha256": "f334fa25900ec3b114ed2cfa9fd4184a7d3deb57f43bbfab8c7f45f27ffdd25f"
+  },
+  {
+    "path": "js/app.js",
+    "size": 733138,
+    "sha256": "03b253269bd9643d2e04ea8a01e16eae7226b413618ba65287de67f0287b32a6"
+  },
+  {
+    "path": "js/auth.js",
+    "size": 2381,
+    "sha256": "ff6bf88f939adc5eb940a7c25ac31acf270dbfb90ad7f2c4491cf37cbe60253d"
+  },
+  {
+    "path": "js/dashboard.js",
+    "size": 7247,
+    "sha256": "670eacd46a4d3b835d91900b910794ddd16d97204656287fbd1a2e58795305d3"
+  },
+  {
+    "path": "js/inventory.js",
+    "size": 17319,
+    "sha256": "864aaf7ba18be41f5efde991178a6152d2f75630e5db0f8877f354674f8c4ca2"
+  },
+  {
+    "path": "js/pos.js",
+    "size": 74117,
+    "sha256": "c228158a86e95eaffbe93c09f1dc85066a9ac244075c1b433ff004825d55baa0"
+  },
+  {
+    "path": "js/products.js",
+    "size": 30481,
+    "sha256": "efe42b3e27b1f66e622a62a82d56f36bf4e4faec8ab982a2852053f95ee0ce72"
+  },
+  {
+    "path": "js/reports.js",
+    "size": 23451,
+    "sha256": "49511b31025fbf07de3321ada5176d79f8a2c8efa65bf9037143e917e05db543"
+  },
+  {
+    "path": "js/settings.js",
+    "size": 38355,
+    "sha256": "bd9528a7bbc17d138ce23fb98397c6ab1d66ba07ce4237cd6d2c4f89dd2f0a03"
+  },
+  {
+    "path": "js/support-center.js",
+    "size": 15277,
+    "sha256": "7e867c7bce62ba2524e21b62d935c230891ab407952b07340faedd03e55fc613"
+  },
+  {
+    "path": "js/transactions.js",
+    "size": 17162,
+    "sha256": "9d40edcafbf3d37d0afd58957e617141f2d4e8182d2e31f78f9bb1d3027993d2"
+  },
+  {
+    "path": "js/users.js",
+    "size": 6700,
+    "sha256": "55957118f503819a0747377e329d5b1477ea12c31e544a45861edc78114ff302"
+  }
+]

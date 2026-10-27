@@ -1,0 +1,805 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="file:///D:/MOCK%20DEFENSE%20ANALYSIS/analysis/SIMSIMI/supporting-evidence/"><title>EDUCORE SIMS - Mock Defense Review</title>
+<style>
+  @page { size: A4; margin: 13mm 12mm 15mm; }
+  :root { --ink:#172033; --muted:#5b6475; --blue:#125e8a; --pale:#eef7fb; --line:#d7dde7; --critical:#a61b1b; --high:#c24f12; --medium:#9a6b00; --ok:#1d7a46; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); font-family:"Segoe UI",Arial,sans-serif; font-size:9.7pt; line-height:1.42; }
+  .cover { height:255mm; display:flex; flex-direction:column; justify-content:center; padding:24mm 18mm; background:linear-gradient(145deg,#0b2942 0%,#125e8a 62%,#1f7fa8 100%); color:white; page-break-after:always; page-break-inside:avoid; }
+  .cover .kicker { font-size:11pt; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:#bde8f8; }
+  .cover h1 { font-size:32pt; line-height:1.12; margin:10mm 0 7mm; color:white; border:0; page-break-before:avoid !important; break-before:avoid !important; }
+  .cover .subtitle { font-size:15pt; max-width:145mm; color:#e3f5fc; }
+  .cover .meta { margin-top:25mm; padding-top:7mm; border-top:1px solid rgba(255,255,255,.38); font-size:10.5pt; }
+  main { max-width:100%; }
+  h1 { color:#0b3654; font-size:22pt; line-height:1.15; margin:0 0 7mm; padding-bottom:3mm; border-bottom:2px solid #2e89b5; page-break-before:always; }
+  main > h2:first-child, main > p:first-child { page-break-before:avoid; }
+  h2 { color:#125e8a; font-size:16pt; margin:8mm 0 3mm; page-break-after:avoid; }
+  h3 { color:#263a53; font-size:12.5pt; margin:5mm 0 2mm; page-break-after:avoid; }
+  h4 { font-size:10.5pt; margin:4mm 0 1.5mm; }
+  p { margin:0 0 3mm; }
+  ul,ol { margin:1mm 0 3mm 6mm; padding-left:5mm; }
+  li { margin-bottom:1.2mm; }
+  strong { color:#142d46; }
+  code { font-family:Consolas,monospace; font-size:8.8pt; background:#eef1f5; padding:.2mm 1mm; border-radius:2px; overflow-wrap:anywhere; }
+  pre { white-space:pre-wrap; background:#172033; color:#eef7fb; padding:4mm; border-radius:4px; font-size:8.4pt; page-break-inside:avoid; }
+  pre code { background:transparent; color:#f8fafc; padding:0; border-radius:0; font-size:inherit; overflow-wrap:normal; }
+  blockquote { margin:4mm 0; padding:3mm 4mm; background:#fff8df; border-left:4px solid #d59a13; color:#4b3c16; }
+  table { width:100%; border-collapse:collapse; margin:3mm 0 5mm; font-size:8.1pt; page-break-inside:auto; }
+  thead { display:table-header-group; }
+  tr { page-break-inside:avoid; }
+  th { background:#125e8a; color:white; text-align:left; font-weight:700; }
+  th,td { border:1px solid var(--line); padding:1.8mm 2mm; vertical-align:top; overflow-wrap:break-word; word-break:normal; }
+  tbody tr:nth-child(even) { background:#f6f8fb; }
+  img { display:block; max-width:100%; max-height:178mm; object-fit:contain; margin:4mm auto 6mm; page-break-inside:avoid; }
+  img.half-diagram { max-height:92mm; margin:2mm auto 3mm; }
+  hr { border:0; border-top:1px solid var(--line); margin:7mm 0; }
+  a { color:#125e8a; text-decoration:none; }
+  .page-break { page-break-before:always; }
+  .section-lead { color:var(--muted); font-size:10.5pt; }
+  .qa-card { border:1px solid var(--line); border-left:4px solid #2e89b5; border-radius:3px; padding:3mm 3.5mm; margin:0 0 3mm; page-break-inside:avoid; }
+  .qa-card p { margin:1mm 0; font-size:8.5pt; }
+  .qa-card .evidence { color:var(--muted); font-size:7.8pt; }
+  .qa-head { display:flex; align-items:center; gap:2mm; margin-bottom:1mm; }
+  .qa-head h3 { flex:1; margin:0; font-size:10.5pt; }
+  .badge { display:inline-block; padding:.5mm 1.8mm; border-radius:10px; font-size:7.3pt; font-weight:700; color:white; background:#64748b; }
+  .badge.passed { background:var(--ok); }.badge.failed,.badge.sev-critical { background:var(--critical); }.badge.blocked,.badge.not-run { background:#64748b; }
+  .badge.sev-high { background:var(--high); }.badge.sev-medium { background:var(--medium); }.badge.sev-low,.badge.sev-info { background:#39769a; }
+  .appendix h1 { page-break-before:always; }
+body{font-size:9.2pt;line-height:1.28}h2{font-size:15pt;margin:5mm 0 2.5mm}h3{font-size:11.5pt;margin:3.2mm 0 1.6mm}p{margin-bottom:2.3mm}table{font-size:8.1pt;margin:2mm 0 3mm;line-height:1.23}th,td{padding:1.25mm 1.7mm}pre{padding:2.5mm;font-size:8pt;margin:2mm 0}img.half-diagram{max-height:88mm;margin:1mm auto 2mm}img{margin:2mm auto 3mm}ul,ol{margin-bottom:2mm}li{margin-bottom:.8mm}</style></head><body>
+<section class="cover"><div class="kicker">Consolidated Mock-Defense Report</div><h1>EDUCORE SIMS - Mock Defense Review</h1><p class="subtitle">System flow, JavaScript, validation, QA, loopholes, vibe-coding indicators, panel questions, and improvements in one reviewer-friendly document.</p><div class="meta">Review date: 02 October 2026 (Asia/Manila)<br>Evidence-aware analysis - Confirmed, code-evidenced, suspected, and blocked results remain distinct.</div></section>
+<main>
+<p><strong>Review date:</strong> 02 October 2026 (Asia/Manila)</p>
+<h2>Panel brief: ano ang system at gaano ito kahanda?</h2>
+<p><strong>Verdict: demonstrable classroom prototype, pero partial pa ang correctness ng records at access controls.</strong> May working role interfaces at JavaScript CRUD. Hindi pa sapat ang ebidensya para sabihing reliable ang buong enrollment, academic history, order reversal, at recovery flow.</p>
+<p>EDUCORE SIMS ang pangalan sa document; <strong>SIMSIMI</strong> ang source folder. Isang HTML/CSS/JavaScript app ito: browser ang nagbabasa, nagva-validate, at nagsusulat ng JSON sa Local Storage. Walang submitted backend o database schema. May <strong>129 files, 38 JavaScript files, at 30 HTML pages</strong>; walang TypeScript, package manifest, o supplied automated test suite sa inventory.</p>
+<p><strong>Strengths:</strong> malinaw ang tatlong role menus; may course/year/section enrollment filter at duplicate check; teacher grades use active enrollments; store checkout checks latest stock and saves product snapshots; teacher password change checks current password and confirmation. Sa Classes at Subjects, may original-array index mapping para sa filtered actions - existing pattern na puwedeng gamitin sa Students/Teachers.</p>
+<p><strong>Unahin sa defense:</strong> (1) browser role value is not a secure identity; (2) search can edit/delete the wrong record; (3) grades and attendance can mix repeated subjects across classes; (4) order cancellation does not restore deducted stock; (5) restore can replace records without validating a backup schema.</p>
+<h3>Roles at pangunahing data movement</h3>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Intended access</th>
+<th>Actual implementation / limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Admin</td>
+<td>Student/teacher/subject/class CRUD, enrollment, announcements, store/orders, reports, settings</td>
+<td>Client-side page checks; all local data accessible to the same browser origin.</td>
+</tr>
+<tr>
+<td>Teacher</td>
+<td>Assigned subjects/classes/students; record attendance and grades; view announcements; settings</td>
+<td>Assignment filters exist. Grade class lookup also accepts matching teacher name, which is weaker than a stable ID.</td>
+</tr>
+<tr>
+<td>Student</td>
+<td>Own profile, subjects, grades, attendance, announcements; store and orders</td>
+<td>Own-record filters exist, but subject-based joins can confuse class histories. No separate Student/classes.html was supplied.</td>
+</tr>
+</tbody></table>
+<p><strong>Intended journey:</strong> admin creates teacher → assigns subject → creates class → creates student → enrolls student → teacher records attendance/grades → student views own records. Store is a separate journey: publish product → student checks out → admin changes status → cancellation should reconcile reserved stock.</p>
+<h3>Evidence at QA snapshot</h3>
+<p><strong>16 selected cases: 2 Passed, 14 Failed, 0 Blocked, 0 Not Run.</strong> These are case outcomes against stated or explicitly proposed acceptance rules, not a whole-system pass rate. Fifteen cases ran in a Node VM with DOM stubs and in-memory synthetic records. Q04 was additionally confirmed in a fresh headless Edge context; Q15 used harmless stored HTML in Edge. All 38 JS files passed syntax checks. No page errors occurred in the sampled Students browser flow.</p>
+<p><strong>Confirmed</strong> means observed in the specified test environment; <strong>Code-evidenced</strong> means inspected code, not reproduced behavior. Full browser end-to-end coverage, concurrency, real accounts, institutional grading policy, and production security were not verified. Source and document were read-only; all generated artifacts are outside the app.</p>
+<div class="page-break"></div>
+
+<h2>Paper-to-system traceability</h2>
+<p>Paper: <strong>EDUCORE_SYSTEM_DOCU.docx</strong>, visible title “EDUCORE TECHNOLOGIES / STUDENT INFORMATION MANAGEMENT SYSTEM / SYSTEM DOCUMENTATION,” academic year 2026-2027. Walang explicit revision date. Section names ang citations; paragraph IDs below are extraction locators, <strong>not page numbers</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>ID / paper claim</th>
+<th>Document section</th>
+<th>Implementation evidence</th>
+<th>Verdict / defense significance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P01: Local Storage prototype, browser/device limited</td>
+<td>Project Overview P34; Project Limitations P172-182</td>
+<td>storage.js:400-486; no backend in inventory</td>
+<td><strong>Implemented.</strong> Fair limitation; do not grade it as a cloud SIS. “Centralized” only means one local dataset.</td>
+</tr>
+<tr>
+<td>P02: Secure login and restricted role functions</td>
+<td>Objectives P52; Limitations P179-181</td>
+<td>auth.js:45-73,168-186; Q02-Q03</td>
+<td><strong>Contradicted as a security claim.</strong> Role routing exists; trusted identity and account-status enforcement do not.</td>
+</tr>
+<tr>
+<td>P03: Admin adds/edits/searches/deletes students and teachers</td>
+<td>Included Features P140-143</td>
+<td>students.js:66-158,453-545; teachers.js:118-148</td>
+<td><strong>Partial.</strong> Search-to-action identity mapping fails for Students; same index pattern exists in Teachers.</td>
+</tr>
+<tr>
+<td>P04: Teacher assigned by subject, classes constructed from subject</td>
+<td>Included Features P144-148</td>
+<td>classes.js:184-400,956-1065; subjects.js:157-260</td>
+<td><strong>Implemented in code for basic setup.</strong> Stable identifier consistency remains weak across modules.</td>
+</tr>
+<tr>
+<td>P05: Enrollment connects students to appropriate classes</td>
+<td>Included Features P149-150</td>
+<td>enrollment.js:426-595,700-922</td>
+<td><strong>Partial.</strong> Course/year/section and duplicate rules exist; status and current-term eligibility are absent.</td>
+</tr>
+<tr>
+<td>P06: Teachers enter grades; students view academic information</td>
+<td>Included Features P153-154; Target Users P217-220</td>
+<td>teacher-grades.js:1356-1753; student-grades.js:377-492</td>
+<td><strong>Partial.</strong> Writer persists class/enrollment identifiers, but student reader selects first matching subject grade.</td>
+</tr>
+<tr>
+<td>P07: Teachers manage attendance for assigned classes</td>
+<td>Included Features P151-152</td>
+<td>teacher-attendance.js:226-316,544-822,1305-1480</td>
+<td><strong>Partial.</strong> Class/date save exists; student reader duplicates repeated-subject histories.</td>
+</tr>
+<tr>
+<td>P08: Audience-specific announcements</td>
+<td>System Features P242-251</td>
+<td>teacher-announcements.js:128-185; student-announcements.js:99-155,366-475</td>
+<td><strong>Contradicted for student viewing.</strong> Teacher filters audience/status; student list renders every stored notice, including teacher-only drafts.</td>
+</tr>
+<tr>
+<td>P09: Store/order management</td>
+<td>Scope P71; Included Features P158-159; Use Case P331</td>
+<td>student-store.js:1825-2408; student-orders.js:1310-1502</td>
+<td><strong>Partial.</strong> Checkout deducts stock; cancellation only changes order status. Product storage key is undeclared.</td>
+</tr>
+<tr>
+<td>P10: Reports, settings, password changes</td>
+<td>Features P266-273</td>
+<td>reports.js:51-221; teacher-settings.js:423-603; settings.js:203-342</td>
+<td><strong>Partial overall.</strong> Counts and password checks exist; recovery validates JSON syntax only.</td>
+</tr>
+<tr>
+<td>P11: Objectives achieved and testing performed</td>
+<td>Objectives P67; Conclusion P422-426</td>
+<td>No test results, dataset, acceptance matrix or supplied test suite found</td>
+<td><strong>Not verifiable as a testing claim.</strong> Analyzer tests below do not validate an earlier evaluation.</td>
+</tr>
+</tbody></table>
+<h3>Paper consistency at diagram critique</h3>
+<p><strong>System Flowchart:</strong> overall login/role/logout sequence matches basic implementation. Its repeated label “Data securely stored” overstates Local Storage protection. The “No logout” arrow returns to the administrator lane even after teacher/student use; it should return to the current role. It omits failed writes and academic-history joins.</p>
+<p><strong>Use Case Diagram:</strong> teacher “Post Announcements” conflicts with the text and supplied view-only teacher module. Student “My Classes” is named in the diagram/text, but the supplied student navigation exposes My Subjects and no dedicated classes page. Clarify whether class detail within subjects satisfies this requirement. The inclusion of “Save to Local Storage” under viewing grades also blurs read versus write behavior. Correct the diagram and scope before claiming every objective achieved.</p>
+<div class="page-break"></div>
+
+<h2>Domain capability baseline and gap critique</h2>
+<p><strong>Scope:</strong> single-browser academic information prototype, with an optional school-store module that the paper explicitly includes. Research question: anong minimum controls ang kailangan para hindi maghalo ang identity, enrollment, grades, attendance, at order stock sa scope na ito?</p>
+<p>Research supports the comparison, not a certification requirement. OneRoster describes class rosters for a defined period and gradebook data; ginamit lang itong reference for relationships and context, not a mandate to implement its API [R1]. OWASP supports identity/resource authorization and treating browser storage as untrusted [R2-R3]. MDN explains origin-scoped persistence and file-URL uncertainty [R4]. Term consistency, reversals, and safe recovery below are <strong>reviewer-derived core dependencies</strong> of the claimed flows.</p>
+<table>
+<thead>
+<tr>
+<th>Capability / importance</th>
+<th>Basis</th>
+<th>Expected → actual evidence</th>
+<th>Verdict / priority</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stable record identity / Core</td>
+<td>Core-process dependency; R1</td>
+<td>Actions target the selected record → filtered row position used by Students/Teachers</td>
+<td><strong>Incorrect / High</strong>, F02</td>
+</tr>
+<tr>
+<td>Role and account eligibility / Core</td>
+<td>Explicit objective; R2-R3</td>
+<td>Valid active account controls access → mutable role and inactive login accepted</td>
+<td><strong>Incorrect / High</strong>, F01</td>
+</tr>
+<tr>
+<td>Teacher ownership / Core</td>
+<td>Explicit assigned-class scope; R2</td>
+<td>Assignment uses stable ID → IDs plus teacher-name fallback; no trusted server enforcement</td>
+<td><strong>Partial / High</strong>, F01</td>
+</tr>
+<tr>
+<td>Subject-to-class setup / Core</td>
+<td>Explicit requirement</td>
+<td>Subject resolves assigned teacher → class creation checks assignment</td>
+<td><strong>Complete in inspected code</strong>, full setup E2E unverified</td>
+</tr>
+<tr>
+<td>Class enrollment / Core</td>
+<td>Explicit; core dependency</td>
+<td>Valid active class/current period; no duplicate → cohort filter + duplicate check only</td>
+<td><strong>Partial / High</strong>, F08</td>
+</tr>
+<tr>
+<td>Class-specific grades / Core</td>
+<td>Explicit; R1 as relationship reference</td>
+<td>Student sees correct enrollment result → first subject grade wins across classes</td>
+<td><strong>Incorrect / High</strong>, F04</td>
+</tr>
+<tr>
+<td>Class/date attendance / Core</td>
+<td>Explicit; core dependency</td>
+<td>Distinct meeting history → writer separates class/date; reader joins by subject</td>
+<td><strong>Incorrect / High</strong>, F04</td>
+</tr>
+<tr>
+<td>Grading completion policy / Core</td>
+<td>Necessary grade interpretation</td>
+<td>Separate progress from completed result → any nonblank periods average to “final”</td>
+<td><strong>Partial / Medium</strong>, F09; institution policy unverified</td>
+</tr>
+<tr>
+<td>Announcements by audience / Core</td>
+<td>Explicit</td>
+<td>Published notices for intended role → teacher filtering exists; student list exposes all notices</td>
+<td><strong>Incorrect / High</strong>, F13</td>
+</tr>
+<tr>
+<td>Store + order reconciliation / Core within claimed store scope</td>
+<td>Explicit; core transaction dependency</td>
+<td>Stock, orders and reversals agree → no cancellation stock reversal; split checkout writes</td>
+<td><strong>Incorrect / High</strong>, F06-F07</td>
+</tr>
+<tr>
+<td>Backup and recovery / Important</td>
+<td>Recommended operational practice; browser-only dependency</td>
+<td>Validate complete backup before replace → arbitrary parsed JSON clears stores</td>
+<td><strong>Incorrect / High</strong>, F11</td>
+</tr>
+<tr>
+<td>Reports / Important</td>
+<td>Explicit broad summary claim</td>
+<td>Summarize existing records → counts/course/order summaries present; period reconciliation absent</td>
+<td><strong>Partial / Medium</strong>, dependent on source correctness</td>
+</tr>
+<tr>
+<td>Audit attribution / Important</td>
+<td>Recommended practice; R2</td>
+<td>Actor/event history → addLog reads username absent from login session; logging mainly order update</td>
+<td><strong>Partial / Medium</strong>, code-evidenced</td>
+</tr>
+<tr>
+<td>Cloud sync/mobile app/email/SMS / Optional</td>
+<td>Explicit limitations</td>
+<td>Future enhancements, not current deliverables</td>
+<td><strong>Out of scope.</strong> No deduction for absence.</td>
+</tr>
+</tbody></table>
+<p><strong>Functional gaps</strong> are wrong record selection and incomplete record/order lifecycles. <strong>Control gaps</strong> include weak access, unsafe HTML rendering and recovery. <strong>Enhancements</strong> include multi-campus sync and mobile support. Walang legal-compliance verdict o prescribed institutional grade weighting sa review na ito.</p>
+<p><strong>Research sources, accessed 02 October 2026:</strong></p>
+<ul>
+<li><a href="https://standards.1edtech.org/oneroster/specifications/standards/v1p2">R1: 1EdTech OneRoster 1.2</a>, final release listed 19 September 2022. Relationship reference, not university policy.</li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">R2: OWASP Authorization Cheat Sheet</a>, living technical guidance.</li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">R3: OWASP HTML5 Security Cheat Sheet</a>, living technical guidance.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">R4: MDN Window.localStorage</a>, living browser documentation.</li>
+</ul>
+<div class="page-break"></div>
+
+<h2>Overall system function and access flow</h2>
+<h3>Diagram 1 - normal implemented flow</h3>
+<img class="half-diagram" src="flowcharts/overall.svg" alt="Overall login, local persistence, modules and logout flow">
+
+<p>Login reads the role-specific account array, saves <code>{id, role}</code>, then redirects. Module scripts read/write the same origin&#39;s local stores and refresh the UI. Logout removes only currentUser. The diagram simplifies module-specific validation; several modules display success even when storage failed. <strong>Code map:</strong> auth.js:14-107; storage.js:52-378,400-486. No API/controller/database boundary exists in this submission.</p>
+<h3>Diagram 2 - actual page-role guard and bypass boundary</h3>
+<img class="half-diagram" src="flowcharts/access.svg" alt="Role guard decisions and untrusted local role bypass">
+
+<p>The guard checks only null and role equality. A matching role with a nonexistent account ID passes in Q03. The redirect is a UI action; the caller does not receive an allow/deny result that stops all subsequent mutation code. “Altered role” is a <strong>local synthetic bypass</strong>, not a remotely demonstrated exploit. <strong>Code map:</strong> auth.js:168-186 and top-level Auth.checkAccess calls in module scripts.</p>
+<p><strong>Practical limit:</strong> browser-local role menus help organize a classroom demo, pero hindi nila ma-eenforce ang secure access against a user controlling that browser. Real school use needs a trusted identity and record authorization boundary; prototype documentation should say this plainly [R2-R3].</p>
+<div class="page-break"></div>
+
+<h2>Main transaction: enrollment to academic records</h2>
+<h3>Diagram 3 - implemented enrollment decisions</h3>
+<img src="flowcharts/enrollment.svg" alt="Enrollment selection, duplicate checking, local save and display flow" style="max-height:150mm">
+
+<p><strong>Code map:</strong> enrollment.js:305-418 selects student; 426-595 filters course/year/section and disables already-enrolled boxes; 700-899 validates selection, finds each class, avoids duplicates, and saves. The handler does not recheck active status/current school year/semester, and it does not inspect the save result before its success message.</p>
+<h3>Critical use cases at postconditions</h3>
+<table>
+<thead>
+<tr>
+<th>Use case / precondition</th>
+<th>Main flow</th>
+<th>Alternatives / actual postcondition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Enroll student: admin, student/class setup exists</td>
+<td>Select student and cohort classes → duplicate checks → append enrollments</td>
+<td>Missing selection is rejected; missing class skipped. Saved enrollment stores classId and names, but no subjectCode/teacherId/term fields.</td>
+</tr>
+<tr>
+<td>Record grade: teacher, assigned class and active enrollment</td>
+<td>Select class → enter period scores → save grade with enrollmentId/classId</td>
+<td>No selected class/teacher/student rejected. Blank periods allowed; first period can produce Passed. Student reader later ignores enrollmentId/classId.</td>
+</tr>
+<tr>
+<td>Record attendance: teacher, class/date/students exist</td>
+<td>Load roster → choose statuses → replace class/date batch</td>
+<td>Missing class/date/roster rejected. Default is Present; failed writes still get success. Student reader duplicates matching subject history.</td>
+</tr>
+<tr>
+<td>Place/cancel order: student, available stock and own order</td>
+<td>Latest stock check → order write → stock write; owner cancels pending order</td>
+<td>Checkout can partially commit if stock write fails. Cancellation preserves order record but leaves stock deduction.</td>
+</tr>
+</tbody></table>
+<p><strong>Process lesson:</strong> may tamang local steps, pero kailangang pareho ang keys at business meaning sa writer at reader. “Na-save” is not enough if a later screen shows another class&#39;s grade or wrong stock.</p>
+<div class="page-break"></div>
+
+<h2>Prioritized loopholes and findings - 1 of 3</h2>
+<h3>F01 - role value can stand in for identity</h3>
+<p><strong>High | Confirmed in VM; supporting code | High confidence.</strong> Problema: role-check ang access gate, hindi verified account/session. Q02 logged in an Inactive synthetic student; Q03 passed admin access with a nonexistent account ID. Credentials are stored/compared as plain text.</p>
+<p><strong>Safe demo:</strong> sa disposable synthetic store, compare inactive login and a same-role session with missing account. Expected: reject both. Actual: redirect/login and guard acceptance. <strong>Effect:</strong> local users can access or alter records outside intended restrictions. <strong>Ayusin:</strong> document demo-only security, enforce account status and stable ownership; for actual deployment use trusted authentication/authorization. <strong>Verify:</strong> revoked/missing accounts and other-role/other-record access are denied. <strong>Panel:</strong> “Saan galing ang trusted identity kung editable ang currentUser?”</p>
+<p><strong>Evidence:</strong> auth.js:45-73,168-186; storage.js:60-183; teacher-grades.js:498-510 also accepts teacher-name matching, untested with duplicate names. This is a local trust-boundary failure, not proof of a remote attack.</p>
+<h3>F02 - search edits or deletes the wrong person</h3>
+<p><strong>High | Confirmed in Edge + VM | High confidence.</strong> Problema: displayed filtered index is passed to a handler that reads the original array. <strong>Safe demo:</strong> create Alpha then Beta, search Beta, click Edit. Expected: Beta form. Actual: Alpha form. Delete uses the same position mapping; no real record was deleted during testing.</p>
+<p><strong>Effect:</strong> wrong student update/delete; Teachers has the same code pattern. <strong>Ayusin:</strong> resolve by record ID or reuse original-index mapping already present in Classes/Subjects. <strong>Verify:</strong> first/middle/last search result updates only its own record. <strong>Panel:</strong> “Bakit hindi guaranteed na original index ang i?”</p>
+<p><strong>Evidence:</strong> students.js:112-144,453-491,505-545; teachers.js:118-148,479-487. Positive comparison: classes.js:611-612,667-680; subjects.js:370-372,438-447. Teacher wrong-row behavior is code-evidenced, not separately browser-tested.</p>
+<h3>F03 - stored text is rendered as HTML</h3>
+<p><strong>High | Harmless markup confirmed in Edge; executable XSS code-evidenced | High confidence.</strong> Problema: names and other record fields enter innerHTML without escaping. <strong>Safe demo:</strong> synthetic firstName contains a harmless bold ReviewMarker. Expected: literal text. Actual: a real bold element appears in the table.</p>
+<p><strong>Effect:</strong> markup changes UI; executable content could affect same-origin data and credentials, but script execution/exfiltration were not tested. <strong>Ayusin:</strong> render user text with textContent or the existing escaping pattern in store modules. <strong>Verify:</strong> harmless HTML characters remain literal through table/modal views. <strong>Panel:</strong> “Paano ninyo sinisigurong data lang ang names/content?”</p>
+<p><strong>Evidence:</strong> students.js:116-144,514-519; announcements.js:91-190. Existing safer helper: admin-store.js:93-101; student-store.js:203-218. See R3 for browser storage and HTML trust implications.</p>
+<h3>F04 - repeated subject histories mix across classes</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: student readers match subject, not exact enrollment/class. <strong>Safe demo:</strong> same student, same subject, two class enrollments; saved grades 80 and 95; one attendance entry per class. Expected: each enrollment has its own grade/meeting. Actual: both show 80; two attendance entries become four rows.</p>
+<p><strong>Effect:</strong> inaccurate student history and attendance summaries. <strong>Ayusin:</strong> join grade by enrollmentId/classId and attendance by classId/studentId/date; expose term context. <strong>Verify:</strong> repeated subjects never reuse another class&#39;s result. <strong>Panel:</strong> “Bakit may classId sa writer pero subject ang join sa reader?”</p>
+<p><strong>Evidence:</strong> student-grades.js:377-492; student-attendance.js:377-486; teacher-grades.js:1621-1649; teacher-attendance.js:1400-1455. Q07-Q08 cover synthetic repeated-subject cases.</p>
+<div class="page-break"></div>
+
+<h2>Prioritized loopholes and findings - 2 of 3</h2>
+<h3>F05 - renamed subjects hide existing academic records</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: enrollment snapshots contain subjectName but no stable subject reference. <strong>Safe demo:</strong> enroll Programming, then rename subject to Renamed Programming. Expected: existing enrollment and results remain visible. Actual: student grades skip both old name-only enrollments.</p>
+<p><strong>Effect:</strong> records look missing although still saved; teacher resolution is also incomplete because enrollment lacks teacherId/employeeNumber expected by readers. <strong>Ayusin:</strong> store stable references, use classId to resolve current subject/teacher, retain historical display snapshots intentionally. <strong>Verify:</strong> rename/reassignment does not hide records. <strong>Panel:</strong> “Alin ang identity key at alin ang display snapshot?”</p>
+<p><strong>Evidence:</strong> enrollment.js:790-879; student-grades.js:227-306,335-366; student-attendance.js:227-306. Q09 verified subject rename only; teacher-label behavior is code-evidenced.</p>
+<h3>F06 - product store uses an undefined key</h3>
+<p><strong>Medium | Confirmed in VM | High confidence.</strong> Problema: STORAGE_KEYS.PRODUCTS is used but never declared. Admin and student happen to share the resulting literal key <strong>&quot;undefined&quot;</strong>, kaya puwedeng magmukhang working ang store.</p>
+<p><strong>Safe demo:</strong> save one synthetic product and inspect key names. Expected: named product store. Actual: product array lives under &quot;undefined&quot;. <strong>Effect:</strong> accidental key collision, fragile backup/migration/debugging. This is not proof the entire store cannot run. <strong>Ayusin:</strong> define and consistently use one named key; safely preserve existing product data. <strong>Verify:</strong> new and restored product records use the intended key. <strong>Panel:</strong> “Ano ang actual string na naipapasa sa setItem?”</p>
+<p><strong>Evidence:</strong> storage.js:7-35; admin-store.js:29-50; student-store.js:124-143,2319-2323; Q10.</p>
+<h3>F07 - order lifecycle does not reconcile stock</h3>
+<p><strong>High | Cancellation confirmed in VM; partial checkout code-evidenced | High confidence.</strong> Problema: checkout deducts quantity, but cancelling a pending order changes status only. Admin status changes also have no allowed-transition matrix or stock reversal.</p>
+<p><strong>Safe demo:</strong> synthetic order for two items, stock already 8 from 10; cancel own Pending order. Expected under the implemented reservation model: stock 10, one reversal. Actual: cancelled, stock 8. <strong>Effect:</strong> stock disappears from available supply. Separately, successful order write followed by failed stock write leaves partial state and a retained cart; retry may create another order.</p>
+<p><strong>Ayusin:</strong> define reservation/release and terminal statuses; make order+stock commit/reversal recoverable and repeat-safe. <strong>Verify:</strong> cancel twice restores once; failed checkout leaves reconcilable state. <strong>Panel:</strong> “Kailan reserved, sold, at returned ang stock?”</p>
+<p><strong>Evidence:</strong> student-store.js:2245-2340; student-orders.js:1310-1502; admin-orders.js:2045-2243. Q11 verified cancellation; retry/concurrency were not executed.</p>
+<h3>F08 - enrollment ignores active status and current term</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: available-class filter checks cohort only. <strong>Safe demo:</strong> create Inactive class in an old school year with same course/year/section. Expected: unavailable for current enrollment. Actual: selectable.</p>
+<p><strong>Effect:</strong> stale/inactive class enrollment, possible duplicate subject histories. Current-term eligibility is a proposed acceptance rule inferred from schoolYear/semester fields; the paper does not define detailed enrollment policy. <strong>Ayusin:</strong> define allowed statuses/term and recheck at save, including student eligibility. <strong>Verify:</strong> inactive and out-of-term selections rejected; same pair remains unique. <strong>Panel:</strong> “Paano ninyo pinipili ang eligible academic period?”</p>
+<p><strong>Evidence:</strong> enrollment.js:477-497,700-786; classes.js:1205-1222 stores schoolYear/semester/status. Q06 confirmed old/inactive visibility, not a full browser enrollment submission.</p>
+<h3>F13 - student announcement view exposes teacher-only drafts</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: student list loads and renders every announcement without audience/status filtering. <strong>Safe demo:</strong> synthetic Teachers + Draft notice. Expected: hidden from student. Actual: its title/content appear in student list. Dashboard filters Published but still ignores audience.</p>
+<p><strong>Effect:</strong> intended audience and publication state do not control student visibility. <strong>Ayusin:</strong> apply the same allowed-audience/published rule to list, dashboard, detail and counts. <strong>Verify:</strong> draft and teacher-only notices stay hidden; published All/Students appear. <strong>Panel:</strong> “Pareho ba ang eligibility rule sa lahat ng announcement screens?”</p>
+<p><strong>Evidence:</strong> student-announcements.js:99-155,366-475; student-dashboard.js:537-556. Q16 confirmed student list; dashboard is code-evidenced. This is distinct from local-storage bypass: the normal viewer itself exposes the notice.</p>
+<div class="page-break"></div>
+
+<h2>Prioritized loopholes and findings - 3 of 3</h2>
+<h3>F09 - incomplete periods can be labeled final and Passed</h3>
+<p><strong>Medium | Confirmed in VM | High confidence on behavior; policy unverified.</strong> Problema: average uses only nonblank periods, then immediately assigns Passed/Failed. <strong>Safe demo:</strong> prelim 90, three blanks. Expected under proposed completion rule: provisional 90, Pending completion. Actual: finalGrade 90.00, Passed.</p>
+<p><strong>Effect:</strong> a progress estimate looks like a finalized result. Equal period weights and a 75 passing mark are hardcoded; no supplied institution policy validates them. <strong>Ayusin:</strong> document authorized formula/completion rules and distinguish provisional versus released final results. <strong>Verify:</strong> incomplete grades cannot be misread as finalized. <strong>Panel:</strong> “Sino ang nag-approved ng weights, threshold, at release rule?”</p>
+<p><strong>Evidence:</strong> teacher-grades.js:1209-1347. Q12 failure is against an explicitly proposed completion acceptance rule, not proof of violating a specific school&#39;s policy.</p>
+<h3>F10 - success can appear after a failed write</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: Storage.save returns false on failure, but grade save ignores it. <strong>Safe demo:</strong> inject an in-memory write error for grades; save four 90s. Expected: clear failure and unchanged persisted/UI result. Actual: no persisted grade, but 90.00 display and success toast.</p>
+<p><strong>Effect:</strong> user thinks a record is saved until refresh. Similar unchecked calls occur in enrollment, attendance, student CRUD and teacher password change. <strong>Ayusin:</strong> show success only after confirmed persistence; preserve input and recover from failure. <strong>Verify:</strong> quota failure never shows saved success. <strong>Panel:</strong> “Paano ninyo alam na persisted ang update?”</p>
+<p><strong>Evidence:</strong> storage.js:456-486; teacher-grades.js:1706-1753; enrollment.js:893-919; teacher-attendance.js:1468-1480; teacher-settings.js:567-601. Q13 confirmed grades only.</p>
+<h3>F11 - restore replaces stores without schema checks</h3>
+<p><strong>High | Confirmed in VM | High confidence.</strong> Problema: parsed JSON is accepted as a backup before clearing storage. <strong>Safe demo:</strong> disposable VM receives a file whose JSON is the scalar string &quot;abc&quot;. Expected: reject it and preserve records. Actual: stores cleared and numeric character keys written.</p>
+<p><strong>Effect:</strong> malformed-but-valid JSON can erase the local dataset; a mid-restore write failure can leave partial data. Backup also exports every origin key, including credentials and currentUser; an unrelated non-JSON key can break export. <strong>Ayusin:</strong> validate version, allowed keys, types and relations; stage replacement and retain a recovery copy. <strong>Verify:</strong> invalid schema never changes live records. <strong>Panel:</strong> “JSON-valid ba ay katumbas ng valid system backup?”</p>
+<p><strong>Evidence:</strong> settings.js:203-267,284-342. Q14 uses fake FileReader and memory only; no real browser dataset was cleared. Backup download and mid-restore quota failure were not executed.</p>
+<h3>F12 - hard delete leaves references and permits identity reuse</h3>
+<p><strong>High | Code-evidenced | High confidence.</strong> Problema: student/class/enrollment deletion removes only its own array entry; related grades/attendance/enrollments are not protected. Storage.generateId scans live records from 001, so a deleted ID can be reused even when old references remain.</p>
+<p><strong>Safe verification plan:</strong> disposable fixture has student STU001 with enrollment; inspect delete logic, then compare next generated ID against historical references. Expected: history is retained/archived and identity never binds to a new person. Code permits an orphan and reused identity; <strong>this end-to-end scenario was not executed</strong>.</p>
+<p><strong>Effect:</strong> hidden history, wrong reattachment, misleading reports. <strong>Ayusin:</strong> archive referenced entities or block destructive deletion; keep stable never-reused identifiers. <strong>Verify:</strong> deleted/archived records do not leak history to new accounts. <strong>Panel:</strong> “Ano ang mangyayari sa grade kapag dinelete at nirecreate ang student?”</p>
+<p><strong>Evidence:</strong> students.js:531-545; classes.js:1491-1526; enrollment.js:1005-1027; storage.js:524-550. Display identifiers also use array length: students.js:226-238; teachers.js:231-250.</p>
+<div class="page-break"></div>
+
+<h2>Validation review and process correctness</h2>
+<p><strong>Trust boundary</strong> means the point where data needs rechecking before it becomes an authoritative record. Dito, all validation runs in the client. There is no server/database enforcement layer; this is an architectural limitation already acknowledged by the paper, but it limits “secure role-based” claims.</p>
+<table>
+<thead>
+<tr>
+<th>Boundary / process</th>
+<th>Existing control</th>
+<th>Missing or weak control</th>
+<th>Process verdict / evidence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Login input → session</td>
+<td>Nonblank fields; username/password equality; role-specific collection</td>
+<td>Status, expiry, trusted identity; plain-text credentials</td>
+<td><strong>Partial / Q01-Q03.</strong> Correct basic login/invalid-password path; inactive/forged identity accepted.</td>
+</tr>
+<tr>
+<td>Form → student/teacher array</td>
+<td>Required fields, exact username duplicate checks</td>
+<td>Canonical username rules; identifier uniqueness after deletion; consistent contact/date rules</td>
+<td><strong>Partial.</strong> students.js:280-316. HTML constraints are client-only.</td>
+</tr>
+<tr>
+<td>Search result → mutation</td>
+<td>Search works; confirm-delete dialog exists</td>
+<td>Selected record identity not preserved after filtering</td>
+<td><strong>Incorrect / Q04.</strong> Confirmation cannot fix the wrong target.</td>
+</tr>
+<tr>
+<td>Subject → class setup</td>
+<td>Assigned teacher must resolve; required course/year/section/subject/year</td>
+<td>Uniform teacher key; uniqueness/schedule conflicts not established</td>
+<td><strong>Correct basic setup in code; broader policy not verified.</strong> classes.js:956-999.</td>
+</tr>
+<tr>
+<td>Student/class → enrollment</td>
+<td>Matching cohort; duplicate student/class check</td>
+<td>Active student/class; current period; authoritative revalidation</td>
+<td><strong>Partial / Q05-Q06.</strong> Priority is eligibility, not adding advanced waitlists.</td>
+</tr>
+<tr>
+<td>Enrollment → grade writer</td>
+<td>Active enrollments; selected teacher/student; 0-100 range comparisons</td>
+<td>Completion/release policy; finite-number guard; unchecked save return</td>
+<td><strong>Partial / Q12-Q13.</strong> Numeric input behavior outside the sampled fixtures not verified.</td>
+</tr>
+<tr>
+<td>Enrollment → student academic views</td>
+<td>Student ID/number and subject matching</td>
+<td>Exact enrollment/class/term join; stable subject identity</td>
+<td><strong>Incorrect / Q07-Q09.</strong> Source persistence and visible correctness differ.</td>
+</tr>
+<tr>
+<td>Class/date → attendance</td>
+<td>Missing class/date/empty roster rejected; replaces class/date batch</td>
+<td>Active-enrollment status in attendance roster; meeting policy; reviewed-default status; save failure</td>
+<td><strong>Partial.</strong> teacher-attendance.js:544-660,1305-1480; defaults Present.</td>
+</tr>
+<tr>
+<td>Product/cart → order</td>
+<td>Latest product/stock checks; quantity ceiling; order save checked</td>
+<td>Strict positive integer check at checkout; atomic/recoverable order+stock; per-user cart key</td>
+<td><strong>Partial.</strong> student-store.js:1850-1959,2245-2340; shared cart key at61-62.</td>
+</tr>
+<tr>
+<td>Order → cancel/admin update</td>
+<td>Student owner and Pending checks; save failure checks</td>
+<td>Stock reversal; allowed admin transitions; persisted-state race recheck</td>
+<td><strong>Incorrect / Q11.</strong> Admin transitions and stale-state races untested.</td>
+</tr>
+<tr>
+<td>Stored fields → rendered DOM</td>
+<td>Store modules have escapeHtml helpers</td>
+<td>General names/content inserted into innerHTML</td>
+<td><strong>Incorrect / Q15.</strong> Harmless markup confirmed; executable injection untested.</td>
+</tr>
+<tr>
+<td>Announcement → student viewer</td>
+<td>Teacher list checks audience/Published</td>
+<td>Student list has no eligibility filter; dashboard ignores audience</td>
+<td><strong>Incorrect / Q16.</strong> Teachers + Draft shown to student, F13.</td>
+</tr>
+<tr>
+<td>Backup → replacement storage</td>
+<td>JSON.parse catches malformed syntax only by throwing</td>
+<td>Schema/version/relations, preview, rollback, allowed key namespace</td>
+<td><strong>Incorrect / Q14.</strong> Export includes unrelated same-origin keys.</td>
+</tr>
+</tbody></table>
+<p><strong>Reusable validator coverage:</strong> validator.js defines required/email/usernameExists; email accepts any text containing “@”. Targeted search found no Validator.* caller in submitted JS. Main modules instead repeat checks. An unused helper is not an effective control; judge actual handlers and native fields.</p>
+<p><strong>Not verified:</strong> every input permutation, malicious script execution, all DOM constraints, grading weights, institutional attendance rules, restoration of a complete valid backup, simultaneous tabs, and external deployment behavior. These are not counted as passed cases.</p>
+<div class="page-break"></div>
+
+<h2>Important JavaScript: functions and user-visible effect</h2>
+<p>All business logic is JavaScript; no TypeScript was supplied. Page script tags load storage/auth and role modules directly. Input → handler → array transformation → JSON storage → UI is the main application pattern.</p>
+<table>
+<thead>
+<tr>
+<th>Function / call site</th>
+<th>Inputs → output / side effect</th>
+<th>Paano ginagamit ng system</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Storage.initialize; loaded by storage.js:611</td>
+<td>Missing keys → demo accounts, empty arrays, settings</td>
+<td>Bootstraps a fresh browser. It does not repair malformed existing records. storage.js:52-378.</td>
+</tr>
+<tr>
+<td>Storage.get / save</td>
+<td>Key / JSON object → parsed value or boolean write result</td>
+<td>Shared persistence boundary. get returns null for missing/invalid JSON; save returns false on exception. storage.js:400-486.</td>
+</tr>
+<tr>
+<td>Auth.login; loginForm submit</td>
+<td>Role/username/password → currentUser + redirect or error</td>
+<td>Reads role collection and compares credentials; stores id and role only. auth.js:14-74,226-236.</td>
+</tr>
+<tr>
+<td>Auth.checkAccess; top of role module</td>
+<td>Required role → redirect on null/mismatch</td>
+<td>Organizes pages; no trusted verification or mutation permission result. auth.js:168-186.</td>
+</tr>
+<tr>
+<td>loadStudents / editStudent</td>
+<td>Keyword / index → rendered rows / populated form</td>
+<td>Search transforms array; action handler reopens original array position. students.js:66-158,453-497.</td>
+</tr>
+<tr>
+<td>getSubjectTeacher; class form submit</td>
+<td>Subject code → assigned teacher record or null</td>
+<td>Auto-populates teacher from subject, avoiding separate manual selection. classes.js:184-400,956-1065.</td>
+</tr>
+<tr>
+<td>loadAvailableClasses; selectStudent</td>
+<td>Selected student&#39;s cohort + enrollments → checkbox table</td>
+<td>Normalizes numeric year to year label; marks duplicates checked/disabled. enrollment.js:426-595.</td>
+</tr>
+<tr>
+<td>Enrollment click handler</td>
+<td>Selected student + checked classes → enrollment array</td>
+<td>Adds stable student/class IDs and display-name snapshots, then refreshes panels. enrollment.js:700-922.</td>
+</tr>
+<tr>
+<td>calculateFinalGrade / getGradeStatus; saveGrade</td>
+<td>Nonblank period values → average string and Passed/Failed/Pending</td>
+<td>Uses equal weights over supplied periods; “Pending” only when all blank. teacher-grades.js:1209-1347,1517-1529.</td>
+</tr>
+<tr>
+<td>saveGrade</td>
+<td>Student/enrollment IDs + DOM values → upsert grade</td>
+<td>Stores class/enrollment context; student reader should preserve those joins. teacher-grades.js:1356-1753.</td>
+</tr>
+<tr>
+<td>saveAttendance; save button</td>
+<td>Selected class/date + roster statuses → replaced class/date batch</td>
+<td>Rewrites a meeting batch and shows toast. teacher-attendance.js:1305-1480.</td>
+</tr>
+<tr>
+<td>loadStudentGrades / loadStudentAttendance</td>
+<td>Current student + enrollments + subjects + records → student lists</td>
+<td>Joins by subject and skips unresolved subject; causes history mixing/rename loss. student-grades.js:69-514; student-attendance.js:70-533.</td>
+</tr>
+<tr>
+<td>checkout; checkout button</td>
+<td>Cart/latest products/current student → order, stock deduction</td>
+<td>Saves item snapshots, checks write results, clears cart only after both writes. student-store.js:1825-2408.</td>
+</tr>
+<tr>
+<td>cancelCurrentOrder / updateOrderStatus</td>
+<td>Own pending order or selected admin order → changed status</td>
+<td>Cancellation keeps history; neither path reconciles stock. student-orders.js:1310-1502; admin-orders.js:2045-2243.</td>
+</tr>
+<tr>
+<td>loadReport</td>
+<td>Local records → count/course/order summaries</td>
+<td>Useful overview, but wrong source joins/deletions cannot be corrected by summary cards. reports.js:51-221.</td>
+</tr>
+<tr>
+<td>Restore FileReader.onload</td>
+<td>Imported JSON → clear + write all keys + reload</td>
+<td>No schema validation or transactional replacement. settings.js:284-342.</td>
+</tr>
+</tbody></table>
+<p><strong>Positive implementation comparison:</strong> Classes uses classes.indexOf(item), Subjects uses originalIndex, and store uses record IDs. Existing correct patterns make F02 a small integration fix. Storage.save and student order paths already demonstrate error feedback; reuse that discipline in academic saves.</p>
+<p><strong>Audit note:</strong> Auth.login stores no username, while Storage.addLog reads currentUser.username (storage.js:566-583). Normal login can therefore leave actor attribution undefined. Logging is mainly observed in admin order updates, not a complete immutable audit history.</p>
+<div class="page-break"></div>
+
+<h2>Vibe-coding indicators: exact evidence, not authorship proof</h2>
+<p>Ang mga ito ay <strong>implementation-risk signals</strong>: inconsistent integration, happy-path handling, at unverified assumptions. Hindi sila proof na AI ang nagsulat, at hindi rin stylistic judgment sa proponents. Excerpts below preserve exact nonblank source lines; blank spacing is compressed.</p>
+<h3>V01 - missing key hidden by shared accidental behavior</h3>
+<pre><code class="language-javascript">    localStorage.setItem(
+        STORAGE_KEYS.PRODUCTS,
+        JSON.stringify(products)
+    );
+</code></pre>
+<p><strong>Location/function:</strong> admin-store.js:47-50, saveProducts; STORAGE_KEYS map is storage.js:7-35 and has no PRODUCTS. <strong>Does:</strong> writes product collection. <strong>Signal:</strong> both product modules rely on a missing shared constant. <strong>Effect:</strong> literal “undefined” key, fragile integration; VM confirmed Q10. <strong>Confidence: High.</strong></p>
+<h3>V02 - filtered action wiring conflicts with existing correct modules</h3>
+<pre><code class="language-html">                &lt;button
+                class=&quot;edit-btn&quot;
+                 onclick=&quot;editStudent(${i})&quot;&gt;
+</code></pre>
+<p><strong>Location/function:</strong> students.js:134-136, loadStudents. <strong>Does:</strong> wires filtered-row position to edit handler. <strong>Signal:</strong> handler uses original array index, while Classes already maps to original index. <strong>Effect:</strong> Beta row edits Alpha; Edge and VM confirmed Q04. <strong>Confidence: High.</strong> This supports incomplete cross-module verification, not a claim about copying or authorship.</p>
+<h3>V03 - success path discards persistence result</h3>
+<pre><code class="language-javascript">    Storage.save(
+        STORAGE_KEYS.GRADES,
+        grades
+    );
+</code></pre>
+<p><strong>Location/function:</strong> teacher-grades.js:1706-1709, saveGrade; success toast at1750-1753. <strong>Does:</strong> attempts persistence without examining boolean return. <strong>Signal:</strong> shared Storage.save explicitly returns false on failure, but UI assumes success. <strong>Effect:</strong> displayed saved result with no stored grade in Q13. <strong>Confidence: High.</strong></p>
+<h3>V04 - comment promises recovery that code does not complete</h3>
+<pre><code class="language-javascript">        The order already exists, so do not
+        create another order. Restore the
+        original product quantities instead.
+</code></pre>
+<pre><code class="language-javascript">        loadProducts();
+</code></pre>
+<p><strong>Location/function:</strong> student-store.js:2329-2334, checkout failure branch. <strong>Does:</strong> reloads products after stock-save failure. <strong>Signal:</strong> the order stays committed, cart stays populated, and no linked rollback/idempotency state is created despite the recovery wording. <strong>Effect:</strong> unresolved order/stock mismatch; retry duplication is code-evidenced, not executed. <strong>Confidence: High for incomplete recovery; Medium for retry impact.</strong></p>
+<p><strong>Verification habit to improve:</strong> test lifecycle changes, not only first-create screens: search before edit, repeat a subject next term, rename a subject, cancel an order, and simulate a failed write. The signal is a missing integration check; the remedy is observable behavior, not speculation about how code was produced.</p>
+<div class="page-break"></div>
+
+<h2>QA: selected high-value cases and actual outcomes</h2>
+<p><strong>16 cases, 2 Passed and 14 Failed.</strong> “Failed” means the observed app behavior misses the specified acceptance condition; successful execution of the analyzer harness does not mean the application passed. Q12 uses a proposed completion rule because no institutional policy was supplied. Q06 uses current-term eligibility inferred from class metadata. These are explicit assumptions.</p>
+<p>All fixture names, grades and products are synthetic. VM tests run unmodified JS functions with DOM stubs and in-memory Local Storage; they do not prove full UI behavior. Edge used a fresh context and read-only loopback server; it was closed after verification.</p>
+<table>
+<thead>
+<tr>
+<th>ID / category</th>
+<th>Safe steps / test data</th>
+<th>Expected</th>
+<th>Actual / status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Q01 Login / positive-negative</td>
+<td>Synthetic active student; correct then wrong password</td>
+<td>Correct routes; wrong rejected</td>
+<td>Both observed. <strong>Passed - VM</strong></td>
+</tr>
+<tr>
+<td>Q02 Auth / status</td>
+<td>Inactive student; correct credentials</td>
+<td>Inactive account rejected</td>
+<td>Redirected to student. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q03 Auth / authorization</td>
+<td>Same-role currentUser with nonexistent admin ID</td>
+<td>Reject nonexistent identity</td>
+<td>Guard passed. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q04 CRUD / integration</td>
+<td>Alpha then Beta; search Beta; Edit</td>
+<td>Form shows Beta</td>
+<td>Form shows Alpha. <strong>Failed - Edge + VM</strong></td>
+</tr>
+<tr>
+<td>Q05 Enrollment / positive + boundary</td>
+<td>Existing enrollment; matching and wrong section</td>
+<td>Disable duplicate; exclude wrong cohort</td>
+<td>Both observed. <strong>Passed - VM</strong>; submit duplicate check also code-evidenced</td>
+</tr>
+<tr>
+<td>Q06 Enrollment / business</td>
+<td>Same cohort; old school year; Inactive class</td>
+<td>Exclude ineligible class</td>
+<td>Class selectable. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q07 Grades / history</td>
+<td>Two classes, same subject, same student; 80 and 95</td>
+<td>Each enrollment shows its grade</td>
+<td>Both use 80. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q08 Attendance / integration</td>
+<td>Two class enrollments; one entry per class</td>
+<td>Two distinct entries</td>
+<td>Four reader rows. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q09 Academic / mutation</td>
+<td>Rename subject after name-only enrollment</td>
+<td>Existing results still discoverable</td>
+<td>Zero grade-view rows. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q10 Storage / schema</td>
+<td>Save synthetic product in admin module</td>
+<td>Defined product key</td>
+<td>Literal undefined key. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q11 Store / reversal</td>
+<td>Own Pending order, qty2; post-deduction stock8</td>
+<td>Cancel releases stock to10 once</td>
+<td>Cancelled, stock8. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q12 Grades / completion</td>
+<td>Prelim90; other periods blank</td>
+<td>Provisional result; pending final completion</td>
+<td>90.00, Passed. <strong>Failed - VM</strong>, proposed acceptance</td>
+</tr>
+<tr>
+<td>Q13 Storage / error handling</td>
+<td>Four90s; synthetic grade-write error</td>
+<td>Error; no saved success display</td>
+<td>Stored grades empty; 90.00 + success toast. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q14 Recovery / negative</td>
+<td>Valid JSON scalar string abc, fake file</td>
+<td>Reject before any replacement</td>
+<td>Stores cleared; character keys written. <strong>Failed - VM</strong></td>
+</tr>
+<tr>
+<td>Q15 Rendering / trust boundary</td>
+<td>Harmless bold ReviewMarker in stored name</td>
+<td>Display literal markup</td>
+<td>Real bold element. <strong>Failed - Edge</strong>; executable script not tested</td>
+</tr>
+<tr>
+<td>Q16 Announcements / authorization</td>
+<td>Synthetic Teachers audience + Draft status</td>
+<td>Hidden from student list</td>
+<td>Title/content rendered. <strong>Failed - VM</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Evidence mapping:</strong> Q01-Q03→F01; Q04→F02; Q15→F03; Q07-Q08→F04; Q09→F05; Q10→F06; Q11→F07; Q06→F08; Q12→F09; Q13→F10; Q14→F11; Q16→F13. F12 remains code-evidenced with a proposed test, outside these executed-case totals. One additional finding/case is included because normal student announcement disclosure is a distinct authorization failure.</p>
+<p><strong>Additional verification:</strong> node --check accepted all 38 JavaScript files. This proves parseability, not business correctness. No dependencies were installed, no submitted files changed, no real account/service contacted, and no real dataset was restored/reset.</p>
+<p><strong>Not covered:</strong> full add/edit/delete journeys in every module; all user inputs; teacher-name collisions; concurrent tabs; checkout partial-write retry; full valid backup recovery; institutional grading/attendance policy; performance/accessibility; production hosting. Browser screenshots inside the paper are prior documentation evidence, not current runtime results.</p>
+<div class="page-break"></div>
+
+<h2>Recommended system improvements</h2>
+<p>This is a product/process roadmap, not replacement code. Unahin ang correctness ng current scope bago cloud sync or mobile expansion.</p>
+<table>
+<thead>
+<tr>
+<th>Priority / current condition</th>
+<th>Add or change / intended process</th>
+<th>Benefit and observable success</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>High - record identity drifts</strong>, F02/F04/F05/F12</td>
+<td>One stable record reference for actions and joins; preserve class/enrollment/term context; archive referenced entities</td>
+<td>Search edits exact person; repeated subject histories remain distinct; rename/delete cannot reattach history to a new account.</td>
+</tr>
+<tr>
+<td><strong>High - role/audience restrictions inconsistent</strong>, F01/F13</td>
+<td>Separate demo restrictions from real authorization; require active accounts, stable ownership and uniform notice eligibility; trusted enforcement before real use</td>
+<td>Missing/inactive accounts denied; drafts/teacher-only notices hidden from students; demo security explained.</td>
+</tr>
+<tr>
+<td><strong>High - records can claim success without persistence</strong>, F10</td>
+<td>Complete each save with explicit result; preserve unsaved inputs; provide recovery action and durable confirmation</td>
+<td>Quota/write error never produces success; reload agrees with displayed state.</td>
+</tr>
+<tr>
+<td><strong>High - store state can diverge</strong>, F06/F07</td>
+<td>Explicit product store; documented reservation/status lifecycle; linked stock release and recoverable checkout</td>
+<td>Place qty2 then cancel returns stock exactly once; retry cannot create duplicate commitment.</td>
+</tr>
+<tr>
+<td><strong>High - unsafe data rendering/recovery</strong>, F03/F11</td>
+<td>Literal rendering for user text; versioned allowlisted backup schema; validate before replace and retain recovery copy</td>
+<td>Harmless markup stays text; invalid or partially failed import leaves prior dataset recoverable.</td>
+</tr>
+<tr>
+<td><strong>Medium - academic rules unclear</strong>, F08/F09</td>
+<td>Define eligible term/status, approved grading formula, completion/release states and attendance meeting rules</td>
+<td>Out-of-term class excluded; partial periods shown as provisional; school owner can explain formula and release conditions.</td>
+</tr>
+<tr>
+<td><strong>Medium - reports/audit can mislead</strong></td>
+<td>Add actor ID, event history for consequential changes, period filters and reconciliation views</td>
+<td>Report matches underlying enrollment/grade/order records; each change identifies actor and reason.</td>
+</tr>
+<tr>
+<td><strong>Later - scale enhancements</strong></td>
+<td>Cloud sync, mobile access, email/SMS after data controls stabilize</td>
+<td>Multi-device use preserves the same authoritative records; these remain beyond submitted prototype scope.</td>
+</tr>
+</tbody></table>
+<h3>Documentation improvements before defense</h3>
+<ol>
+<li>Revise “secure” and “centralized” wording to describe actual local-browser guarantees. Keep acknowledged limitations visible.</li>
+<li>Align teacher announcement permissions and Student My Classes with supplied pages. Fix the role-loop arrow and read/write semantics in diagrams.</li>
+<li>Add concrete test evidence: fixture, expected/actual result, environment, and test date. Screenshots alone do not establish all objectives achieved.</li>
+<li>Document lifecycle rules for current-term enrollment, grade release, class/student archival, and pending-order stock reservation/cancellation.</li>
+</ol>
+<p><strong>Suggested acceptance sequence:</strong> correct identity mapping → academic joins → order lifecycle → persistence/recovery → retest the 16 cases with expanded browser journeys. A successful walkthrough should show record counts and identities before and after each action, including reload.</p>
+<p><strong>Fair assessment:</strong> may solid learning value at interactive functionality ang project. Ang main improvement is integration discipline: keep the same identity and business meaning across creation, editing, viewing, reversal, and recovery. More modules are less valuable than making these flows consistent.</p>
+<div class="page-break"></div>
+
+<h2>Five strongest panel questions</h2>
+<h3>1. “Kung editable ang currentUser, saan ninyo vine-verify ang identity at authority?”</h3>
+<p><strong>Why ask:</strong> security claim versus local role comparison, F01. <strong>Strong answer:</strong> explain authentication versus authorization, browser trust limits, active-account checks and stable record ownership; acknowledge that real deployment needs a trusted boundary. <strong>Follow-up:</strong> demonstrate a nonexistent same-role identity and an inactive user. <strong>Red flag:</strong> “Hidden naman ang menu” or treating role selection/local JSON as secure permission.</p>
+<h3>2. “Kapag nag-search ng Beta, paano ninyo sinisigurong Beta rin ang ie-edit o ide-delete?”</h3>
+<p><strong>Why ask:</strong> directly reproduced wrong-target mutation, F02. <strong>Strong answer:</strong> describe filtered versus original array positions, use stable ID or original mapping, and cite the existing Classes/Subjects implementation. <strong>Follow-up:</strong> repeat the action when the searched record is last in the original list. <strong>Red flag:</strong> “Pareho lang ang index” without tracing arrays or testing search first.</p>
+<h3>3. “Paano ninyo dini-distinguish ang same subject sa dalawang class o school year?”</h3>
+<p><strong>Why ask:</strong> grades and attendance are saved with context but read by subject, F04/F05. <strong>Strong answer:</strong> trace student → enrollment → class → subject; grades use enrollment/class reference, attendance uses student/class/date, and term is shown. Explain which fields are stable identity versus display snapshots. <strong>Follow-up:</strong> save 80/95 in two classes, then rename the subject. <strong>Red flag:</strong> matching by subject name alone or saying records are correct only because they exist in storage.</p>
+<h3>4. “Ano ang mangyayari sa stock kapag Pending order ay kinansela, o stock-save ang nag-fail?”</h3>
+<p><strong>Why ask:</strong> lifecycle/recovery consistency, F07. <strong>Strong answer:</strong> define reservation, fulfillment, cancellation and release; explain a repeat-safe reversal and recoverable order+stock commitment. Admit the current cancellation changes status only. <strong>Follow-up:</strong> place quantity2, cancel, inspect stock, cancel/retry again. <strong>Red flag:</strong> deletion/status alone is claimed to restore quantity, or assuming two storage writes are one transaction.</p>
+<h3>5. “Paano ninyo pinatutunayang saved ang record at valid ang imported backup?”</h3>
+<p><strong>Why ask:</strong> false save success and unsafe replacement, F10/F11. <strong>Strong answer:</strong> handle failed persistence before success; validate backup version, key/type/relationship schema before replacement; retain rollback/recovery data. <strong>Follow-up:</strong> show synthetic quota failure and schema-invalid but JSON-valid file. <strong>Red flag:</strong> JSON.parse alone is validation, or toast alone is evidence of a durable save.</p>
+<h3>Final review boundaries</h3>
+<p><strong>Reviewed:</strong> source inventory and page wiring; critical authentication, student CRUD, subject/class setup, enrollment, academic readers/writers, store/order lifecycle, announcements, reports/settings; paper text/tables and embedded flow/use-case figures. Technical references in this report are relative to the submitted SIMSIMI source root:</p>
+<p><code>C:/Users/justi/Downloads/Web-20261002T152358Z-1-001/Web/SIMSIMI/</code></p>
+<p>The supplied paper path is the sibling <code>EDUCORE_SYSTEM_DOCU.docx</code>. Line references use the original submitted files. No generated analysis files were included in source findings. Paper claims remain separate from implementation evidence; institutional policies and earlier evaluation results were not supplied. Suspected concurrency and executable injection impacts were not promoted to confirmed runtime results.</p>
+<p><strong>Defense-ready takeaway:</strong> explain the working prototype honestly, demonstrate the current limitations with synthetic records, and show measurable acceptance rules for the next revision. Do not claim production-grade access, complete testing, or final academic correctness from role menus and success messages alone.</p>
+</main>
+</body></html>

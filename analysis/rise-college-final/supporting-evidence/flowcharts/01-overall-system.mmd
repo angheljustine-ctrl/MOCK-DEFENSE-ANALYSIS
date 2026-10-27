@@ -1,0 +1,20 @@
+flowchart LR
+    A([Start]) --> B[/Open public site/]
+    B --> C{Choose action}
+    C -- Browse --> D[View public pages and static content]
+    C -- Contact or order --> E[/Enter request details/]
+    E --> F[Client-side validation]
+    F --> G[/Show prepared message only/]
+    C -- Portal --> H{Session already in localStorage?}
+    H -- Yes --> I[Read client-controlled role]
+    H -- No --> J[/Sign in or create student account/]
+    J --> K[(Browser localStorage users and session)]
+    K --> I
+    I --> L{Role route exists?}
+    L -- No --> M[/Missing page or student fallback/]
+    L -- Yes --> N[Open role dashboard]
+    N --> O[Render mostly hardcoded dashboard data]
+    D --> P([End])
+    G --> P
+    M --> P
+    O --> P

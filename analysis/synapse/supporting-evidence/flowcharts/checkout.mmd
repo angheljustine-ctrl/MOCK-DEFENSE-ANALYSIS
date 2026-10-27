@@ -1,0 +1,21 @@
+flowchart TD
+    A(["Cashier opens POS"])
+    B[/"Choose variants / quantity"/]
+    C["Cart uses captured stock / Compute VAT and discount"]
+    D{"Empty / Cash underpaid?"}
+    E[/"Show error; edit cart"/]
+    F[("Write sale header first")]
+    G["Find variant; subtract qty / No fresh-stock validation"]
+    H[("Write variants, items, / movements separately")]
+    I[/"Audit, clear cart, receipt"/]
+    J[/"Write throws: execution stops / No rollback handler"/]
+    A --> B
+    B --> C
+    C --> D
+    D -- "Yes" --> E
+    E -- "Retry" --> B
+    D -- "No" --> F
+    F --> G
+    G --> H
+    H -- "Writes succeed" --> I
+    H -- "Write failure" --> J

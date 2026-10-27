@@ -1,0 +1,32 @@
+[
+  {
+    "name": "index.html",
+    "bytes": 25131,
+    "sha256": "96210f320bca5d227e19eec7393d790595d1d7244c94f0ea7d2af24a3b642faa"
+  },
+  {
+    "name": "schoolBackground.jpg",
+    "bytes": 96286,
+    "sha256": "8edb6c9c6970c90c21e3863b83789ae834f68de224293d236c406c9f06004d65"
+  },
+  {
+    "name": "script.js",
+    "bytes": 55596,
+    "sha256": "6bcf115ac894e566359e30b94684e46a2023bd9c7c917bdcf1f3eadec738b78c"
+  },
+  {
+    "name": "style.css",
+    "bytes": 26158,
+    "sha256": "7482eaba3b84956348bae3aa24f7c5b5bcd6be11776e3e2bf04f91cd738a48b4"
+  },
+  {
+    "name": "syncOneLogoLogin.png",
+    "bytes": 192982,
+    "sha256": "aa26f6c7fbb898fac1e4a35758a7a31059cddeecbb2da482ec033ea6eb54cb63"
+  },
+  {
+    "name": "syncOneLogoSidebar.jpg",
+    "bytes": 89799,
+    "sha256": "cfb78f8cfedb50fe16284fdbcd4a766e3ce73b1dd9de06674f0472daf275d49c"
+  }
+]

@@ -1,0 +1,24 @@
+flowchart TD
+    A(["Open Login.html"])
+    B[/"Enter credentials"/]
+    C{"Active account matches?"}
+    D[/"Login error"/]
+    E[("Save pos_user / Browser localStorage")]
+    F["Dashboard / module choice"]
+    G{"Admin-only page?"}
+    H{"pos_user.role = Admin?"}
+    I["Run page JavaScript"]
+    J[/"Redirect to Dashboard"/]
+    K[("Read/write pos_* records")]
+    A --> B
+    B --> C
+    C -- "No" --> D
+    D -- "Retry" --> B
+    C -- "Yes" --> E
+    E --> F
+    F --> G
+    G -- "No" --> I
+    G -- "Yes" --> H
+    H -- "Yes" --> I
+    H -- "No" --> J
+    I --> K

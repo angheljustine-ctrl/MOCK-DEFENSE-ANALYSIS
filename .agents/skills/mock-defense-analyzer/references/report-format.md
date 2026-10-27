@@ -41,15 +41,16 @@ Severity describes impact and likelihood; confidence describes strength of evide
 2. **One-page panel brief:** What the system does, readiness verdict, top strengths, top five risks, and QA counts.
 3. **System explained simply:** Actors, modules, overall function, technology, and data movement.
 4. **Paper-to-system traceability, when papers are supplied:** Highest-value claims, paper page/section, implementation evidence, verdict, and effect. Keep it concise in Light/Standard mode.
-5. **Three essential flowcharts:** Overall system, main transaction, and riskiest security/validation flow.
-6. **Top findings:** Compact plain-language finding cards; do not repeat a separate 18-row risk table.
-7. **Recommended system improvements:** Product/process capabilities to add or change, not replacement code.
-8. **Validation and process correctness:** One compact matrix.
-9. **Important JavaScript/TypeScript:** Responsibility, function, and user-visible effect; avoid duplicating finding prose.
-10. **Vibe-coding evidence:** Exact short code excerpts with location, function/responsibility, signal, effect, and confidence.
-11. **QA summary:** Counts plus 10-15 distinct high-value tests; no full repetitive test-card dump in Standard mode.
-12. **Five panel questions:** Strong-answer guide, follow-up, and red flags.
-13. **Coverage, assumptions, limitations, and compact evidence summary.**
+5. **Domain capability baseline and gap matrix:** What this type and scope of system reasonably needs, research basis, and what is complete, partial, incorrect, missing, not verifiable, or out of scope. Keep Standard mode to 8-15 high-value capabilities.
+6. **Three essential flowcharts:** Overall system, main transaction, and riskiest security/validation flow.
+7. **Top findings:** Compact plain-language finding cards; do not repeat a separate 18-row risk table.
+8. **Recommended system improvements:** Product/process capabilities to add or change, derived from material gaps and findings rather than repeating the gap matrix.
+9. **Validation and process correctness:** One compact matrix.
+10. **Important JavaScript/TypeScript:** Responsibility, function, and user-visible effect; avoid duplicating finding prose.
+11. **Vibe-coding evidence:** Exact short code excerpts with location, function/responsibility, signal, effect, and confidence.
+12. **QA summary:** Counts plus 10-15 distinct high-value tests; no full repetitive test-card dump in Standard mode.
+13. **Five panel questions:** Strong-answer guide, follow-up, and red flags.
+14. **Coverage, assumptions, limitations, research sources, and compact evidence summary.**
 
 ## Plain-language finding block
 
@@ -75,6 +76,7 @@ Put exact files/lines, confidence, and detailed verification after this plain-la
 - Omit repetitive QA cards, full command logs, full execution-evidence tables, renderer details, and supporting-file instructions from the Standard PDF.
 - Keep source references once per finding or vibe-coding indicator instead of repeating them under every summary.
 - When papers are supplied, cite the relevant paper page or section once per material claim. Do not reproduce long passages or inflate the PDF with a chapter-by-chapter summary.
+- Cite the research source supporting each disputed or non-obvious domain expectation. A short shared citation may support several related capabilities; do not repeat full URLs in every row.
 
 ## Finding format
 

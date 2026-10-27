@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Doughnut Disturb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="dashboard">
+    <div id="appShell"></div>
+    <main class="main-content" id="mainContent">
+        <div class="page-heading">
+            <div>
+                <span class="eyebrow">OVERVIEW</span>
+                <h1>Dashboard</h1>
+                <p>Welcome back. Here is today's management overview.</p>
+            </div>
+            <div class="date-pill"><span data-icon="calendar"></span><span id="todayDate"></span></div>
+        </div>
+
+        <section class="stat-grid" id="dashboardStats"></section>
+
+        <section class="dashboard-grid">
+            <article class="panel chart-panel">
+                <div class="panel-header">
+                    <div><h2>Attendance Overview</h2><p>Today's attendance distribution</p></div>
+                </div>
+                <div class="bar-chart" id="attendanceChart"></div>
+                <div class="legend-row" id="attendanceLegend"></div>
+            </article>
+
+            <article class="panel chart-panel">
+                <div class="panel-header">
+                    <div><h2>Payroll Overview</h2><p>Current payroll status</p></div>
+                </div>
+                <div class="donut-wrap">
+                    <div class="donut-chart" id="payrollDonut"><div><strong id="payrollPaidPct">0%</strong><span>Paid</span></div></div>
+                    <div class="donut-list" id="payrollLegend"></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="dashboard-grid lower single-dashboard-panel">
+            <article class="panel">
+                <div class="panel-header">
+                    <div><h2>Employee Overview</h2><p>Current workforce status</p></div>
+                    <a class="panel-link" href="employees.html">View employees →</a>
+                </div>
+                <div class="mini-metrics" id="employeeOverview"></div>
+            </article>
+        </section>
+
+        <section class="dashboard-grid lower">
+            <article class="panel">
+                <div class="panel-header">
+                    <div><h2>Quick Actions</h2><p>Start the most common management workflows</p></div>
+                </div>
+                <div class="mini-metrics" id="quickActions"></div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-header">
+                    <div><h2>Recent Activities</h2><p>Latest system events</p></div>
+                </div>
+                <div class="activity-list" id="recentActivities"></div>
+            </article>
+        </section>
+    </main>
+    <div id="modalRoot"></div>
+    <div id="toastRoot"></div>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

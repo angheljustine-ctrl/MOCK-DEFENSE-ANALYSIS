@@ -1,0 +1,13 @@
+flowchart TD
+ A([Start]) --> B[/Login credentials/]
+ B --> C{Match and Approved?}
+ C -- No --> D[/Error/]
+ D -- Retry --> B
+ C -- Yes --> E[Save session role]
+ E -- Employee --> F[Clock / leave / own payslip UI]
+ E -- Admin or HR --> G[Records / review / payroll]
+ F --> H[(Browser localStorage)]
+ G --> H
+ H --> I[Remove session on logout]
+ I --> J([End])
+ 

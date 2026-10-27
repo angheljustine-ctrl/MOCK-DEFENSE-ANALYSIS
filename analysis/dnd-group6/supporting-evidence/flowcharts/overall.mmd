@@ -1,0 +1,10 @@
+flowchart LR
+ A([Open app]) --> B{Session valid?}
+ B -- No --> C[/Login or retry/]
+ C -- Retry --> B
+ B -- Yes --> D[Role-filtered menu]
+ D --> E[/Select module/]
+ E --> F[Validate and process]
+ F -- Error --> E
+ F -- Valid --> G[(Browser localStorage)]
+ G --> H[/Update screen or report/]

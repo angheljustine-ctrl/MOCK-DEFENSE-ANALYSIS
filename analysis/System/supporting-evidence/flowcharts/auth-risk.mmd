@@ -1,0 +1,16 @@
+flowchart TD
+    A([Open app]) --> B[Restore accounts from localStorage or defaults]
+    B --> C[/Submit credentials/]
+    C --> D{Hash matches browser account object?}
+    D -- No --> E[/Reject login/]
+    E --> C
+    D -- Yes --> F[Set currentUsername and sessionUsername]
+    F --> G[Hide navigation not listed in allowedPages]
+    G --> H{User stays in normal UI?}
+    H -- Yes --> I[/Staff sees Dashboard, POS, Sales/]
+    I --> J([Normal use])
+    H -- No --> K[/Edit localStorage or expose hidden DOM/]
+    K --> L[Reload or invoke privileged UI code]
+    L --> M{Server authorization check?}
+    M -- None --> N[/Privileged pages and actions become available/]
+    N --> O([Authorization bypass])

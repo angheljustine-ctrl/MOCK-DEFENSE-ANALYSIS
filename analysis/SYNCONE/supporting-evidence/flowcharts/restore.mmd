@@ -1,0 +1,6 @@
+flowchart TD
+A([Choose backup]) --> B[/Read JSON/] --> C{Parses as array?}
+C -- No --> D[/Reject or catch error/]
+C -- Yes --> E{Confirm replace?}
+E -- No --> F([Cancel; retain records])
+E -- Yes --> G[(Replace and save first)] --> H[Render; may fail]

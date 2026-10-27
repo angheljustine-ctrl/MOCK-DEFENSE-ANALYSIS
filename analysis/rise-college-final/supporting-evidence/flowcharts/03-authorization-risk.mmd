@@ -1,0 +1,25 @@
+flowchart TD
+    A([Start]) --> B[/User enters a dashboard URL/]
+    B --> C[Read student-portal-session from localStorage]
+    C --> D{Dashboard type}
+    D -- Accounting --> E{Session role is accounting-staff?}
+    E -- No --> F[/Redirect to public home/]
+    E -- Yes --> G[Render accounting dashboard]
+    D -- Eight other staff dashboards --> H{Session missing or wrong role?}
+    H -- Yes --> I[Empty guard body does nothing]
+    H -- No --> J[Continue normally]
+    I --> K[Render protected-looking dashboard]
+    J --> K
+    D -- Student --> L{Session exists?}
+    L -- No --> M[Create student session automatically]
+    L -- Yes --> N{Role is student?}
+    N -- No --> F
+    N -- Yes --> O[Render student SIS or dashboard]
+    M --> O
+    C --> P{Attacker edits local role value?}
+    P -- Yes --> Q[Client check accepts forged role]
+    Q --> G
+    F --> R([End])
+    G --> R
+    K --> R
+    O --> R

@@ -1,0 +1,438 @@
+P1: EDUCORE TECHNOLOGIES
+P2: STUDENT INFORMATION MANAGEMENT SYSTEM
+P3: WEB SYSTEM TECHNOLOGIES WITH JAVASCRIPT
+P4: SYSTEM DOCUMENTATION
+P7: EduCore Technologies (SIMS)
+P8: Prepared by:
+P9: Biscarra, Jonathan
+P10: Carzano, Janrey
+P11: Cortez, Eunice Mae
+P12: Daguit, John Kenneth
+P13: Gamonido, Laurence
+P14: Hafalla, Christian Kemuel D.
+P15: Loterte, Andy
+P16: Macapobre, Gerald
+P17: Madrid, Juan Antonio
+P18: Sese, Jaizierine
+P19: Course/Year: BSIT 3B
+P20: Subject: Web System Technologies with JavaScript
+P21: Instructor: Emanuel Gumayagay
+P22: Academic Year: 2026-2027
+P23: INTRODUCTION
+P24: The EduCore Technologies (SIMS) is a web-based information management system developed as part of the requirements for the subject Web System Technologies with JavaScript. It is a system that will help organize and manage important academic information like student record, teacher record, subjects, classes, enrollment, attendance, grades, announcements and reports.
+P25: The system is designed to address the need of a centralized and organized platform from where school administrators, teachers and students can access information according to their respective roles. EduCore provides a web-based structured interface to manage and view academic information in case of manual or separate file records.
+P26: The system demonstrates how JavaScript can be used to build an interactive web application. In JavaScript, functions like form validation, CRUD, login authentication, manipulation of data, dynamic content creation, search, notifications, modal dialog, user interaction etc. are taken care of. EduCore is designed for three main types of users: Administrators, Teachers and Students. Each user’s role determines what permissions they have and what system features they can access.
+P28: PROJECT OVERVIEW
+P29: System Name
+P30: EduCore Technologies (SIMS)
+P31: Description of System
+P32:     EduCore SIMS is a role-based web system designed to manage academic and administrative information in a school environment.
+P33:      The system consists of an Admin interface for managing students, teachers, subjects, classes, enrollment, announcements, orders, reports, system settings, and the school store. Teachers can view the subjects and classes they are assigned to, manage students, take attendance and record grades, view announcements, and manage their account settings. Students can view their academic information and other features available to their account.
+P34:      The system uses HTML, CSS, and JavaScript as its primary web technologies. Data is stored using the browser's Local Storage, allowing the system to operate without requiring a traditional server-side database.
+P35:     The system also uses role-based access control to ensure that users are directed to the appropriate pages and functions according to their account type.
+P37: Statement of problem
+P38: Manual or distributed file storage can make it difficult to manage student and academic records. Searching for records, updating information, managing classes, recording grades, and communicating announcements can be time-consuming and labor intensive.
+P39: There is also a need to provide easier access to academic information for teachers and students while restricting administrative functions to authorized users.
+P40: Hence the project addresses the need for an organized web-based system to manage the academic records with different functionalities based on user roles.
+P41: Proposed Solution
+P42: The proposed solution is the development of EduCore SIMS, a web-based student information management system that centralizes important academic records into one platform.
+P43: The system provides CRUD operations for records, role-based login, searchable tables, class and subject management, attendance and grade management, announcements, reports, and account settings.
+P44: JavaScript is used to dynamically process information, validate forms, update records, display notifications, control modals, manage authentication, and interact with Local Storage.
+P46: PROJECT GOAL AND OBJECTIVES
+P47: Project Goal
+P48: The main goal of this project is to develop a functional and interactive web-based Student Information Management System that allows school administrators, teachers, and students to manage and access academic information efficiently. The system aims to demonstrate the practical use of HTML, CSS, and JavaScript in developing a role-based web application capable of handling records, user interactions, data management, academic information, announcements, and system preferences.
+P49: Specific Objectives
+P50: The project aims to:
+P51: Develop a web-based Student Information Management System for school academic records.
+P52: Provide secure role-based login for administrators, teachers, and students.
+P53: Allow administrators to manage student and teacher records.
+P54: Allow administrators to manage subjects and classes.
+P55: Provide enrollment management for students.
+P56: Allow teachers to access their assigned subjects and classes.
+P57: Allow teachers to manage student attendance.
+P58: Allow teachers to enter and manage student grades.
+P59: Provide an announcement system for communicating important information.
+P60: Provide search functionality for easier record retrieval.
+P61: Implement Create, Read, Update, and Delete (CRUD) operations.
+P62: Implement JavaScript-based form validation and interactive features.
+P63: Store system data using browser Local Storage.
+P64: Provide reports and summary information for administrators.
+P65: Provide account and system settings for users.
+P66: Implement light and dark mode preferences where applicable.
+P67: Test the system according to its required functions and user roles.
+P69: PROJECT SCOPE
+P70:       EduCore SIMS focuses on the management of school-related academic and administrative information through a web-based interface. The project covers the management of records and information that are commonly used by administrators, teachers, and students.
+P71:       The system includes user authentication, academic record management, class and subject management, enrollment, attendance, grades, announcements, school store and order management, reports, and account settings.
+P73: Users Who Can Access the System
+P74: The system provides access for:
+P75: Administrator
+P76: Teacher
+P77: Student
+P78: Each role has different permissions and available modules.
+P79: Data Handled
+P80: The system handles information such as:
+P81: Student information
+P82: Teacher information
+P83: User credentials
+P84: Subject information
+P85: Class information
+P86: Enrollment records
+P87: Attendance records
+P88: Grade records
+P89: Announcement information
+P90: Report data
+P91: User settings
+P92: Store information
+P93: Order Information
+P94: System-related information
+P95: Main Pages/Modules
+P96: The system contains modules such as:
+P97: Login
+P98: Dashboard
+P99: Students
+P100: Teachers
+P101: Subjects
+P102: Classes
+P103: Enrollment
+P104: Announcements
+P105: Orders
+P106: Reports
+P107: Profile
+P108: My Subjects
+P109: My Classes
+P110: My Student
+P111: Attendance
+P112: Grades
+P113: Settings
+P114: JavaScript Functions Implemented
+P115: JavaScript is used for:
+P116: Login authentication
+P117: Role-based access control
+P118: CRUD operations
+P119: Form validation
+P120: Search and filtering
+P121: Dynamic table generation
+P122: Modal windows
+P123: Delete confirmation dialog
+P124: Toast notifications
+P125: Data storage and retrieval
+P126: Password changes
+P127: Announcement management
+P128: Grade management
+P129: Attendance management
+P130: Store and order management
+P131: Dynamic dashboard information
+P133: INCLUDED FEATURES
+P134: User Registration and Account Management
+P135: The system allows authorized users to have accounts containing their personal and login information.
+P136: User Login
+P137: Users can log in using their registered credentials. The system determines the user's role and provides access to the appropriate interface.
+P138: Dashboard
+P139: The dashboard provides a summary of important system information and allows users to navigate to available modules.
+P140: Student Management
+P141: Administrators can add, view, update, search, and delete student records.
+P142: Teacher Management
+P143: Administrators can manage teacher information including employee numbers, names, usernames, and other account details.
+P144: Subject Management
+P145: Administrators can create and manage subjects and assign teachers to subjects.
+P146: Class Management
+P147: Administrators can create classes based on course, year level, section, subject, school year, semester, room, and schedule.
+P148: The class system can identify the teacher assigned to the selected subject based on the teacher assignment stored in the subject record.
+P149: Enrollment
+P150: The enrollment module manages student enrollment information and connects students with their appropriate academic classes.
+P151: Attendance
+P152: Teachers can manage attendance records for students assigned to their classes.
+P153: Grades
+P154: Teachers can enter and manage academic grades for students in their assigned classes and subjects.
+P155: Announcements
+P156: Administrators can create announcements and specify their intended audience, such as all users, students, or teachers.
+P157: Teachers and students can view announcements available to them.
+P158: School Store and Orders
+P159: Administrators can manage school store items and related order information through the system. The store module allows administrators to organize available products and manage orders within the administrative interface.
+P161: Search
+P162: Search fields allow users to quickly find records by relevant information such as names, subjects, classes, or announcements.
+P163: Reports
+P164: The reports module provides summarized academic and administrative information.
+P165: Settings
+P166: Users can manage available account and system preferences, including password changes and notification settings.
+P168: PROJECT LIMITATIONS
+P169: The following limitations apply to the current version of EduCore SIMS:
+P170: The system is designed primarily for web browsers.
+P171: The project does not include a dedicated mobile application.
+P172: The system currently uses browser Local Storage instead of a server-based database.
+P173: Data stored in Local Storage is limited to the browser and device where the system is being used.
+P174: Clearing browser storage may remove stored system data.
+P175: The system does not currently provide a cloud-based synchronization system.
+P176: The system does not include advanced server-side security.
+P177: The system does not include an external email notification service.
+P178: The system does not include real-time communication between users.
+P179: Administrative functions are restricted to authorized administrator accounts.
+P180: Teacher functions are restricted to authorized teacher accounts.
+P181: Student functions are restricted to authorized student accounts.
+P182: The system is intended primarily as an academic project and prototype rather than a production-ready school information system.
+P184: TARGET USERS
+P185: Administrator
+P186: The administrator is responsible for managing the main information within the system.
+P187: The administrator can manage:
+P188: Students
+P189: Teachers
+P190: Subjects
+P191: Classes
+P192: Enrollment
+P193: Announcements
+P194: Reports
+P195: Orders
+P196: School Store
+P197: System settings
+P198: The administrator has the highest level of access within the system.
+P199: Teacher
+P200: Teachers can access academic information related to their assigned classes and subjects.
+P201: Teacher functions include:
+P202: Viewing their profile
+P203: Viewing assigned subjects
+P204: Viewing assigned classes
+P205: Viewing assigned students
+P206: Managing attendance
+P207: Managing grades
+P208: Viewing announcements
+P209: Managing account settings
+P210: Changing their password
+P211: Managing notification preferences
+P213:  Student
+P214: Students can access their available academic information.
+P215: Depending on the implemented modules, students can view information such as:
+P216: Profile information
+P217: Enrolled classes
+P218: Subjects
+P219: Grades
+P220: Attendance
+P221: Announcements
+P223: SYSTEM FEATURES
+P224: User Login
+P225: Allows registered users to enter their username and password. The system checks the credentials and identifies the user's role before granting access.
+P226: Role-Based Access
+P227: The system separates users according to their roles. Administrators, teachers, and students receive different menus and permissions.
+P228: Student Management
+P229: Allows administrators to create, view, update, search, and delete student records.
+P230: Teacher Management
+P231: Allows administrators to manage teacher accounts and information.
+P232: Subject Management
+P233: Allows administrators to create subjects and assign teachers to specific subjects.
+P234: Class Management
+P235: Allows administrators to create classes based on course, year level, section, subject, teacher, school year, semester, room, and schedule.
+P236: Enrollment Management
+P237: Allows the system to manage student enrollment and class assignments.
+P238: Attendance Management
+P239: Allows teachers to record and manage student attendance.
+P240: Grade Management
+P241: Allows teachers to enter and manage student grades for their assigned subjects.
+P242: Announcement Management
+P243: Allows administrators to create announcements and determine the intended audience.
+P244: Announcements can contain:
+P245: Title
+P246: Content
+P247: Audience
+P248: Priority
+P249: Status
+P250: Date created
+P251: Teachers and students can view announcements intended for them.
+P252: Search and Filtering
+P253: Allows users to search records by entering keywords. JavaScript dynamically filters the displayed records without requiring the page to reload.
+P254: CRUD Operations
+P255: The system implements CRUD operations:
+P256: Create - Add new records.
+P257: Read - Display existing records.
+P258: Update - Modify existing records.
+P259: Delete - Remove records after confirmation.
+P260: Form Validation
+P261: JavaScript validates required fields and checks user input before information is saved.
+P262: Modal Windows
+P263: Modal windows are used for adding and editing information without leaving the current page.
+P264: Toast Notifications
+P265: The system provides visual notifications when actions such as adding, updating, or deleting records are completed.
+P266: Reports
+P267: The reports module presents summarized system information that can assist administrators in monitoring school records.
+P268: School Store and Order Management
+P269: The system provides a school store feature accessible to administrators for managing store items and orders. Administrators can organize available products and manage order related information within the system.
+P270: Account Settings
+P271: Users can manage available account preferences and change their passwords.
+P272: Notification Settings
+P273: Teachers can enable or disable announcement notifications through their settings.
+P274: SYSTEM REQUIREMENTS
+P275: Hardware Requirements
+P276: The minimum hardware requirements for developing and running the system are:
+P278: Software Requirements
+P280: Because the current system uses browser Local Storage, a traditional database server such as MySQL is not required for the core functions of the project.
+P281: SYSTEM DESIGN
+P282: System Flowchart
+P284: System Flowchart Explanation
+P285: The system begins with the opening or loading page. The user is directed to the login page where they enter their credentials.
+P286: The system validates the entered username and password. If the credentials are incorrect, the user remains on the login page and receives an error message.
+P287: If the credentials are correct, the system identifies the user's role and redirects the user to the appropriate dashboard.
+P288: The user can then access the modules available for their role. Data entered into the system is processed using JavaScript and stored in Local Storage.
+P289: When the user performs an action such as adding, editing, searching, or deleting information, JavaScript processes the action and dynamically updates the displayed information.
+P290: The user can continue using the system until they choose to log out.
+P292: Use Case Diagram
+P293: Use Case Explanation
+P294: The EduCore SIMS system has three primary actors:
+P295: Administrator
+P296: The Administrator can:
+P297: Log in
+P298: Manage students
+P299: Manage teachers
+P300: Manage subjects
+P301: Manage classes
+P302: Manage enrollment
+P303: Manage announcements
+P304: View reports
+P305: Manage school store and orders
+P306: Manage system settings
+P307: Log out
+P308: Teacher
+P309: The Teacher can:
+P310: Log in
+P311: View profile
+P312: View assigned subjects
+P313: View assigned classes
+P314: View assigned students
+P315: Manage attendance
+P316: Manage grades
+P317: View announcements
+P318: Manage account settings
+P319: Change password
+P320: Log out
+P322: Student
+P323: The Student can:
+P324: Log in
+P325: View profile
+P326: View classes
+P327: View subjects
+P328: View grades
+P329: View attendance
+P330: View announcements
+P331: Able to order 
+P332: Log out
+P333: SYSTEM FLOW
+P334: The general operation of EduCore SIMS follows these steps:
+P335: Step 1 - System Opening
+P336: The user opens the EduCore system. The opening page provides a short introductory transition before directing the user to the login page.
+P337: Step 2 - Login
+P338: The user enters their username and password.
+P339: Step 3 - Authentication
+P340: JavaScript checks the stored account information and determines whether the credentials are valid.
+P341: Step 4 - Role Identification
+P342: After successful authentication, the system determines whether the user is an Administrator, Teacher, or Student.
+P343: Step 5 - Dashboard
+P344: The user is redirected to the dashboard associated with their role.
+P345: Step 6 - Module Access
+P346: The user selects a module from the sidebar.
+P347: Step 7 - Data Processing
+P348: When a user performs an operation, JavaScript processes the request and updates the information stored in Local Storage.
+P349: Step 8 - Record Display
+P350: The updated information is dynamically displayed in tables or other interface components.
+P351: Step 9 - Notifications
+P352: The system displays toast messages or confirmation dialog to inform the user about completed or pending actions.
+P353: Step 10 - Logout
+P354: When the user finishes using the system, they can select the Logout button. The system ends the current session and redirects the user to the login page.
+P356: USER INTERFACE DESIGN
+P357: Administrator Dashboard
+P358: The Administrator Dashboard provides a summary of important school information and provides navigation to administrative modules.
+P359: Main features:
+P360: Student summary
+P361: Teacher summary
+P362: Academic information
+P363: Navigation sidebar
+P364: Reports and system statistics
+P365: Student Management
+P366: The Student Management page allows administrators to manage student records.
+P367: Main controls:
+P368: Add Student
+P369: Search Student
+P370: Edit Student
+P371: Delete Student
+P372: Student information table
+P373: Teacher Management
+P374: The Teacher Management page allows administrators to manage teacher records and account information.
+P375: Main controls:
+P376: Add Teacher
+P377: Search Teacher
+P378: Edit Teacher
+P379: Delete Teacher
+P380: Teacher information table
+P381: Subject Management
+P382: The Subject Management page allows administrators to create and manage academic subjects.
+P383: Administrators can also assign a teacher to a subject. The teacher assignment can then be associated with classes using that subject.
+P384: Class Management
+P385: The Class Management page allows administrators to create classes based on course, year level, section, subject, school year, semester, room, and schedule.
+P386: The system can identify the teacher associated with the selected subject, reducing unnecessary duplicate teacher selection when the teacher assignment already exists in the subject record.
+P387: Enrollment
+P388: The Enrollment page is used to manage student enrollment and class assignments.
+P389: Announcement Management
+P390: The Announcement Management page allows administrators to create and manage announcements.
+P391: Administrators can specify:
+P392: Announcement title
+P393: Announcement content
+P394: Audience
+P395: Priority
+P396: Status
+P397: Date created
+P398: Teacher Dashboard
+P399: The Teacher Dashboard provides teachers with access to academic functions related to their assigned classes and subjects.
+P400: Teacher Grades
+P401: The Grades page allows teachers to enter and manage academic grades for students in their assigned subjects and classes.
+P402: Teacher Attendance
+P403: The Attendance page allows teachers to record and manage student attendance.
+P404: Teacher Announcements
+P405: The Teacher Announcements page allows teachers to view announcements intended for them.
+P406: Announcements can be selected to view the complete message and additional information.
+P407: Teacher Settings
+P408: The Teacher Settings page allows teachers to manage account and system preferences.
+P409: The page includes:
+P410: Employee Number
+P411: Username
+P412: First Name
+P413: Last Name
+P414: Current Password
+P415: New Password
+P416: Confirm New Password
+P417: Announcement Notifications
+P418: Student Dashboard
+P419: The Student Dashboard provides students with access to their academic information and available student modules.
+P421: CONCLUSION
+P422: The EduCore Technologies (SIMS) was successfully developed as a web-based academic information management system using HTML, CSS, and JavaScript.
+P423: The project provides separate interfaces for administrators, teachers, and students. It includes important functions such as user authentication, student management, teacher management, subject management, class management, enrollment, attendance, grades, announcements, reports, search, CRUD operations, and account settings.
+P424: The project's objectives were achieved by implementing interactive JavaScript functionality throughout the system. JavaScript played an important role in validating forms, processing user actions, managing authentication, manipulating records, filtering information, controlling modals, displaying notifications, and storing data through Local Storage.
+P425: The development of EduCore SIMS also provided practical experience in designing user interfaces, organizing web pages, implementing role-based access, handling data, and creating interactive web applications.
+P426: Although the current system has limitations such as relying on browser Local Storage and not having a server-side database, it provides a functional foundation for a Student Information Management System.
+P427: Future improvements may include:
+P428: Integration with a server-side database.
+P429: Cloud-based data synchronization.
+P430: Improved authentication and security.
+P431: Password encryption and stronger security measures.
+P432: Online student registration.
+P433: Email and SMS notifications.
+P434: Online grade viewing and submission.
+P435: Improved reporting and data visualization.
+P436: Mobile application support.
+P437: Automated backups.
+P438: Multi-school or multi-campus support.
+P439: Overall, EduCore SIMS demonstrates how JavaScript and other web technologies can be combined to create an interactive and organized system for managing academic information.
+TABLE 1
+HARDWARE | MINIMUM REQUIREMENT
+Processor | Intel Core i3 or equivalent
+RAM | 4 GB
+Storage | At least 500 MB available space
+Display | 1366 × 768 resolution
+Keyboard | Standard Keyboard
+Mouse | Standard Mouse
+Internet | Not required for the core Local Storage functions
+TABLE 2
+SOFTWARE | REQUIREMENT
+Operating System | Windows10/11 or equivalent
+Web Browser | Google Chrome, Mozilla Firefox , or equivalent
+Code Editor | Visual Studio Code
+Programming Language | JavaScript
+Markup | HTML5
+Styling | CCS3
+Data Storage | Browser Local Storage
+Development Tools | Browser Developer Tools

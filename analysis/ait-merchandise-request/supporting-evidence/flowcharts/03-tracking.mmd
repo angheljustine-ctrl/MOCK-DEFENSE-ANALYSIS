@@ -1,0 +1,13 @@
+flowchart TD
+A([Start]) --> B[/Enter request ID, no login required/]
+B --> C{ID found?}
+C -- No --> D[/Not found or retry/]
+D -- Retry --> B
+C -- Yes --> E[/Display status/]
+E --> F{Refresh clicked?}
+F -- No --> G([End])
+F -- Yes, no auth check --> H[Advance one stage]
+H --> I[(Attempt local save)]
+I --> J{Saved?}
+J -- Yes --> K[/Display advanced status/]
+J -- No, still returns object --> K

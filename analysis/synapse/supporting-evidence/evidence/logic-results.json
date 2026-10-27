@@ -1,0 +1,125 @@
+{
+  "syntax": "All inline scripts and app.js parsed",
+  "results": [
+    {
+      "id": "Q01",
+      "name": "Return sold one, return one",
+      "expected": "stock=5; returns=1",
+      "actual": "stock=5; returns=1",
+      "status": "Passed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q02",
+      "name": "Return zero quantity",
+      "expected": "stock=4; returns=0",
+      "actual": "stock=4; returns=0",
+      "status": "Passed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q03",
+      "name": "Return sold one, request five",
+      "expected": "stock=4; returns=0",
+      "actual": "stock=9; returns=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q04",
+      "name": "Same sold item returned twice",
+      "expected": "stock=5; returns=1",
+      "actual": "stock=6; returns=2",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q05",
+      "name": "Negative refund",
+      "expected": "returns=0",
+      "actual": "returns=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q06",
+      "name": "Refund exceeds sale total",
+      "expected": "returns=0",
+      "actual": "returns=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q07",
+      "name": "Exchange insufficient destination stock",
+      "expected": "exchanges=0",
+      "actual": "exchanges=0",
+      "status": "Passed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q08",
+      "name": "Exchange more than originally sold",
+      "expected": "exchanges=0",
+      "actual": "exchanges=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q09",
+      "name": "Checkout rechecks reduced stock",
+      "expected": "stock=1; sales=0",
+      "actual": "stock=-1; sales=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q10",
+      "name": "Cash underpayment",
+      "expected": "sales=0",
+      "actual": "sales=0",
+      "status": "Passed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q11",
+      "name": "GCash missing confirmation/reference",
+      "expected": "sales=0",
+      "actual": "sales=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q12",
+      "name": "Checkout storage write failure rolls back sale",
+      "expected": "stock=5; sales=0",
+      "actual": "stock=5; sales=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q13",
+      "name": "Positive cash sale deducts stock and stores details",
+      "expected": "stock=4; sales=1; items=1; movements=1",
+      "actual": "stock=4; sales=1; items=1; movements=1",
+      "status": "Passed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q14",
+      "name": "Product price negative rejected at handler",
+      "expected": "products=0",
+      "actual": "products=1",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    },
+    {
+      "id": "Q15",
+      "name": "Editing user preserves unique usernames",
+      "expected": "unique=true",
+      "actual": "unique=false",
+      "status": "Failed",
+      "method": "Extracted original JavaScript in Node VM; in-memory storage/DOM mocks, not full browser E2E"
+    }
+  ]
+}

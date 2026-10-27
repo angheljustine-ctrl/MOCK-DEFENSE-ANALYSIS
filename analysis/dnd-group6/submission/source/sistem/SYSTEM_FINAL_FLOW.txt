@@ -1,0 +1,29 @@
+DOUGHNUT DISTURB MANAGEMENT SYSTEM - FINAL FLOW
+
+LOGIN
+Username or Email + Password -> Dashboard
+
+FORGOT PASSWORD
+Forgot Password -> Username or Email -> Account Found -> New Password -> Confirm New Password -> Reset Password -> Back to Login
+
+Recovery Security, Recovery Key, Recovery Requests, Recovery Codes and Admin Recovery Approval are intentionally removed from this frontend prototype.
+
+MAIN BUSINESS FLOW
+Dashboard -> Employees -> Attendance -> Payroll System
+Products -> Inventory
+
+ADMINISTRATION
+Admin Management -> Create Account -> System Information -> Settings
+
+SETTINGS
+Appearance -> Profile -> Change Password
+
+ROLES
+Admin: full management access.
+Crew: dashboard, employees, attendance, payroll and system information; view-only.
+
+REAL-TIME HEADER
+Philippine local time/date is displayed beside Notifications and updates every second.
+
+SECURITY LIMITATION
+This is a frontend/localStorage prototype. Passwords and authorization are not production-secure. Production deployment should move authentication, password hashing, authorization and recovery to a server/database.

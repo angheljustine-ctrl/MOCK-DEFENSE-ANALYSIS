@@ -1,0 +1,19 @@
+flowchart TD
+    A([Start]) --> B[/Open SLA-SIMS page/]
+    B --> C{Session object in localStorage?}
+    C -- No --> D[/Show login page/]
+    D --> E[Compare email and plaintext password with local users]
+    E --> F{Match?}
+    F -- No --> G[/Show warning or 60-second browser lock/]
+    G --> D
+    F -- Yes --> H[Save full user object as browser session]
+    C -- Yes --> I[Load requested page]
+    H --> I
+    I --> J[Hide navigation and forms by role]
+    J --> K[/User views or edits module/]
+    K --> L{Write action?}
+    L -- No --> M[(Read browser localStorage)]
+    L -- Yes --> N[(Overwrite browser localStorage array)]
+    M --> O[/Render dashboard, table, or report/]
+    N --> O
+    O --> P([End])

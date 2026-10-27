@@ -1,0 +1,125 @@
+{
+  "scope": "Synthetic in-memory VM only; original source unchanged",
+  "results": [
+    {
+      "id": "T01",
+      "name": "Cash sale happy path",
+      "expected": "1 sale, stock 4",
+      "status": "Passed",
+      "actual": "sales=1, stock=4",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T02",
+      "name": "Short payment rejected",
+      "expected": "No sale, stock unchanged",
+      "status": "Passed",
+      "actual": "sales=0, stock=5; short-payment notification",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T03",
+      "name": "Stale cart stock",
+      "expected": "Reject qty 5 against live stock 1",
+      "status": "Failed",
+      "actual": "5-unit sale accepted against 1 live unit; stock clamped to 0",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T04",
+      "name": "Product write fails after sale",
+      "expected": "Rollback sale or reject without success",
+      "status": "Failed",
+      "actual": "sale persisted, stock still 5, success notification emitted",
+      "kind": "Isolated function runtime / injected storage failure"
+    },
+    {
+      "id": "T05",
+      "name": "Discounted full refund",
+      "expected": "Refund 80 actually paid",
+      "status": "Failed",
+      "actual": "paid=80, refund=100, remaining total=0",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T06",
+      "name": "Refund then Inventory stock-in",
+      "expected": "Return stock once, final stock 1",
+      "status": "Failed",
+      "actual": "POS restored to 1; pending Inventory +1 raised stock to 2",
+      "kind": "Isolated cross-module runtime"
+    },
+    {
+      "id": "T07",
+      "name": "Forged role and session",
+      "expected": "Reject unissued session / privileged role",
+      "status": "Failed",
+      "actual": "unissued session without token or user record accepted for system_management.html",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T08",
+      "name": "Disabled active session",
+      "expected": "Reject disabled account session",
+      "status": "Failed",
+      "actual": "disabled stored account still has valid active session",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T09",
+      "name": "Crypto unavailable",
+      "expected": "Fail closed; never reversible password storage",
+      "status": "Failed",
+      "actual": "FAKE__ fallback contains Base64-recoverable synthetic password",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T10",
+      "name": "Backup operational keys",
+      "expected": "Include remittances and refund-processing markers",
+      "status": "Failed",
+      "actual": "NB_DATA_KEYS omits nb_remittances and nb_refund_stock_done",
+      "kind": "Executed source/config check; no restore performed"
+    },
+    {
+      "id": "T11",
+      "name": "Per-product discount",
+      "expected": "Honor configured product discount or remove field",
+      "status": "Failed",
+      "actual": "product discount=20 but POS calculated discount=0 without nb_discounts rule",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T12",
+      "name": "Staff password policy",
+      "expected": "Reject one-character password",
+      "status": "Failed",
+      "actual": "Staff Management saved account with password length 1",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T13",
+      "name": "Expired perfume checkout",
+      "expected": "Block expired sale if sellability policy requires it",
+      "status": "Failed",
+      "actual": "expired perfume accepted; policy expectation is recommended, not explicit paper prohibition",
+      "kind": "Isolated function runtime"
+    },
+    {
+      "id": "T14",
+      "name": "Stored HTML in product name",
+      "expected": "Product name rendered as literal text",
+      "status": "Not Run",
+      "actual": "Code-evidenced unescaped POS HTML sink; browser execution not tested",
+      "kind": "Static review only"
+    },
+    {
+      "id": "T15",
+      "name": "Scanner, thermal print and two-display operation",
+      "expected": "Physical barcode, print and focus flow work together",
+      "status": "Blocked",
+      "actual": "Physical peripherals and business acceptance data unavailable",
+      "kind": "No hardware runtime"
+    }
+  ]
+}

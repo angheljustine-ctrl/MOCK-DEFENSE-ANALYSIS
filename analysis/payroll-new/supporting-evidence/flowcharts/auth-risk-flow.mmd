@@ -1,0 +1,15 @@
+flowchart TD
+    A([Start]) --> B[/Enter username and password/]
+    B --> C[(Read users and employees from localStorage)]
+    C --> D{Credentials match?}
+    D -- No --> E[/Invalid login/]
+    D -- Yes --> F{User active OR employee active?}
+    F -- No --> E
+    F -- Yes --> G[Write role-bearing session to localStorage]
+    G --> H{Role allowed by page?}
+    H -- No --> I[/Redirect by role/]
+    H -- Yes --> J[/Open protected page/]
+    K[/Alternative: edit localStorage directly/] --> G
+    E --> Z([End])
+    I --> Z
+    J --> Z

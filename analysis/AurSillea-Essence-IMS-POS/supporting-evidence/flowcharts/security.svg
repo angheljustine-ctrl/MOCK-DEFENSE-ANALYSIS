@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="510" height="190" preserveAspectRatio="xMinYMin meet" viewBox="0 0 510 190" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="510" height="190"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-190)" style="clip-path: url(#clip)">
+		<g transform="">
+			<polygon points="27 178, 160 178, 148 148, 15 148" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="57.488" y="163.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,326) scale(1,-1)">Enter credentials</text>
+			<polygon points="257.5 186, 325 162, 257.5 138, 190 162" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="226.044" y="162.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,324) scale(1,-1)">Fields + lock OK?</text>
+			<polygon points="377 177, 500 177, 488 145, 365 145" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="412.276" y="161.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,322) scale(1,-1)">Error / retry</text>
+			<rect x="185" y="66" width="145" height="32" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="217.04" y="82.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,164) scale(1,-1)">Verify active user hash</text>
+			<rect x="10" y="6" width="160" height="28" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<ellipse cx="90.0" cy="6.0" rx="80.0" ry="3.0" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<ellipse cx="90.0" cy="34.0" rx="80.0" ry="3.0" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="47.088" y="20.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,40) scale(1,-1)">Save logged user object</text>
+			<rect x="185" y="3" width="145" height="34" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="227.932" y="20.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,40) scale(1,-1)">Read stored role</text>
+			<rect x="365" y="3" width="135" height="34" rx="12" ry="12" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,95%,96%); fill-rule: evenodd;"/>
+			<text x="406.936" y="20.0" style="font-family: Helvetica; font-size: 8px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,40) scale(1,-1)">Role-based UI</text>
+			<path d="M 160,163 L 190,162 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="190 162, 185.6944 164.542, 185.5347 159.7504" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 325,162 L 365,161 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="365 161, 360.6734 163.506, 360.5535 158.7133" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="349.0" y="165.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,331) scale(1,-1)">No</text>
+			<path d="M 257.5,138 L 257.5,98 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="257.5 98, 259.8971 102.3879, 255.1029 102.3879" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="261.5" y="122.0" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,244) scale(1,-1)">Yes</text>
+			<path d="M 330,82 L 365,161 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="365 161, 361.0309 157.9592, 365.4143 156.0172" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="351.5" y="125.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,251) scale(1,-1)">Failed</text>
+			<path d="M 257.5,66 L 90,37 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="90 37, 94.73253 35.38657, 93.91465 40.11055" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<text x="177.75" y="55.5" style="font-family: Helvetica; font-size: 7px;fill: rgb(9%,23%,31%); stroke:none;" transform="translate(0,111) scale(1,-1)">Success</text>
+			<path d="M 170,20 L 185,20 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="185 20, 180.6121 22.39713, 180.6121 17.60287" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 330,20 L 365,20 Z" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="365 20, 360.6121 22.39713, 360.6121 17.60287" style="stroke: rgb(9%,23%,31%); stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,23%,31%); fill-rule: evenodd;"/>
+			<path d="M 432,177 L 432,185 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 432,185 L 87,185 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 87,185 L 87,178 Z" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="87 178, 84 183, 90 183" style="stroke: rgb(8%,49%,55%); stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,49%,55%); fill-rule: evenodd;"/>
+			<text x="332" y="185" style="font-family: Helvetica; font-size: 7px;fill: rgb(8%,49%,55%); stroke:none;" transform="translate(0,370) scale(1,-1)">Retry</text>
+		</g>
+	</g>
+</svg>

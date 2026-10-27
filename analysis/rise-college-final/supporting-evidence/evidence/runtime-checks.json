@@ -1,0 +1,18 @@
+{
+  "reviewDate": "2026-09-29",
+  "scope": "Local and non-destructive browser checks against an isolated Python HTTP server on 127.0.0.1:8765",
+  "checks": [
+    {"id":"RT-01","name":"Public homepage","status":"Confirmed","result":"Passed","detail":"index.html loaded and rendered navigation and content."},
+    {"id":"RT-02","name":"Unauthenticated IT dashboard","status":"Confirmed","result":"Failed secure expectation","detail":"it-admin.html rendered the full dashboard without a session."},
+    {"id":"RT-03","name":"Unauthenticated accounting dashboard","status":"Confirmed","result":"Passed limited expectation","detail":"accounting.html redirected to index.html."},
+    {"id":"RT-04","name":"Unauthenticated student portal","status":"Confirmed","result":"Failed secure expectation","detail":"student.html created a local student session and showed SIS onboarding."},
+    {"id":"RT-05","name":"Seeded president credential","status":"Confirmed","result":"Failed secure expectation","detail":"president@rise.edu with president123 opened president.html."},
+    {"id":"RT-06","name":"SIS required field","status":"Confirmed","result":"Passed limited expectation","detail":"Blank academicYear was blocked by browser validation."},
+    {"id":"RT-07","name":"Stored markup encoding","status":"Confirmed","result":"Failed secure expectation","detail":"A harmless B element stored in fullName became a live DOM element in My Profile."}
+  ],
+  "notPerformed": [
+    "No production or third-party service was contacted.",
+    "No destructive payload, password attack, broad fuzzing, dependency installation, data deletion, or submitted-source modification was performed.",
+    "No real student or staff data was used."
+  ]
+}

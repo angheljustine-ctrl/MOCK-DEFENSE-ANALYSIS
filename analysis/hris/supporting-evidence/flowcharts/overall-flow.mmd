@@ -1,0 +1,16 @@
+flowchart TD
+    A([Open HRIS]) --> B[seedIfEmpty]
+    B --> C[(Browser localStorage)]
+    C --> D[/Enter username and password/]
+    D --> E[Hash password and find local user]
+    E --> F{Credentials valid?}
+    F -- No --> G[/Show error or cooldown/]
+    G --> D
+    F -- Yes --> H[Write local session]
+    H --> I{Session key exists?}
+    I -- No --> D
+    I -- Yes --> J[Render shared layout and page module]
+    J --> K[/Employee, attendance, payroll, reports, settings actions/]
+    K --> C
+    C --> L[/Render result or success toast/]
+    L --> M([Continue or log out])

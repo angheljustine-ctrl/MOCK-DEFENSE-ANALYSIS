@@ -1,0 +1,16 @@
+flowchart TD
+    A([Start]) --> B{Entry path}
+    B -- Normal login --> C[/Enter username and password/]
+    C --> D[Compare plaintext values in localStorage]
+    D --> E{Match?}
+    E -- No --> F[/Show error/]
+    E -- Yes --> G[Write currentUser and role to localStorage]
+    B -- Direct admin URL --> H[Load admin page]
+    H --> I{Admin page guard present?}
+    I -- No --> J[Render dashboard and local records]
+    G --> J
+    J --> K{Server authorization check?}
+    K -- None --> L[(Browser localStorage remains source of truth)]
+    L --> M[/User can view or change payroll and HR data in that browser/]
+    M --> N([End])
+

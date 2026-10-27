@@ -1,0 +1,34 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+const require=createRequire(String.raw`C:\Users\justi\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules\playwright\package.json`);
+const {chromium}=require('playwright');
+const root=String.raw`C:\Users\justi\Downloads\Web-20261002T152358Z-1-001\Web\SIMSIMI`;
+const out=path.join(path.dirname(fileURLToPath(import.meta.url)),'evidence');
+const server=http.createServer((req,res)=>{const p=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!p.startsWith(root+path.sep)||!fs.existsSync(p)||!fs.statSync(p).isFile()){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.ico':'image/x-icon'})[path.extname(p)]||'application/octet-stream');res.end(fs.readFileSync(p));});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+let browser;
+try{
+ browser=await chromium.launch({executablePath:String.raw`C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`,headless:true});
+ const context=await browser.newContext({viewport:{width:1366,height:900}});
+ const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const base=`http://127.0.0.1:${server.address().port}`;
+ await page.goto(base+'/login.html');
+ const fixtures=['Alpha','Beta'].map((firstName,i)=>({id:'S'+i,studentNumber:'N'+i,firstName,lastName:'Test',username:'user'+i,password:'SyntheticOnly',role:'student',status:'Active',course:'BSIT',yearLevel:'1',section:'A'}));
+ await page.evaluate(students=>{Storage.save(STORAGE_KEYS.STUDENTS,students);Storage.save(STORAGE_KEYS.CURRENT_USER,{id:'ADM001',role:'admin'});},fixtures);
+ await page.goto(base+'/pages/Admin/students.html');
+ await page.locator('#searchStudent').fill('Beta');await page.locator('#searchStudent').press('a');await page.locator('#searchStudent').press('Backspace');
+ const displayed=await page.locator('tbody').innerText();assert.match(displayed,/Beta/);assert.doesNotMatch(displayed,/Alpha/);
+ await page.getByRole('button',{name:'Edit',exact:true}).click();
+ assert.equal(await page.locator('#studentFirstName').inputValue(),'Alpha');
+ await page.screenshot({path:path.join(out,'browser-filter-edit.png'),fullPage:true});
+ await page.evaluate(()=>{const s=Storage.get(STORAGE_KEYS.STUDENTS);s[0].firstName='<b data-review-marker="safe">ReviewMarker</b>';Storage.save(STORAGE_KEYS.STUDENTS,s);loadStudents('ReviewMarker')});
+ assert.equal(await page.locator('tbody b[data-review-marker="safe"]').count(),1);
+ const summary={environment:'Fresh headless Edge context, loopback read-only file server, synthetic browser-only records',filteredEdit:'Confirmed: Beta row opened Alpha form',htmlSink:'Confirmed: harmless stored bold markup was interpreted as HTML; script execution not tested',pageErrors:errors};
+ fs.writeFileSync(path.join(out,'browser-checks.json'),JSON.stringify(summary,null,2));
+ console.log(JSON.stringify(summary));
+ assert.equal(errors.length,0);
+}finally{if(browser)await browser.close();await new Promise(r=>server.close(r));}

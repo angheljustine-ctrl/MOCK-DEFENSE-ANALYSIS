@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#31546f"/></marker><style>.n{fill:#eef7fb;stroke:#125e8a;stroke-width:2}.d{fill:#fff7dd;stroke:#9a6b00;stroke-width:2}.s{fill:#e9f7ef;stroke:#1d7a46;stroke-width:2}.db{fill:#f4ecfb;stroke:#6d3a91;stroke-width:2}.bad{fill:#fdecec;stroke:#a61b1b;stroke-width:2}.t{font:16px 'Segoe UI',Arial;fill:#172033;text-anchor:middle}.sm{font:14px 'Segoe UI',Arial;fill:#172033;text-anchor:middle}.ln{stroke:#31546f;stroke-width:2;fill:none;marker-end:url(#a)}.dash{stroke:#a61b1b;stroke-width:2;stroke-dasharray:7 5;fill:none;marker-end:url(#a)}</style></defs>
+  <rect class="s" x="30" y="35" width="130" height="46" rx="23"/><text class="t" x="95" y="64">Start</text>
+  <path class="ln" d="M160 58 H220"/><path class="n" d="M240 30 H435 L415 86 H220 Z"/><text class="sm" x="328" y="55">Enter learner and</text><text class="sm" x="328" y="74">guardian fields</text>
+  <path class="ln" d="M435 58 H485"/><rect class="n" x="485" y="25" width="250" height="66"/><text class="sm" x="610" y="52">Validate required fields, positive age,</text><text class="sm" x="610" y="72">and 11-digit contact</text>
+  <path class="ln" d="M735 58 H790"/><polygon class="d" points="875,23 960,58 875,93 790,58"/><text class="t" x="875" y="64">Valid?</text>
+  <path class="ln" d="M875 93 V140 H610 V91"/><text class="sm" x="900" y="125">No: alert</text>
+  <path class="ln" d="M960 58 H1020 V150 H900"/><text class="sm" x="997" y="47">Yes</text><path class="n" d="M675 122 H900 L880 180 H655 Z"/><text class="sm" x="778" y="147">Show modal: fee 6,500,</text><text class="sm" x="778" y="166">discount 0</text>
+  <path class="ln" d="M778 180 V220"/><polygon class="d" points="778,220 870,260 778,300 686,260"/><text class="t" x="778" y="266">Save?</text>
+  <path class="ln" d="M686 260 H580"/><text class="sm" x="630" y="248">No</text><rect class="s" x="430" y="237" width="150" height="46" rx="23"/><text class="t" x="505" y="266">Cancel</text>
+  <path class="ln" d="M778 300 V340"/><text class="sm" x="802" y="323">Yes</text><path class="db" d="M675 340 C675 325 881 325 881 340 V395 C881 410 675 410 675 395 Z"/><ellipse class="db" cx="778" cy="340" rx="103" ry="15"/><text class="t" x="778" y="376">Save student</text>
+  <path class="ln" d="M778 410 V445"/><path class="db" d="M675 445 C675 430 881 430 881 445 V500 C881 515 675 515 675 500 Z"/><ellipse class="db" cx="778" cy="445" rx="103" ry="15"/><text class="sm" x="778" y="475">Add automatic 20% voucher</text>
+  <path class="ln" d="M778 515 V545"/><path class="db" d="M655 545 C655 530 901 530 901 545 V600 C901 615 655 615 655 600 Z"/><ellipse class="db" cx="778" cy="545" rx="123" ry="15"/><text class="sm" x="778" y="575">Add 5,200 enrollment payment</text>
+  <path class="dash" d="M675 370 H500"/><path class="dash" d="M675 475 H500"/><rect class="bad" x="240" y="430" width="260" height="75"/><text class="sm" x="370" y="458">If a later write fails:</text><text class="sm" x="370" y="480">partial learner/voucher/payment state</text>
+  <path class="ln" d="M655 575 H545 V585 H500"/><rect class="s" x="370" y="560" width="130" height="46" rx="23"/><text class="t" x="435" y="589">End</text>
+</svg>

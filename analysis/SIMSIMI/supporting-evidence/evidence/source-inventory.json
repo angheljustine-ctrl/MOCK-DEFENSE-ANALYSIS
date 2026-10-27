@@ -1,0 +1,647 @@
+[
+  {
+    "path": "css/admin-orders.css",
+    "bytes": 17925,
+    "sha256": "51f6d8d3bfb8793ec3dea56d6e68d5ad1ec7e000a6f3330cb55713140d5fdaa2"
+  },
+  {
+    "path": "css/admin-store.css",
+    "bytes": 16870,
+    "sha256": "49e074e35b6de325be30cd9123d4190e53c2f1805db3234ebaf81818288f44db"
+  },
+  {
+    "path": "css/announcements.css",
+    "bytes": 7204,
+    "sha256": "07053dd5c2621ce8d0e73306312cbf99ddce575d4367c069efd50d8dc1e92f68"
+  },
+  {
+    "path": "css/classes.css",
+    "bytes": 5699,
+    "sha256": "a69af11b7b1fb760bdebba766df2c0dadee5cbe26a14d9e7776a50d5d41e74dd"
+  },
+  {
+    "path": "css/components.css",
+    "bytes": 1188,
+    "sha256": "541a3e2ec71e7b378eb18be21a760b0dd9f5e120f5d1bcdf711b665e2c3d9867"
+  },
+  {
+    "path": "css/dashboard.css",
+    "bytes": 8040,
+    "sha256": "427beec8080b6385eebada8c23bc51181d0867f78244101388bea21c2fdaf248"
+  },
+  {
+    "path": "css/enrollment.css",
+    "bytes": 7456,
+    "sha256": "0cf7ffb81e12b267cb8dc9a888e477f3b8b9f11bd099d47d83f4bfcba8732fb5"
+  },
+  {
+    "path": "css/login.css",
+    "bytes": 3731,
+    "sha256": "39cc631fe4cf4b71638ac50faf32b63728e263f26b05ca5acf850b1cb6e563de"
+  },
+  {
+    "path": "css/my-attendance.css",
+    "bytes": 5778,
+    "sha256": "6256b3c3e037b9866e4890b87399671424be7bb761b2c6036ab67863774a8fce"
+  },
+  {
+    "path": "css/reports.css",
+    "bytes": 6264,
+    "sha256": "78b656d314be5770be8c43cf5faae8ab05af3df8222f7feedd989ea5d65b6277"
+  },
+  {
+    "path": "css/settings.css",
+    "bytes": 3310,
+    "sha256": "dd9c08fc35e3f3ef2e12febd74bc52111d7c2b8285005e37219b3b0efbf33820"
+  },
+  {
+    "path": "css/student-announcements.css",
+    "bytes": 13234,
+    "sha256": "725d951efaabf7ff68547e06d2d8025fdc117670d4aacdb3b619aac1171fde16"
+  },
+  {
+    "path": "css/student-dashboard.css",
+    "bytes": 7343,
+    "sha256": "ae46cda3f4a8ea4091d662789396c574a09af8e83107b7b63292ff2e1b1ae0d5"
+  },
+  {
+    "path": "css/student-grades.css",
+    "bytes": 9246,
+    "sha256": "8ffb724ef0ad8f21a34181e25b2975ffaa2a9c887d8fa85dec7f9196374791f4"
+  },
+  {
+    "path": "css/student-orders.css",
+    "bytes": 12887,
+    "sha256": "75fc469c01045d5590af2799bb44a17d9317e9678f3aae509924d1d8dfa4637b"
+  },
+  {
+    "path": "css/student-profile.css",
+    "bytes": 9280,
+    "sha256": "0c63b67bd6be55bdafab2301a2da5e7ef9f32dc62c32c6463682baf0f76df780"
+  },
+  {
+    "path": "css/student-store.css",
+    "bytes": 13803,
+    "sha256": "cfcdc610f08d2ba56700b5ba472457cd7bfc1f05d555197ada260f8074ea94c5"
+  },
+  {
+    "path": "css/student-subjects.css",
+    "bytes": 8194,
+    "sha256": "fa595526755424a9cf132ca6f8fcc27edb5793201486ee5d5c31114df5a7ff00"
+  },
+  {
+    "path": "css/students.css",
+    "bytes": 1607,
+    "sha256": "26185bf6f38f66024f2c611d20472bc4e081f6abd2997d7c8e8ef9d62c691367"
+  },
+  {
+    "path": "css/subjects.css",
+    "bytes": 1374,
+    "sha256": "3054b0f71120df68069ff3596d15b1921ea49ccd3bd5cb868630e6db419ff8a7"
+  },
+  {
+    "path": "css/teacher-announcements.css",
+    "bytes": 5349,
+    "sha256": "1942159bc5ed33bd3c3878085cf1318ecaf49792a9fdf1d693cacca6ff92e5ec"
+  },
+  {
+    "path": "css/teacher-attendances.css",
+    "bytes": 9972,
+    "sha256": "f6585181a978269c54ff2dc8b9eb852b9cb2ae9cfd1423e261e30054a1e791ce"
+  },
+  {
+    "path": "css/teacher-classes.css",
+    "bytes": 8490,
+    "sha256": "c61cf30f5a83ba1ca2f9ff7a1382101c99fead526dc736bea4f836967eb9514f"
+  },
+  {
+    "path": "css/teacher-dashboard.css",
+    "bytes": 7197,
+    "sha256": "d2162e3a2ef22ccaff3a15cac7ce2319bcdbfb90314284e15ba02d22cbe1d233"
+  },
+  {
+    "path": "css/teacher-grades.css",
+    "bytes": 9500,
+    "sha256": "fb4b0a830b672147ef7f879ec229972e2947c2ba00b572a221673dfd0ce8a124"
+  },
+  {
+    "path": "css/teacher-profile.css",
+    "bytes": 7151,
+    "sha256": "54c044b5b40a0b93de50437309f3fd7bfc81ad000a717ed8b033038d2b28c9cf"
+  },
+  {
+    "path": "css/teacher-settings.css",
+    "bytes": 4970,
+    "sha256": "0208aba571d9e5c4266a3dbc726379d508a90797ca246deb54475548a2c811ea"
+  },
+  {
+    "path": "css/teacher-students.css",
+    "bytes": 4775,
+    "sha256": "fd862a5a582b0d9c6eef35e9442467a797f9822302096399776c2a74d113b210"
+  },
+  {
+    "path": "css/teacher-subjects.css",
+    "bytes": 6921,
+    "sha256": "4b46216a9df00952574ceccf75753eca86329504da2ae804b571a06c9fb1acac"
+  },
+  {
+    "path": "css/teachers.css",
+    "bytes": 1374,
+    "sha256": "1026a4167535044edd663393b155d1890223570f8a103c57726dbe9c963aa307"
+  },
+  {
+    "path": "css/Untitled.txt",
+    "bytes": 5349,
+    "sha256": "1942159bc5ed33bd3c3878085cf1318ecaf49792a9fdf1d693cacca6ff92e5ec"
+  },
+  {
+    "path": "images/absent.png",
+    "bytes": 120741,
+    "sha256": "0499e1a0b512d17aaa17e5aa340fe6bb8f8447fe3abb83d2427b8b6623f0f37a"
+  },
+  {
+    "path": "images/announcement.png",
+    "bytes": 69745,
+    "sha256": "082894746013679fecd469b908072c1ea6f275bfbc38dc2a147dffc6893b9844"
+  },
+  {
+    "path": "images/attendance.png",
+    "bytes": 8032,
+    "sha256": "0c5df3c93558e0815265485c3515ec4ae94320011254792bfa86027083d9ed5f"
+  },
+  {
+    "path": "images/campus.jpg",
+    "bytes": 167298,
+    "sha256": "989321226a8b374e6d63e6bcc5cf18a871c9c398f7c1527593507cf914d54a60"
+  },
+  {
+    "path": "images/campus.png",
+    "bytes": 508783,
+    "sha256": "aa4d87112feeef1245b0b40282138685db506ca43f537d2b44b862931f6c6687"
+  },
+  {
+    "path": "images/classes.png",
+    "bytes": 77415,
+    "sha256": "cbdec9ab248b4446d7099406f7b36f6c02345ed74cfe9f4b0bcd7bf5387bfd1d"
+  },
+  {
+    "path": "images/dashboard.png",
+    "bytes": 111379,
+    "sha256": "ae0eae7aba87c22683f1e465f8eb9910da47650e8fbe1d0761f0a6c851607ea9"
+  },
+  {
+    "path": "images/enrollment.png",
+    "bytes": 95367,
+    "sha256": "014e07d040fef7a1b73004c0c458056266a7b48fe5a6fb0be53f332db7bc60d5"
+  },
+  {
+    "path": "images/failed.png",
+    "bytes": 7441,
+    "sha256": "1243af8e6efc4dd97fee965c1f753e22a24a83c9681e13c9b391ea71f439b224"
+  },
+  {
+    "path": "images/female.png",
+    "bytes": 192980,
+    "sha256": "9c1885053d4a776239601212ea0a90dc6755b2f16e2d84d0c7b0291dfce766a0"
+  },
+  {
+    "path": "images/grades.png",
+    "bytes": 7284,
+    "sha256": "d8f334988f43f9e02f496b64b2b83f785e18d580448fc54bac883c3700cbde4b"
+  },
+  {
+    "path": "images/idandlace.jpg",
+    "bytes": 59692,
+    "sha256": "0398eb9744783e8370c4c304c106ba4f28d073c43d0b5f5788c8d8a3cd07db1c"
+  },
+  {
+    "path": "images/late.png",
+    "bytes": 92637,
+    "sha256": "375b0f55634250aa1e03415b67239e4fe5a4e704085a38c307d9a563b30aa30e"
+  },
+  {
+    "path": "images/logo.png",
+    "bytes": 837142,
+    "sha256": "f8ebc24cd3871b90e39a20712dd8c774ecd0f7a0386ee42a859b50c6371a6ed2"
+  },
+  {
+    "path": "images/logonamin.ico",
+    "bytes": 432254,
+    "sha256": "314c3502befc0c583d520aa26819007abd163ce87ab1fed35e793d228f461601"
+  },
+  {
+    "path": "images/logout.png",
+    "bytes": 73928,
+    "sha256": "161c71561774c79da4f089a8449cf1a579e3d03ca840d1e3448bdcef90fae8d2"
+  },
+  {
+    "path": "images/male.png",
+    "bytes": 189018,
+    "sha256": "bb33a118dc4e5c17413d0c9d6cbea9cdabd78133687ebbad443f00ef1457e4af"
+  },
+  {
+    "path": "images/orders.png",
+    "bytes": 7277,
+    "sha256": "4b747e43e4093d512a1bb2db3e87467b749c8e5268e031f0b48758a48fb0f503"
+  },
+  {
+    "path": "images/passed.png",
+    "bytes": 7733,
+    "sha256": "9b45c24b4e3a595b8905627595f0e25e7f2555126d55ad3c4298b821e8b3b679"
+  },
+  {
+    "path": "images/peuniform.jpg",
+    "bytes": 66546,
+    "sha256": "e4653e116bb10161588db6db7b5c87cb02d80de21da619e9431b0ed87aefd12e"
+  },
+  {
+    "path": "images/present.png",
+    "bytes": 110435,
+    "sha256": "82cd789398da9e7151f2c5595d0029540d50cae4f85037bb804071cca64dd599"
+  },
+  {
+    "path": "images/profile.png",
+    "bytes": 7621,
+    "sha256": "4c4dcd2ec6015b46bad4523cc0245cb96d69a2e251e21a0544d7421ccf6c281a"
+  },
+  {
+    "path": "images/reports.png",
+    "bytes": 89378,
+    "sha256": "13a2e82f33149689ab39523b7444b353326c059f61cb880fc8e98f147dda9bed"
+  },
+  {
+    "path": "images/settings.png",
+    "bytes": 65033,
+    "sha256": "cddd4a15ef24212528cbcab3bb51c242d9001b01f641bc7116edd4d85a43e9f3"
+  },
+  {
+    "path": "images/store.png",
+    "bytes": 7447,
+    "sha256": "24d11a4667de1d0e675da8e0ade4cb4e20cba4e23b976b93d795c1b96ad369c8"
+  },
+  {
+    "path": "images/student.png",
+    "bytes": 96325,
+    "sha256": "92d6d960c3108e2ec5ab73afcf91918130759a8a6f624edc8030d242071477f4"
+  },
+  {
+    "path": "images/subject.png",
+    "bytes": 88907,
+    "sha256": "a2b0133adfc540504fd11ecdb4cc459d2e8383bcb969aa197883d035f4c0bc04"
+  },
+  {
+    "path": "images/teacher.png",
+    "bytes": 135089,
+    "sha256": "1183447317363ebbcc117ff8cb8383443fe1cac686a6db416516a119b40b39a3"
+  },
+  {
+    "path": "images/toga.jpg",
+    "bytes": 104332,
+    "sha256": "1eec2b3ffe48de0ccb84e5f16782922d2cb3941e87aab449579a63b185aa34d1"
+  },
+  {
+    "path": "images/yearbook.jpg",
+    "bytes": 74373,
+    "sha256": "4bc82aa8c8e53337ac43b4385fbb8573bfcc7f7f1362b8f88bb0b377f8700dd2"
+  },
+  {
+    "path": "js/admin-orders.js",
+    "bytes": 38534,
+    "sha256": "ce6aa1764f5d509e8db54d242c231855d2f9a45745548d58672cea86282deaae"
+  },
+  {
+    "path": "js/admin-store.js",
+    "bytes": 17307,
+    "sha256": "e294a7d00154ecf6b74606254983ea736fb8630295d3a585f4c39cb203437e94"
+  },
+  {
+    "path": "js/admin.js",
+    "bytes": 2423,
+    "sha256": "43ed223089fe70d37c09eead96c786dec9b6a1d11c1963b1b6e334478c3d1f6d"
+  },
+  {
+    "path": "js/announcements.js",
+    "bytes": 9704,
+    "sha256": "606c9f04b8dd424373a761cde5c2afe2f7668215ffd388498fd8b30fafe9f82e"
+  },
+  {
+    "path": "js/attendance.js",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "js/auth.js",
+    "bytes": 4987,
+    "sha256": "274576da256874b10210ecc2aaf9ec9a24bfe7132f13b80d07696922a429abc0"
+  },
+  {
+    "path": "js/charts.js",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "js/classes.js",
+    "bytes": 25582,
+    "sha256": "60139a176fbe93965cf393ac92f6b131bafb322140b4bcdf1d348df634c79ab1"
+  },
+  {
+    "path": "js/enrollment.js",
+    "bytes": 16938,
+    "sha256": "f5b37dffe4ded6071a3a1868509982352b035a2e6b63be646c7fc2390916468f"
+  },
+  {
+    "path": "js/grades.js",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "js/reports.js",
+    "bytes": 17653,
+    "sha256": "38f87456d5ecd32080b623c1d29f39a4c238a3ef2b3ec26cf0b705bcfcea15e6"
+  },
+  {
+    "path": "js/settings.js",
+    "bytes": 6132,
+    "sha256": "e0355e747757236b4e0265c811fe19b654925ea2d348e161d25d9d17fe68f1fe"
+  },
+  {
+    "path": "js/sidebar.js",
+    "bytes": 1547,
+    "sha256": "9c53937080d360f6ffaa766b170c2815afb936064b87d30acde9fe3bc5415a62"
+  },
+  {
+    "path": "js/storage.js",
+    "bytes": 10130,
+    "sha256": "5e8f5b0c1ed62c1d815d40f9b0b4d8438beedc7e0924cc1178c731f64aee362a"
+  },
+  {
+    "path": "js/student-announcements.js",
+    "bytes": 18066,
+    "sha256": "1347108cef38e006e7f92a8b52cc7dee8059d5c83ec01177037a7cd2ee48aa28"
+  },
+  {
+    "path": "js/student-attendance.js",
+    "bytes": 20155,
+    "sha256": "1870f8f4a272fd99494287befd807bc247f25f00dc3ed238771eaaa0200dbda9"
+  },
+  {
+    "path": "js/student-dashboard.js",
+    "bytes": 10453,
+    "sha256": "e8c1ec6fdf6ee905f2635268404c484fd22b4923abcb17c848f5fe076343e579"
+  },
+  {
+    "path": "js/student-grades.js",
+    "bytes": 22517,
+    "sha256": "647bfb5c15b4037692182a12c937c73b1b0083b07a0db74c3e35e1ffd4b04b66"
+  },
+  {
+    "path": "js/student-orders.js",
+    "bytes": 29312,
+    "sha256": "e931ba7453395ad511c9db98f165e36bf806ecf97c8e2fd32d7681ccaf7ee529"
+  },
+  {
+    "path": "js/student-profile.js",
+    "bytes": 4109,
+    "sha256": "143afdbad3e2fd16c657c2b2794d4c3ce09594e82c29db8f9986333f34b36c32"
+  },
+  {
+    "path": "js/student-store.js",
+    "bytes": 38329,
+    "sha256": "90ec84be89012284bf0cd3e07ceb9857a53a390306f500245359e4924c1ab6ca"
+  },
+  {
+    "path": "js/student-subjects.js",
+    "bytes": 16495,
+    "sha256": "9980135fa9979695988471f66e1438c3bc2575fe8401788d4f5de4cd616c1264"
+  },
+  {
+    "path": "js/students.js",
+    "bytes": 12178,
+    "sha256": "cdd1d59e5e523c24663d9c9bcf770f62ab0701fc86f8c34e039e89947060747d"
+  },
+  {
+    "path": "js/subjects.js",
+    "bytes": 19176,
+    "sha256": "a6eaf4bea181bcf2253b48a64f880a9947feeb6169097654e248e9b2aeb569d8"
+  },
+  {
+    "path": "js/teacher-announcements.js",
+    "bytes": 7549,
+    "sha256": "2d29e928333dee071638d5fdd0a5092f7a76ebd90619625b490ee99c05fd37ae"
+  },
+  {
+    "path": "js/teacher-attendance.js",
+    "bytes": 24762,
+    "sha256": "7bd782b543785668f7bfb9a8a2a6545c375460e7020fe9c06762c2ff20940a9b"
+  },
+  {
+    "path": "js/teacher-classes.js",
+    "bytes": 21485,
+    "sha256": "455fdb00f5941c712ea6ac7e58bec36e2c108baebb563121a40b27eaa2af1aaa"
+  },
+  {
+    "path": "js/teacher-dashboard.js",
+    "bytes": 18472,
+    "sha256": "9fbb9a5e6c907123a9441501fd1e832962a6f00395f49e3acd83bd634176de74"
+  },
+  {
+    "path": "js/teacher-grades.js",
+    "bytes": 30695,
+    "sha256": "51df9c43356c450844ce173a95099bec64487d8bf353577976b3478f9c23afe0"
+  },
+  {
+    "path": "js/teacher-profile.js",
+    "bytes": 6468,
+    "sha256": "de4f800ebbb6123fa07f3332cf7422fa47e67328ffcc6065b4b602af38f8700f"
+  },
+  {
+    "path": "js/teacher-settings.js",
+    "bytes": 10819,
+    "sha256": "b3ebee61af004224828b53ba95b048515cb683b241036e2753b93516662c6f19"
+  },
+  {
+    "path": "js/teacher-students.js",
+    "bytes": 21468,
+    "sha256": "f6168485061467d74231cdb1fddceed7bf08a2972c8c1d313b5175d29f0e81a2"
+  },
+  {
+    "path": "js/teacher-subjects.js",
+    "bytes": 19423,
+    "sha256": "db482144a3b90cb93a15d7caf7c7feb6bfec7d3721269960a27b472d2a570a11"
+  },
+  {
+    "path": "js/teachers.js",
+    "bytes": 12508,
+    "sha256": "a3ddec5ff676ba8c37f4917649915d576009d0c90ac86cfd7fecea189d07f33b"
+  },
+  {
+    "path": "js/theme.js",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "js/ui.js",
+    "bytes": 1412,
+    "sha256": "19afef4caca42fe4e3ef1d61bd54a9458b8e1d09d0cc07e3aabe0f4bd2d557b2"
+  },
+  {
+    "path": "js/utils.js",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "js/validator.js",
+    "bytes": 826,
+    "sha256": "31f21520ddec5708ff281ff42f1200502114bdf656d8f0502e75c556340f715c"
+  },
+  {
+    "path": "login.html",
+    "bytes": 1638,
+    "sha256": "3818a5031f2f8d3ce8ede27537610d9aeb9f20062f19faf294d419c6130fa8b9"
+  },
+  {
+    "path": "pages/Admin/announcements.html",
+    "bytes": 8247,
+    "sha256": "1644afb1deb65bd06d0f4d813b29245495174fa17afc529899a066d333852950"
+  },
+  {
+    "path": "pages/Admin/classes.html",
+    "bytes": 9605,
+    "sha256": "8720ae74dba15ab3c1e9c8ea1bb1356be237aa43fff78eb2be07397397004271"
+  },
+  {
+    "path": "pages/Admin/dashboard.html",
+    "bytes": 5849,
+    "sha256": "0c40ee1c704163b3e502fcad827db35b9f0740be85a4d15b78d1180247c7e56a"
+  },
+  {
+    "path": "pages/Admin/enrollment.html",
+    "bytes": 9412,
+    "sha256": "14072c229a91d06632d067633c47b295e2a9ad7f9c718621007b492990b95b3a"
+  },
+  {
+    "path": "pages/Admin/orders.html",
+    "bytes": 11015,
+    "sha256": "a037a01f6f82daaddc968fede437439aed9de46b9d0bf6ce77775ecb6b20fac3"
+  },
+  {
+    "path": "pages/Admin/reports.html",
+    "bytes": 16034,
+    "sha256": "09018d62ee67c208263e565fa7f820476df2e7de041157ca8aacedb0316a8ef0"
+  },
+  {
+    "path": "pages/Admin/settings.html",
+    "bytes": 7666,
+    "sha256": "25b3c2142aaa942b95e53a6844aab4cd0e2b510b7d06a627e35fc7df0b6c0c9f"
+  },
+  {
+    "path": "pages/Admin/store.html",
+    "bytes": 19321,
+    "sha256": "bb0bad7638ca07fe1fbae3da97749d39f37ac0334758adac5ddc487adc3b1dcb"
+  },
+  {
+    "path": "pages/Admin/students.html",
+    "bytes": 11134,
+    "sha256": "ca85039cce8469d9722091eb0576c0aa3106fb10e35d5e0184f12a2727f64313"
+  },
+  {
+    "path": "pages/Admin/subjects.html",
+    "bytes": 9649,
+    "sha256": "845887ed0d3c9715f653234ece4cfbc56fd2526e0c431665cbd6b58fa077348a"
+  },
+  {
+    "path": "pages/Admin/teachers.html",
+    "bytes": 10358,
+    "sha256": "af8b0eea229edd0795ea25d9d0e16acfb7a01b18659d8d5a302dc28072314014"
+  },
+  {
+    "path": "pages/Student/announcements.html",
+    "bytes": 10783,
+    "sha256": "0e64e28c4d1722169f372d73722ce65245ac4559cd4107f018c667da113f8ffd"
+  },
+  {
+    "path": "pages/Student/attendance.html",
+    "bytes": 7228,
+    "sha256": "d149255ecaccd0df90cf9c3e129a6b3989da92886708d47d7f01683f15e0747a"
+  },
+  {
+    "path": "pages/Student/dashboard.html",
+    "bytes": 6929,
+    "sha256": "bb38685d088b8127ec5b7dc7314507329aff3471287e49839c4d8b375439bfdd"
+  },
+  {
+    "path": "pages/Student/grades.html",
+    "bytes": 7990,
+    "sha256": "a40a06164299537214606633bfa8e8b859cb77545a9886c603bbeceb4d3dfeb5"
+  },
+  {
+    "path": "pages/Student/orders.html",
+    "bytes": 8649,
+    "sha256": "687f541f2888af83b8afddd8e90c715cb851b87bfe6a8e9a370d8099f40c335e"
+  },
+  {
+    "path": "pages/Student/profile.html",
+    "bytes": 8580,
+    "sha256": "877503bc7bdf47fc09ad7eb522c493b4140279feb49a57db089e490d18c807af"
+  },
+  {
+    "path": "pages/Student/store.html",
+    "bytes": 10605,
+    "sha256": "4a1b7c6ce527e26f1b654cc47602927476aa61c3d2c0c1ffb8673d2cd4d45720"
+  },
+  {
+    "path": "pages/Student/subjects.html",
+    "bytes": 5758,
+    "sha256": "47e33040b73889cab52cf2cd21191e0bc0a1d326e17a2fabd4691e59327b5be6"
+  },
+  {
+    "path": "pages/Teacher/announcements.html",
+    "bytes": 7177,
+    "sha256": "bba7a8be44c5e55aafc1713fa7c3ae29fbe950e4e29b1645ed3b43306315e46e"
+  },
+  {
+    "path": "pages/Teacher/attendance.html",
+    "bytes": 13035,
+    "sha256": "15bf1cf3edd384449c3654ccbf8aa9f802916ee178f4470a6985e71aad0cddc6"
+  },
+  {
+    "path": "pages/Teacher/classes.html",
+    "bytes": 8850,
+    "sha256": "481cb03257850b6061d28786d4a04311ffaecdf912844b386a7bd4460332635e"
+  },
+  {
+    "path": "pages/Teacher/dashboard.html",
+    "bytes": 13453,
+    "sha256": "dfbc7be40c78c09fd9650a2bfe4fd07f9333d4d45d0a79dd0570312ffc0ef98f"
+  },
+  {
+    "path": "pages/Teacher/grades.html",
+    "bytes": 10954,
+    "sha256": "c174acf67ae0a56f3f7200f048995e232900db54024fcb65675ddb5331d49d33"
+  },
+  {
+    "path": "pages/Teacher/profile.html",
+    "bytes": 12180,
+    "sha256": "7f7c5c6ad99b2fed8b1ca7e95ddc3d1d8cbb3d72a19c70a61e7a73b9f3b461c8"
+  },
+  {
+    "path": "pages/Teacher/settings.html",
+    "bytes": 10519,
+    "sha256": "f02d8d7be08c81ae0a4c2da1475b1d49905c0e54d9c57d87da64c1af1bf62efe"
+  },
+  {
+    "path": "pages/Teacher/students.html",
+    "bytes": 9771,
+    "sha256": "fa519721818b4c10ec4d223dbf18b20705af101264b1f0bdb5f143b31c492697"
+  },
+  {
+    "path": "pages/Teacher/subjects.html",
+    "bytes": 7955,
+    "sha256": "83f8955bd8939a2efea6af1e9e36672e864708e2bf57b40ee53cc44d8d3241e6"
+  },
+  {
+    "path": "splash.html",
+    "bytes": 13409,
+    "sha256": "4606d4669e19a67abbe17f744e484d12b4780e7bc51c337abbe8faea153fba0c"
+  }
+]

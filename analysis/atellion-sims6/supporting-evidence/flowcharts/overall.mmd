@@ -1,0 +1,25 @@
+flowchart TD
+ A([Open SIMS])
+ B{Seed flag exists?}
+ C[(Write demo records)]
+ D{Session object exists?}
+ E[/Enter credentials/]
+ F{Local match?}
+ G[/Show login error/]
+ H[Role page handler]
+ I[(Read / write records)]
+ J[/Show result/]
+ K([End / next action])
+ A --> B
+ B -- No --> C
+ C --> D
+ B -- Yes --> D
+ D -- No --> E
+ D -- Yes --> H
+ E --> F
+ F -- No --> G
+ G -- Retry --> E
+ F -- Yes --> H
+ H --> I
+ I --> J
+ J --> K

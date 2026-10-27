@@ -1,0 +1,53 @@
+DOUGHNUT DISTURB — SYSTEM AUDIT AND ROADMAP
+==============================================
+
+WHAT WAS WRONG / INCOMPLETE
+----------------------------
+1. The inner-system sidebar referenced assets/logo.png while the actual project uses img/logo.png. This could produce a broken logo.
+2. README asset paths were outdated and did not match the actual img folder.
+3. There was no real-time clock beside the notification button.
+4. Navigation order was not aligned with the natural business workflow: employee setup -> attendance -> payroll.
+5. Dashboard was too summary-heavy and did not show On Leave, Low Stock, inventory health, Not Yet In, or practical quick actions.
+6. Dashboard payroll totals could represent old/all records instead of the current pay period when current-period records exist.
+7. Notification timestamps were mostly static text such as “Just now” and were not tied to a real creation time.
+8. addNotification did not consistently store read state / creation timestamps.
+9. An inactive account could remain in an already-open session because requireAuth only checked whether a session object existed.
+10. Employee validation was missing future-date checks, contact validation, and duplicate email prevention.
+11. Employee details did not expose calculated age even though birthday was stored.
+12. Payroll editing could change an already-paid payroll back to Pending if the user selected Pending. Paid records should remain Paid unless a deliberate payment workflow is added.
+13. Product summary information was limited; stock health is now visible on the Products page and dashboard.
+14. Product save validation needed stronger finite-number checks to reject invalid numeric input.
+15. The system is still a frontend/localStorage demo. Authentication, passwords, roles, payroll approval, and CRUD are not secure enough for production.
+
+WHAT WAS CHANGED WITHOUT REDESIGNING
+-------------------------------------
+- Existing colors, typography, cards, borders, spacing, buttons, drawers, modals, sidebar, and overall visual language were preserved.
+- Only content, data logic, navigation order, validation, and small supporting styles for the live clock were improved.
+- Logo remains directly controlled by the HTML/CSS image path.
+- Background remains directly controlled by the CSS variable --system-background.
+- Dashboard now includes richer operational metrics and quick actions.
+- Header now has a live clock/date beside Notifications.
+- Notification records have real timestamps and relative-time display.
+- Route access still respects the existing Admin/Crew distinction.
+
+RECOMMENDED NEXT PHASE FOR A REAL BUSINESS SYSTEM
+-------------------------------------------------
+A. Backend/API + real database
+B. Server-side authentication with hashed passwords
+C. Server-side RBAC/permissions
+D. Audit logs with actor, action, record ID and timestamp
+E. Employee document/profile management
+F. Leave requests and approvals
+G. Attendance correction/approval workflow
+H. Payroll approval -> finalized -> paid workflow
+I. Government/statutory deduction rules appropriate to the business
+J. Payslip export/print templates
+K. Inventory stock-in/stock-out transaction history
+L. Product categories, suppliers, reorder levels and stock adjustments
+M. Reports/export (attendance, payroll, inventory, employee roster)
+N. Database transactions and referential integrity
+O. Backup/restore and deployment configuration
+
+IMPORTANT
+---------
+This frontend can demonstrate the complete workflow and UI, but localStorage is not a security boundary. Do not use the demo password or localStorage data for real employee/payroll information in production.

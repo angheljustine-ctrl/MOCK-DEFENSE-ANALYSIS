@@ -1,0 +1,162 @@
+[
+  {
+    "path": "about.html",
+    "bytes": 961,
+    "sha256": "d107f820a169a41e6c251c0edd5374f1e9aeb47aa9fcd6d9b921a261fcc42164"
+  },
+  {
+    "path": "admins.html",
+    "bytes": 1033,
+    "sha256": "3773835a50a6a39678cdc5a787ae45fb84daf0e9abb32e90a58bdf4f0f4b222b"
+  },
+  {
+    "path": "assets/README.txt",
+    "bytes": 395,
+    "sha256": "30eb942f9f1de7c2e13df1c445c3d17b03b0957834f9121c7296f7cb41191716"
+  },
+  {
+    "path": "attendance.html",
+    "bytes": 1009,
+    "sha256": "ca14e801620730da9c1aca1292e0ce7285e726c86e89dcf48757a19756233473"
+  },
+  {
+    "path": "create-account.html",
+    "bytes": 972,
+    "sha256": "08d15ef3bcefbfa2b010fc1ae9fdf8d6c65553099547a30a1d8462a4d0822664"
+  },
+  {
+    "path": "css/responsive.css",
+    "bytes": 2561,
+    "sha256": "da3298c18b4d76d105f261e3e70e2e53d47ad5df2455c2de95c9c0b4bcb916a6"
+  },
+  {
+    "path": "css/style.css",
+    "bytes": 34859,
+    "sha256": "139d3fcececf30b8179d1c6e7942d1e2181644a0e31cb6bcc03d68b64252021f"
+  },
+  {
+    "path": "dashboard.html",
+    "bytes": 3036,
+    "sha256": "4e953616cdd081c2d3694b8b6711afed6d501fb78ec16f297b555718bb8f4725"
+  },
+  {
+    "path": "employees.html",
+    "bytes": 1009,
+    "sha256": "12653453637426e6223ea4c960924bdae5ecaed9f70bcb75da2a2e2653b08ff3"
+  },
+  {
+    "path": "img/bg (2).png",
+    "bytes": 2481887,
+    "sha256": "e8bb9af2ad5b7f81a2f1773d91fb57901e227d3de5fcaaa0bd1f92ca58707471"
+  },
+  {
+    "path": "img/logo.png",
+    "bytes": 2314805,
+    "sha256": "b7f0eb805794949c12ee1ba5f3bf0dbf1cdc2f991ef5dbacc3c06a276fe5184e"
+  },
+  {
+    "path": "index.html",
+    "bytes": 3195,
+    "sha256": "8aff2ffb4bdb1f6c73308e30e823b74c750622c58acf7656c14a5543e087d1f3"
+  },
+  {
+    "path": "js/about.js",
+    "bytes": 2556,
+    "sha256": "3fa081e243056d0b21fc939961d9ff2fc496c5d3f42c1a54c410753c53a6e0f9"
+  },
+  {
+    "path": "js/admins.js",
+    "bytes": 13573,
+    "sha256": "82c1950ee07c3ab374a8e067effd7d6c21bf62f1e32b1cd8f7be42f84f8efb0b"
+  },
+  {
+    "path": "js/app.js",
+    "bytes": 32833,
+    "sha256": "170260f105737332de6ebd084b77cc3d113e3d1b622509be74ac288420685c36"
+  },
+  {
+    "path": "js/attendance.js",
+    "bytes": 13181,
+    "sha256": "66e542b930c1ffe5533d8f40b2a930a2fa23c04e6fbc0d6c57e18260696db6c1"
+  },
+  {
+    "path": "js/auth.js",
+    "bytes": 17792,
+    "sha256": "a9df45f7d4f53633d1a45e48b545669fe0729a0f75e9f43f708b4c3447bc2e58"
+  },
+  {
+    "path": "js/dashboard.js",
+    "bytes": 6440,
+    "sha256": "ae5dcdb9a31bebecde763b212069308509bec5dc54c4b5e16491c3ed7272742f"
+  },
+  {
+    "path": "js/employees.js",
+    "bytes": 25066,
+    "sha256": "58a13f2ff61356388d0d1b329a8c1e954a571f529eb2da1823780190b1f971b1"
+  },
+  {
+    "path": "js/leave.js",
+    "bytes": 9751,
+    "sha256": "c191ea91df91d017851b4ce7725a45f3d209464cbc0c9c16270681f2015fe120"
+  },
+  {
+    "path": "js/payroll.js",
+    "bytes": 22149,
+    "sha256": "6a41c1b32df0c01d3946fe421c4f902a5a69733eb97e7d234bf1a52d72d4579e"
+  },
+  {
+    "path": "js/reports.js",
+    "bytes": 12171,
+    "sha256": "579469dce876880e03bf39872dbf20b0ea1b34f3aec07b33d792b3458d190d63"
+  },
+  {
+    "path": "js/settings.js",
+    "bytes": 11933,
+    "sha256": "c4d4dd071699f30da07c63992a19b490e4a050c37ee3bdd4e10dded47dc772c6"
+  },
+  {
+    "path": "js/trash-manager.js",
+    "bytes": 10892,
+    "sha256": "8398c6c803099d1917d246a52e4ab52d4091c20391d1b33016c6bb347197f7cf"
+  },
+  {
+    "path": "leave.html",
+    "bytes": 971,
+    "sha256": "f0b785616466ac66cc00f3fb4c0e846d5a952d572c0271429d0fa4d52e32cea1"
+  },
+  {
+    "path": "payroll.html",
+    "bytes": 1011,
+    "sha256": "acc13580ac8e6e4c06706618ff84e63648a067160e7e767a47ee03cede5b903a"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 3822,
+    "sha256": "799edbc47687c92627d0c6b91b403ea7991df278f54685d8ef45b86fd2b9beeb"
+  },
+  {
+    "path": "reports.html",
+    "bytes": 974,
+    "sha256": "3fcc476aa86f51c6042d9624006679cf1ed8a02b327ff7ee3c051e249ca41b12"
+  },
+  {
+    "path": "settings.html",
+    "bytes": 950,
+    "sha256": "e05d24c2a405e1761cc60d56f47a83be5d5d93f31fb23b2875393e91560bce28"
+  },
+  {
+    "path": "SYSTEM_AUDIT_AND_ROADMAP.txt",
+    "bytes": 3660,
+    "sha256": "bb4fd6d142b7416f5c20407be3b426d859f74084621c1fd604d7894021b2353d"
+  },
+  {
+    "path": "SYSTEM_FINAL_FLOW.txt",
+    "bytes": 1090,
+    "sha256": "c1d22f217593107dc4304d992020a404fe714c7ccf79b17f829f34936024091a"
+  },
+  {
+    "path": "SYSTEM_IMPROVEMENTS.txt",
+    "bytes": 3453,
+    "sha256": "a0a75103093d4fd2a308a0279a548a3b85e5d9aaded697a5fa497f923ca63850"
+  }
+]

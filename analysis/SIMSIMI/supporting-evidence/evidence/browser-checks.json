@@ -1,0 +1,6 @@
+{
+  "environment": "Fresh headless Edge context, loopback read-only file server, synthetic browser-only records",
+  "filteredEdit": "Confirmed: Beta row opened Alpha form",
+  "htmlSink": "Confirmed: harmless stored bold markup was interpreted as HTML; script execution not tested",
+  "pageErrors": []
+}

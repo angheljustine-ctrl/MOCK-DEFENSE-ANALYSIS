@@ -1,0 +1,237 @@
+[
+  {
+    "path": "SYSTEM \\Copy of hirazora system docs..pdf",
+    "size": 1219443,
+    "sha256": "4fbef3112b120d2f5a5ea6bec6fbaf97b0793d50e73e375686ba33d742d1428f"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\admin-login.php",
+    "size": 20133,
+    "sha256": "5c0d3a110478e261dd1295497ee047ee67f9a93e1e9001a38a53c8b483a357f9"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\backup.php",
+    "size": 60368,
+    "sha256": "d7cd0105bc16f836795c0a190d012a4985d48343c260d6ec46ebd74e9023e783"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\categories.php",
+    "size": 42732,
+    "sha256": "1bff638464b095e4fd67c5d7ee75a93c63ff68e1e85ee3eec7a3f5f300a96234"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\admin-login.css",
+    "size": 48750,
+    "sha256": "7a6498fda0d47658371a8a2ed1661d67cba177daf0a8375b3c30a40166419960"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\backup.css",
+    "size": 75895,
+    "sha256": "17d5fcbac269d444c6986c69d8ae481225772996424ba3ecb07d1525c95fcb18"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\categories.css",
+    "size": 53699,
+    "sha256": "fd74bb6fc53b71dcb7ce17a91ec9cf5cd3f221afacd7a6edfd41ff526206068d"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\dashboard.css",
+    "size": 33633,
+    "sha256": "4e67b0b08f3dcf9b15dba401883df7f103a2e822a310e40eafda5164b5698e1c"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\inventory.css",
+    "size": 67928,
+    "sha256": "8b9a5689fee382e20860083302da13b5128b974fcdd9bc965d0e68e1006420a9"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\pos.css",
+    "size": 87736,
+    "sha256": "6ad4e93cb2cf934dab443785e70feae35aa6df2665476547befde0b15e904212"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\products.css",
+    "size": 65826,
+    "sha256": "04dcf4eb0323ba9e861474124d42ce3266ab3f7455a7c77b6032e149ba87b88d"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\reports.css",
+    "size": 68218,
+    "sha256": "dcdddf47a727e454be49f3fcf4e318eed3f699837cb215e889d4883919f503a8"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\sales.css",
+    "size": 104311,
+    "sha256": "38d4f25c89693cd15c4db446ed3b3887bf5f4dd79dc9cf3abaa7f2a2cfca52bd"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\settings.css",
+    "size": 50289,
+    "sha256": "7d8273268959b295a2b297c93619c803325c70713667912793e5c4d697b5c250"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\css\\user.css",
+    "size": 49726,
+    "sha256": "736fdee299a762be39f00215646b8a487b22efddc138844fd444efb7164d757c"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\dashboard.php",
+    "size": 42738,
+    "sha256": "cffaf291a8cf2ef62fd0cd1ac8ead862c7626b682a94bec2b7fc5f00dd28488d"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\bg1.png",
+    "size": 1622970,
+    "sha256": "a62f9cf6470fb1b68922be8d1a5600e9752b84ccf83d9880be1940a0ec1140ec"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\cap.png",
+    "size": 181943,
+    "sha256": "7aea561bd22a1983813232fb75ad021a46e6684a59e86009ddb534e13d7c5d38"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\CARGO PANTS (2).png",
+    "size": 275679,
+    "sha256": "1895508b1c68f719b2cd2c171351f0359e0ad98f899148dea5f3b880d409aedc"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\HOODIE (1).png",
+    "size": 168591,
+    "sha256": "20ed6ec587eacf03dce694ebf7e8f848bc637cf2e6b2f8026e4595781b31744c"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\JACKET (1).png",
+    "size": 258235,
+    "sha256": "3e09cf77858a901df74fb78a07559c6ca2b980b50236290cf8f0f51ec434ca1f"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\logo.png",
+    "size": 417558,
+    "sha256": "bf3376225fbd666815d9e14d4fd18250430dc7e779c66ff1229c0d637982b7bc"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\OVERSIZED TSHIRT (2).png",
+    "size": 134992,
+    "sha256": "9bcda0f07cd3288f926e84905011c1d8f2dd3a683d52462364e467b5169f445e"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\OVERSIZED TSHIRT.png",
+    "size": 122033,
+    "sha256": "d4df27a3ff3c69f9298f559151d608cad383ca88fe11b43c87b027fb6190758e"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\SHORTS (1).png",
+    "size": 169874,
+    "sha256": "44cd8858798eb702d7ffe71682c9a15aa7fbfd8fb2509c78aa861fd376cec199"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\image\\tote.png",
+    "size": 193748,
+    "sha256": "3e26c4750976a49cd79f567ec7e5cb0b10f6f736ad9b8bc5c849da60a19d420f"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\inventory.php",
+    "size": 58113,
+    "sha256": "396ef5355c1db092be2baa8de05172a23c78990c1d647b6e9a1b8a82a4b36cb7"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\admin-login.js",
+    "size": 31846,
+    "sha256": "aac78faa997112ffd4fdf588e66a2d618d83231cdc963423c43abb340984f0cb"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\auth.js",
+    "size": 63741,
+    "sha256": "a7dd137885b61ee0559f2087ee12baca351149689359fa4e82991ce7275abe8c"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\backup.js",
+    "size": 121463,
+    "sha256": "dc9a825fa38caf0cefd95c33059b233e5e8783ba0c2de593de53d57891ff5098"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\categories.js",
+    "size": 41734,
+    "sha256": "0b194392749eabc634da6935b06ef85f8ff1f2ed311ede5e4e81652806bf7398"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\dashboard.js",
+    "size": 43310,
+    "sha256": "da05286ed2fc4e58df847e8911eb1dde97fbf136868888789dd97581e64bda18"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\inventory.js",
+    "size": 64740,
+    "sha256": "91933d2347bbaaed0de3886f82cc0a8998d32db4413a3f17eae866a969c5634e"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\pos.js",
+    "size": 89771,
+    "sha256": "783c453727b4218a67674fd1c09fd7d4b421511aff298212f718ddf494249d27"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\products.js",
+    "size": 66103,
+    "sha256": "bebfa100ff70cd0edd02045e807da8266768475a5e2e3aec2885e1d3592b1d0e"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\reports.js",
+    "size": 154277,
+    "sha256": "4552a2cdbff8094bca1d9f9a34c5c21e38ac832825e98525096d31b4ce769e66"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\sales.js",
+    "size": 157164,
+    "sha256": "1a2226aded021e85917db0a17989e6fdb92492f73e5244ec44778bea4e8ecac6"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\settings.js",
+    "size": 60788,
+    "sha256": "267e206dffd2acedd6df32162c7f54e3561df36d964140bdf050c3965a267372"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\js\\user.js",
+    "size": 85981,
+    "sha256": "04a31bb2319f71a99fe0cc804a02dae6f4e52de61e997fd5939c9ed0dba6a326"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\New Text Document.txt",
+    "size": 432,
+    "sha256": "52aef4229d208adddeebb48456b495233e077097413da2e05eb781c7fb3cbbf7"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\pos.php",
+    "size": 51555,
+    "sha256": "caf7fd594a63551cddaaa9a02d603a2feedfff55bec58dd28ff80a369ed64f91"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\products.php",
+    "size": 54708,
+    "sha256": "f914ef8888ae61cd44110cca4b8037017da67e1b79085a596bcdca5bb86281bf"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\reports.php",
+    "size": 57153,
+    "sha256": "8ea942ff45ca35cd6a9e6192ba6a0a14595553fe87d73ee2d2a5a3f0d44a5175"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\sales.php",
+    "size": 64491,
+    "sha256": "252206ab73a8f10e2e35ed3acc530cc810117cc7050dd81fa2aff1475a9c7c11"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\settings.php",
+    "size": 57092,
+    "sha256": "8e137ebef6abdfe0c11c5292993b69e6d60f542b74be1d7e59877d1dfa7dfd18"
+  },
+  {
+    "path": "SYSTEM \\hirazora\\user.php",
+    "size": 28415,
+    "sha256": "e96cdace82960ab36783af2cbd8577ed0e4c215882e994ecd1f0a3d846e2e00e"
+  },
+  {
+    "path": "SYSTEM \\hirazora system documents.docx",
+    "size": 31181,
+    "sha256": "c1932dedcaaeba5cd9286ad0bf59988db73f4c92a0384b1a86dfe40d191ae981"
+  }
+]

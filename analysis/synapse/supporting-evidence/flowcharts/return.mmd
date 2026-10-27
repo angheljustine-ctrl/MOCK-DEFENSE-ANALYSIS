@@ -1,0 +1,22 @@
+flowchart TD
+    A(["Staff opens New Return"])
+    B[/"Select sale, item, qty, / reason and refund"/]
+    C{"Qty > 0; sale/item exists?"}
+    D[/"Show specific error"/]
+    E[("Write return record")]
+    F{"Variant still exists?"}
+    G["Add qty to sellable stock / Even if reason is Damaged"]
+    H[("Write variant and movement")]
+    I[/"Audit + success message"/]
+    J(["End"])
+    A --> B
+    B --> C
+    C -- "No" --> D
+    D -- "Retry" --> B
+    C -- "Yes" --> E
+    E --> F
+    F -- "Yes" --> G
+    F -- "No" --> I
+    G --> H
+    H --> I
+    I --> J

@@ -1,6 +1,6 @@
 ---
 name: mock-defense-analyzer
-description: Analyze a student software system and optional capstone papers for mock-defense preparation, or review a capstone paper when no source is supplied. Deliver one user-friendly consolidated PDF covering implementation, requirements, flow, validation, QA, loopholes, vibe-coding indicators, and panel questions.
+description: Analyze a student software system and optional capstone papers for mock-defense preparation, or review a capstone paper when no source is supplied. Research what that kind of system reasonably needs, compare it with the submitted scope and implementation, and deliver one user-friendly consolidated PDF covering capability gaps, flow, validation, QA, loopholes, vibe-coding indicators, and panel questions.
 ---
 
 # Mock Defense Analyzer
@@ -45,7 +45,7 @@ Treat `LIGHT` and `DEEP` case-insensitively. The mode named by the user override
 
 ## Mandatory PDF coverage
 
-Every full-system Light, Standard, or Deep PDF must visibly include these six areas; modes change depth, not coverage:
+Every full-system Light, Standard, or Deep PDF must visibly include these seven areas; modes change depth, not coverage:
 
 1. Vibe-coding indicators: exact code evidence, location, function, why it is a signal, and system/user effect.
 2. Important JavaScript/TypeScript: what each selected function does and how the system applies it.
@@ -53,6 +53,7 @@ Every full-system Light, Standard, or Deep PDF must visibly include these six ar
 4. Validation review: client, server, database/business rules, authorization, boundaries, and missing controls.
 5. Tailored panel questions about actual functions, flow, and logic, with answer guidance and red flags.
 6. Process correctness: compare the intended workflow with the implemented workflow and state what is correct, partial, incorrect, or blocked.
+7. Domain capability baseline and gap critique: explain what this type and scope of system reasonably needs, then show which capabilities are complete, partial, incorrect, missing, not verifiable, or not applicable.
 
 Do not hide these only in appendices or supporting files. Give each area a clear PDF heading or an unmistakable subsection. A Focused review may omit unrelated areas only when the user explicitly limits the scope.
 
@@ -63,28 +64,30 @@ Do not hide these only in appendices or supporting files. Give each area a clear
 - Start with static triage. Install dependencies, build, or launch the app only when the result will confirm or reject a material claim. Never run a broad dependency audit by default.
 - Stop expanding a category when new files repeat an already-supported pattern. Sample enough instances to establish scope and cite representative locations.
 - Prioritize authentication, authorization, sensitive data, core business transactions, validation boundaries, concurrency, and advertised-but-missing features. Compress cosmetic findings into a short appendix or omit them.
+- Keep domain research targeted. Use enough current, credible sources to support the baseline, but do not turn the report into a generic industry checklist or literature review.
 - Keep the report canonical. QA and evidence support it; they must not duplicate long narrative prose.
 
 ## Workflow
 
 1. Classify supplied files as system source, capstone paper, supporting appendix, or unrelated attachment. Locate the submitted system and keep generated output in the workspace-level analysis area, outside an app subfolder when possible. Always exclude generated analysis artifacts from the source inventory. Create a single source inventory and identify the system's documentation, stack, entry points, roles, modules, data stores, external services, and available test commands.
 2. Establish the intended process from the paper and requirements when supplied; otherwise use documentation, UI labels, and code. Clearly separate paper claims, documented facts, implementation evidence, and inferred behavior. For combined analysis, build a concise paper-to-system traceability matrix before drafting findings.
-3. Trace important flows end to end: user action, client logic, API/controller, business rules, persistence, response, and error handling.
-4. Inventory JavaScript and TypeScript by role, not merely by filename. Explain important functions, inputs, outputs, side effects, call sites, and user-visible effects.
-5. Build actor/use-case and role/permission matrices. Include preconditions, main flow, alternatives, exceptions, and postconditions for critical use cases.
-6. Review validations at every trust boundary and design positive, negative, boundary, authorization, integration, and business-logic tests. In Standard mode, select only tests that cover distinct risks and critical journeys. Read [references/audit-checklist.md](references/audit-checklist.md) for Deep review or when the requested area needs it.
-7. When the app can run safely, execute proportionate checks and record actual results. When it cannot run, distinguish static evidence from unverified expectations.
-8. Identify loopholes and process bypasses with safe reproduction steps, impact, evidence, and a specific improvement. Do not provide destructive exploitation instructions.
-9. Separate **system improvements** from code remediation. Recommend features, controls, workflows, roles, recovery, auditability, and user-facing process changes. For each, state the current condition, what the system should add/change, intended process, benefit, priority, and success indicator. Do not turn this section into replacement code.
-10. Create a distinct **vibe-coding evidence** section. Read [references/system-improvements-and-vibe-evidence.md](references/system-improvements-and-vibe-evidence.md). Every indicator must show a short exact code excerpt, file/line, function or code responsibility, what the code does, why it is a signal, observable effect, and confidence. Never present an indicator as proof of AI authorship.
-11. Create genuine flowcharts for the overall flow and only the critical/problematic flows needed to understand the system. Read [references/flowcharts.md](references/flowcharts.md) whenever diagrams are requested or required.
-12. Produce one consolidated PDF using [references/report-format.md](references/report-format.md). When available, use `scripts/build-report-pdf.mjs` to combine the report and embedded flowcharts without rewriting them. Recheck every major claim against its cited code, command output, screenshot, or stated assumption before finishing.
-13. Render every final PDF page to images and visually inspect it. Deliver the PDF as the single primary output; mention supporting files only when the user asks for technical evidence.
+3. Establish a scope-aware **domain capability baseline** before judging completeness. Research what systems of this type reasonably need, classify each capability as Core, Important, or Optional/Advanced for the submitted scope, and compare it with the paper and implementation. Read [references/domain-baseline-and-gap-analysis.md](references/domain-baseline-and-gap-analysis.md) for every full-system review and for paper-only reviews that claim functional completeness.
+4. Trace important flows end to end: user action, client logic, API/controller, business rules, persistence, response, and error handling.
+5. Inventory JavaScript and TypeScript by role, not merely by filename. Explain important functions, inputs, outputs, side effects, call sites, and user-visible effects.
+6. Build actor/use-case and role/permission matrices. Include preconditions, main flow, alternatives, exceptions, and postconditions for critical use cases.
+7. Review validations at every trust boundary and design positive, negative, boundary, authorization, integration, and business-logic tests. In Standard mode, select only tests that cover distinct risks and critical journeys. Read [references/audit-checklist.md](references/audit-checklist.md) for Deep review or when the requested area needs it.
+8. When the app can run safely, execute proportionate checks and record actual results. When it cannot run, distinguish static evidence from unverified expectations.
+9. Identify loopholes and process bypasses with safe reproduction steps, impact, evidence, and a specific improvement. Do not provide destructive exploitation instructions.
+10. Separate **system improvements** from code remediation. Derive recommendations from material capability gaps and findings. For each, state the current condition, what the system should add/change, intended process, benefit, priority, and success indicator. Do not turn this section into replacement code.
+11. Create a distinct **vibe-coding evidence** section. Read [references/system-improvements-and-vibe-evidence.md](references/system-improvements-and-vibe-evidence.md). Every indicator must show a short exact code excerpt, file/line, function or code responsibility, what the code does, why it is a signal, observable effect, and confidence. Never present an indicator as proof of AI authorship.
+12. Create genuine flowcharts for the overall flow and only the critical/problematic flows needed to understand the system. Read [references/flowcharts.md](references/flowcharts.md) whenever diagrams are requested or required.
+13. Produce one consolidated PDF using [references/report-format.md](references/report-format.md). When available, use `scripts/build-report-pdf.mjs` to combine the report and embedded flowcharts without rewriting them. Recheck every major claim against its cited code, command output, screenshot, research source, or stated assumption before finishing.
+14. Render every final PDF page to images and visually inspect it. Deliver the PDF as the single primary output; mention supporting files only when the user asks for technical evidence.
 
 ## Completion standard
 
-A Standard combined review is complete when the consolidated PDF includes the system overview, concise paper-to-system traceability, important JavaScript/TypeScript, critical use cases, validation coverage, evidence-aware QA, prioritized loopholes, process correctness, vibe-coding indicators, genuine flowcharts, actionable improvements, tailored panel questions with answer guidance, and limitations.
+A Standard combined review is complete when the consolidated PDF includes the system overview, concise paper-to-system traceability, researched domain capability baseline, capability gap matrix, important JavaScript/TypeScript, critical use cases, validation coverage, evidence-aware QA, prioritized loopholes, process correctness, vibe-coding indicators, genuine flowcharts, actionable improvements, tailored panel questions with answer guidance, and limitations.
 
-A paper-only review is complete when it assesses objectives, scope, roles, requirements, workflows, diagrams, validation/testing claims, internal contradictions, feasibility, panel questions, and limitations without implying that implementation was inspected.
+A paper-only review is complete when it assesses objectives, scope, roles, requirements, a researched scope-aware capability baseline, workflows, diagrams, validation/testing claims, internal contradictions, feasibility, panel questions, and limitations without implying that implementation was inspected.
 
 A Deep review additionally covers every applicable audit-checklist section and records exclusions or blocked areas. More volume is not evidence of better coverage.

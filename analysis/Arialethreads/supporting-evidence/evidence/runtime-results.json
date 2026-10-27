@@ -1,0 +1,20 @@
+{
+  "source": "F:\\Arialethreads.html",
+  "method": "Exact inline script executed in a Node standard-library VM with minimal in-memory DOM and localStorage stubs.",
+  "browser_ui": "Blocked because the available controlled browser disallows file: URLs; no bypass attempted.",
+  "checks": [
+    {"id":"RT-01","name":"Seeded admin login works","status":"Confirmed","result":"Passed","detail":"Logged in as seeded Admin account."},
+    {"id":"RT-02","name":"Invalid login is rejected","status":"Confirmed","result":"Passed","detail":"Generic incorrect-credentials message shown."},
+    {"id":"RT-03","name":"Staff role cannot access inventory","status":"Confirmed","result":"Passed","detail":"Dashboard allowed; inventory denied."},
+    {"id":"RT-04","name":"Blank numeric product fields become zero","status":"Confirmed","result":"Defect reproduced","detail":"Blank price, stock, and minimum saved as 0."},
+    {"id":"RT-05","name":"Duplicate SKU is accepted","status":"Confirmed","result":"Defect reproduced","detail":"Two products saved with SKU DUP-1."},
+    {"id":"RT-06","name":"Normal sale deducts stock and creates a sale","status":"Confirmed","result":"Passed","detail":"Quantity 2 reduced stock 5 to 3 and saved total 100."},
+    {"id":"RT-07","name":"Deleting a cart product can sell a different item","status":"Confirmed","result":"Defect reproduced","detail":"Cart intended SKU A; completed sale charged SKU B and reduced B stock."},
+    {"id":"RT-08","name":"Completed sale omits product lines","status":"Confirmed","result":"Defect reproduced","detail":"Sale keys were date, reference, items, total; Top Products showed 0."},
+    {"id":"RT-09","name":"Empty inventory is automatically reseeded","status":"Confirmed","result":"Defect reproduced","detail":"Five demo products reappeared."},
+    {"id":"RT-10","name":"Modified local storage can introduce Admin","status":"Confirmed","result":"Defect reproduced","detail":"Injected local account authenticated as Admin."},
+    {"id":"RT-11","name":"Product edit reports wrong success action","status":"Confirmed","result":"Defect reproduced","detail":"Product added message displayed after edit."},
+    {"id":"RT-12","name":"One-character password is accepted","status":"Confirmed","result":"Defect reproduced","detail":"Cashier account created with password x."},
+    {"id":"RT-13","name":"User-controlled HTML enters table markup","status":"Code-evidenced in harness","result":"Raw insertion reproduced","detail":"Payload remained raw inside row.innerHTML; active browser execution not tested."}
+  ]
+}

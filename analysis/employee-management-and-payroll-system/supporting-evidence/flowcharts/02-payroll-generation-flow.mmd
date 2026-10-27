@@ -1,0 +1,28 @@
+flowchart TD
+    A([Start]) --> B[/Select month, cutoff, and employee filter/]
+    B --> C[Load active employees, attendance, leave, holidays]
+    C --> D[For each date in cutoff]
+    D --> E{Future, day off, or holiday?}
+    E -- Yes --> F[Skip date]
+    E -- No --> G{Approved leave?}
+    G -- Paid --> H[Count as worked day]
+    G -- Unpaid --> I[Count unpaid leave]
+    G -- No --> J{Attendance record exists?}
+    J -- No --> K[Count absence]
+    J -- Yes --> L[Count work and late or undertime]
+    F --> M[Compute earnings and deductions]
+    H --> M
+    I --> M
+    K --> M
+    L --> M
+    M --> N{Second cutoff?}
+    N -- Yes --> O[Add SSS, PhilHealth, Pag-IBIG]
+    N -- No --> P[No statutory deduction in this cutoff]
+    O --> Q{Existing payroll record?}
+    P --> Q
+    Q -- No --> R[(Append Generated record)]
+    Q -- Yes --> S[Replace record; preserve Paid status and paidAt]
+    R --> T[/Render payroll and reports/]
+    S --> T
+    T --> U([End])
+

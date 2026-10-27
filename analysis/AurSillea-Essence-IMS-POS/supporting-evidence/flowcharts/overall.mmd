@@ -1,0 +1,6 @@
+flowchart TD
+ A([Open page]) --> B[(Initialize and normalize localStorage)]
+ B --> C{Logged user exists?}
+ C -- No --> D[/Go to login/]
+ C -- Yes --> E[Role redirect and navigation]
+ E --> F([Use modules or logout])

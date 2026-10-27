@@ -1,0 +1,25 @@
+flowchart TD
+    A(["Start"])
+    B{"Accounts exist?"}
+    C["Create Primary Admin<br/>in user.php"]
+    D[/"Enter login credentials"/]
+    E["Verify password hash"]
+    F{"Valid login?"}
+    G[/"Show login error"/]
+    H["Open permitted module"]
+    I[("Browser-local records")]
+    J[/"Tables / receipts / reports"/]
+    K(["Logout / end"])
+    A --> B
+    B -->|"No"| C
+    C -->|"Setup then login"| D
+    B -->|"Yes"| D
+    D --> E
+    E --> F
+    F -->|"No"| G
+    G -->|"Retry"| D
+    F -->|"Yes"| H
+    H --> I
+    I --> J
+    J -->|"Continue"| H
+    J --> K

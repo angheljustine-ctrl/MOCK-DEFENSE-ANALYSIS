@@ -1,0 +1,13 @@
+flowchart TD
+ A([Cart ready]) --> B[/Enter payment/]
+ B --> C{Fields and payment valid?}
+ C -- No --> I[/Reject/]
+ I --> B
+ C -- Yes --> D[(Save transaction)]
+ D --> E{Write succeeded?}
+ E -- No --> J[/Stop on quota error/]
+ J --> H([End])
+ E -- Yes --> F[Deduct stock and save products]
+ F --> K[No final live-stock check; product failure ignored]
+ F --> G[/Clear cart, show receipt and success/]
+ G --> H

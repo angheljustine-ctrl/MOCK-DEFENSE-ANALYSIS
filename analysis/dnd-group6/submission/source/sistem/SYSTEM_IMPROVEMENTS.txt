@@ -1,0 +1,63 @@
+DOUGHNUT DISTURB MANAGEMENT SYSTEM
+FUNCTIONAL IMPROVEMENTS APPLIED
+
+1. EMPLOYEE MANAGEMENT
+- Employee IDs are automatically generated for new employees.
+- Employee ID is locked during editing so linked attendance, payroll and account records remain consistent.
+- Employee email and salary validation added.
+- Salary cannot be negative.
+- Employee deletion was changed to safe archival (Inactive) so payroll and attendance history are preserved.
+- Crew account employee links remain compatible with employee records.
+
+2. ATTENDANCE
+- Late minutes are calculated automatically from Time In (after 08:00).
+- Overtime minutes are calculated automatically from Time Out (after 17:00).
+- Duplicate attendance for the same employee and date is blocked.
+- Invalid combinations such as Absent with Time In/Time Out are blocked.
+- Payroll can read attendance records for days worked, late minutes and overtime minutes.
+
+3. PAYROLL
+- Payroll now uses a real start/end date instead of free-text-only periods.
+- Existing legacy payroll period text is recognized for compatibility.
+- Employee monthly salary is used to derive semi-monthly basic pay (50%).
+- Days worked and overtime minutes are pulled from attendance.
+- Overtime pay is automatically calculated using 125% of hourly rate.
+- Gross pay, total deductions and net pay are automatically calculated.
+- Duplicate payroll for the same employee and pay period is blocked.
+- Payslip now uses the same standardized payroll fields as the payroll record.
+- Payroll history is not deleted when an employee is archived.
+
+4. ACCOUNTS / PERMISSIONS
+- Crew accounts remain view-only for supported system pages.
+- Crew accounts must be linked to a valid active employee.
+- Non-Crew roles cannot retain an employee link.
+- Current logged-in account cannot deactivate or delete itself.
+- Primary Admin account remains protected.
+
+5. SETTINGS
+- Profile settings now update the actual signed-in account instead of only a separate profile object.
+- Username/email uniqueness is validated.
+- Change Password now actually saves the new password in the frontend demo data.
+- Remember Me now uses localStorage when checked and sessionStorage when unchecked.
+
+6. PRODUCTS
+- Price and stock cannot be negative.
+- Duplicate product IDs are blocked.
+- Stock status is automatically determined: 0 = Unavailable, 1-10 = Low Stock, above 10 = Available.
+- Optional image URL validation added.
+
+7. DATA CONSISTENCY
+- Standardized payroll fields: startDate, endDate, basic, days, absentDays, overtimeMinutes, overtimePay, allowance, bonus, lateDeduction, absenceDeduction, otherDeductions, deductionsTotal, grossPay, netPay, status.
+- Legacy payroll values remain readable through normalization.
+- Existing visual theme, layout, drawer/modal approach, colors and navigation were preserved.
+
+IMPORTANT DEMO LIMITATION
+This project remains a frontend/localStorage demonstration. Passwords and permissions are not production-grade security. For deployment with real employees and payroll, use a backend database, hashed passwords, server-side authorization and secure sessions.
+
+PAYROLL ASSUMPTIONS USED BY THIS FRONTEND DEMO
+- Semi-monthly basic pay = 50% of monthly employee salary.
+- Standard workday = 08:00 to 17:00.
+- Overtime = minutes after 17:00.
+- Overtime rate = 125% of estimated hourly rate.
+- Hourly rate = monthly salary / 26 / 8.
+These assumptions should be replaced with your school's/business payroll policy if different.

@@ -1,0 +1,11 @@
+flowchart TD
+    A([Open protected page]) --> B[(Read avenor_session from localStorage)]
+    B --> C{Session exists?}
+    C -- No --> D[/Redirect to login/]
+    C -- Yes --> E[Normalize session role]
+    E --> F{Role listed for page?}
+    F -- No --> G[/Redirect to dashboard/]
+    F -- Yes --> H[/Render privileged page and functions/]
+    X[/Locally edit session role to Admin/] --> B
+    Y[/Restore crafted backup with injected session/] --> B
+    H --> Z([Privileged access accepted])

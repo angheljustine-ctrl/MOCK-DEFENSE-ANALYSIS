@@ -1,0 +1,11 @@
+flowchart TD
+A([Start]) --> B[/Browse, search or FAQ/]
+B --> C{Account action?}
+C -- No --> D[/Public tracking: diagram 3/]
+C -- Yes --> E{Logged in?}
+E -- No --> F[Register or log in]
+F -- Retry --> E
+E -- Yes --> G[My Account or request form]
+G -- Request --> H[Subprocess: submit request, diagram 2]
+H -- Save --> I[(Browser localStorage)]
+I --> J([Local demo only])

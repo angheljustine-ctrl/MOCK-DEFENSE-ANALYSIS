@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 760"><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#356078"/></marker></defs><rect width="740" height="760" fill="white"/>
+<polyline points="225,70 225,95" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="225,155 225,185" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="225,245 225,280" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="335,310 460,310" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="397.5" y="300" font-family="Arial" font-size="13" fill="#78451d">Yes</text>
+<polyline points="570,282 570,125 335,125" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="397.5" y="115" font-family="Arial" font-size="13" fill="#78451d">Retry</text>
+<polyline points="225,340 225,375" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="237" y="357.5" font-family="Arial" font-size="13" fill="#78451d">No</text>
+<polyline points="225,435 225,470" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="225,530 225,565" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="225,625 225,660" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="237" y="642.5" font-family="Arial" font-size="13" fill="#78451d">Writes succeed</text>
+<polyline points="335,595 460,595" fill="none" stroke="#356078" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="397.5" y="585" font-family="Arial" font-size="13" fill="#78451d">Write failure</text>
+<rect x="115" y="12" width="220" height="56" rx="28" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="45.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Cashier opens POS</text>
+<polygon points="127,97 337,97 323,153 113,153" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="130.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Choose variants / quantity</text>
+<rect x="115" y="187" width="220" height="56" rx="3" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="211.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Cart uses captured stock</text>
+<text x="225" y="228.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Compute VAT and discount</text>
+<polygon points="225,276 340,310 225,344 110,310" fill="#fff3d8" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="315.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Empty / Cash underpaid?</text>
+<polygon points="472,282 682,282 668,338 458,338" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="570" y="315.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Show error; edit cart</text>
+<path d="M115,377 C115,366 335,366 335,377 L335,425 C335,441 115,441 115,425 Z" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/><path d="M115,377 C115,388 335,388 335,377" fill="none" stroke="#125e8a"/>
+<text x="225" y="410.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Write sale header first</text>
+<rect x="115" y="472" width="220" height="56" rx="3" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="496.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Find variant; subtract qty</text>
+<text x="225" y="513.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">No fresh-stock validation</text>
+<path d="M115,567 C115,556 335,556 335,567 L335,615 C335,631 115,631 115,615 Z" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/><path d="M115,567 C115,578 335,578 335,567" fill="none" stroke="#125e8a"/>
+<text x="225" y="591.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Write variants, items,</text>
+<text x="225" y="608.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">movements separately</text>
+<polygon points="127,662 337,662 323,718 113,718" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="225" y="695.0" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Audit, clear cart, receipt</text>
+<polygon points="472,567 682,567 668,623 458,623" fill="#e8f4fa" stroke="#125e8a" stroke-width="2"/>
+<text x="570" y="591.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">Write throws: execution stops</text>
+<text x="570" y="608.5" text-anchor="middle" font-family="Arial" font-size="14" fill="#172033">No rollback handler</text>
+</svg>

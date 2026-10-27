@@ -1,0 +1,666 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="file:///D:/MOCK%20DEFENSE%20ANALYSIS/analysis/ait-merchandise-request/supporting-evidence/"><title>AIT Merchandise Request and Tracking System</title>
+<style>
+  @page { size: A4; margin: 13mm 12mm 15mm; }
+  :root { --ink:#172033; --muted:#5b6475; --blue:#125e8a; --pale:#eef7fb; --line:#d7dde7; --critical:#a61b1b; --high:#c24f12; --medium:#9a6b00; --ok:#1d7a46; }
+  * { box-sizing:border-box; }
+  body { margin:0; color:var(--ink); font-family:"Segoe UI",Arial,sans-serif; font-size:9.7pt; line-height:1.42; }
+  .cover { height:255mm; display:flex; flex-direction:column; justify-content:center; padding:24mm 18mm; background:linear-gradient(145deg,#0b2942 0%,#125e8a 62%,#1f7fa8 100%); color:white; page-break-after:always; page-break-inside:avoid; }
+  .cover .kicker { font-size:11pt; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:#bde8f8; }
+  .cover h1 { font-size:32pt; line-height:1.12; margin:10mm 0 7mm; color:white; border:0; page-break-before:avoid !important; break-before:avoid !important; }
+  .cover .subtitle { font-size:15pt; max-width:145mm; color:#e3f5fc; }
+  .cover .meta { margin-top:25mm; padding-top:7mm; border-top:1px solid rgba(255,255,255,.38); font-size:10.5pt; }
+  main { max-width:100%; }
+  h1 { color:#0b3654; font-size:22pt; line-height:1.15; margin:0 0 7mm; padding-bottom:3mm; border-bottom:2px solid #2e89b5; page-break-before:always; }
+  main > h2:first-child, main > p:first-child { page-break-before:avoid; }
+  h2 { color:#125e8a; font-size:16pt; margin:8mm 0 3mm; page-break-after:avoid; }
+  h3 { color:#263a53; font-size:12.5pt; margin:5mm 0 2mm; page-break-after:avoid; }
+  h4 { font-size:10.5pt; margin:4mm 0 1.5mm; }
+  p { margin:0 0 3mm; }
+  ul,ol { margin:1mm 0 3mm 6mm; padding-left:5mm; }
+  li { margin-bottom:1.2mm; }
+  strong { color:#142d46; }
+  code { font-family:Consolas,monospace; font-size:8.8pt; background:#eef1f5; padding:.2mm 1mm; border-radius:2px; overflow-wrap:anywhere; }
+  pre { white-space:pre-wrap; background:#172033; color:#eef7fb; padding:4mm; border-radius:4px; font-size:8.4pt; page-break-inside:avoid; }
+  pre code { background:transparent; color:#f8fafc; padding:0; border-radius:0; font-size:inherit; overflow-wrap:normal; }
+  blockquote { margin:4mm 0; padding:3mm 4mm; background:#fff8df; border-left:4px solid #d59a13; color:#4b3c16; }
+  table { width:100%; border-collapse:collapse; margin:3mm 0 5mm; font-size:8.1pt; page-break-inside:auto; }
+  thead { display:table-header-group; }
+  tr { page-break-inside:avoid; }
+  th { background:#125e8a; color:white; text-align:left; font-weight:700; }
+  th,td { border:1px solid var(--line); padding:1.8mm 2mm; vertical-align:top; overflow-wrap:break-word; word-break:normal; }
+  tbody tr:nth-child(even) { background:#f6f8fb; }
+  img { display:block; max-width:100%; max-height:178mm; object-fit:contain; margin:4mm auto 6mm; page-break-inside:avoid; }
+  img.half-diagram { max-height:92mm; margin:2mm auto 3mm; }
+  hr { border:0; border-top:1px solid var(--line); margin:7mm 0; }
+  a { color:#125e8a; text-decoration:none; }
+  .page-break { page-break-before:always; }
+  .section-lead { color:var(--muted); font-size:10.5pt; }
+  .qa-card { border:1px solid var(--line); border-left:4px solid #2e89b5; border-radius:3px; padding:3mm 3.5mm; margin:0 0 3mm; page-break-inside:avoid; }
+  .qa-card p { margin:1mm 0; font-size:8.5pt; }
+  .qa-card .evidence { color:var(--muted); font-size:7.8pt; }
+  .qa-head { display:flex; align-items:center; gap:2mm; margin-bottom:1mm; }
+  .qa-head h3 { flex:1; margin:0; font-size:10.5pt; }
+  .badge { display:inline-block; padding:.5mm 1.8mm; border-radius:10px; font-size:7.3pt; font-weight:700; color:white; background:#64748b; }
+  .badge.passed { background:var(--ok); }.badge.failed,.badge.sev-critical { background:var(--critical); }.badge.blocked,.badge.not-run { background:#64748b; }
+  .badge.sev-high { background:var(--high); }.badge.sev-medium { background:var(--medium); }.badge.sev-low,.badge.sev-info { background:#39769a; }
+  .appendix h1 { page-break-before:always; }
+</style></head><body>
+<section class="cover"><div class="kicker">Consolidated Mock-Defense Report</div><h1>AIT Merchandise Request and Tracking System</h1><p class="subtitle">System flow, JavaScript, validation, QA, loopholes, vibe-coding indicators, panel questions, and improvements in one reviewer-friendly document.</p><div class="meta">Review date: 02 October 2026 | Asia/Manila<br>Evidence-aware analysis - Confirmed, code-evidenced, suspected, and blocked results remain distinct.</div></section>
+<main>
+<div style="display:none">
+
+<p><strong>Review date:</strong> 02 October 2026 | Asia/Manila</p>
+</div>
+
+<style>body{font-size:9.2pt;line-height:1.35}h2{margin-top:4mm;font-size:14pt}h3{margin-top:3mm;font-size:11pt}table{font-size:7.8pt}th,td{padding:1.5mm 2mm}.compact{font-size:9pt}.finding{break-inside:avoid;margin-bottom:4mm}.diagram{max-height:82mm;margin:1mm auto 2mm}.small-diagram{max-height:78mm;margin:1mm auto 2mm}td code{font-size:7.4pt}blockquote{font-size:9pt}pre{font-size:7.7pt;margin:2mm 0;padding:2.8mm}</style>
+
+<h1>Panel brief: ano ang actual system?</h1>
+<p><strong>Verdict: functional local prototype, may material correctness issues bago maging dependable demo; hindi pa operational campus service.</strong> Nakakapag-browse, register, log in, submit, at track ng merchandise request. Ang records ay nasa sariling browser; walang request na ipinapadala sa campus store. Ito ay tahasang limitation sa System Proposal, hindi hidden backend failure.</p>
+<p><strong>Strengths:</strong> gumagana ang three-item catalog at search/reset; may account-linked request history at refresh persistence; may native required-field checks, email-format check, duplicate member-ID check, at password confirmation. Kapaki-pakinabang ang dynamic item selection at malinaw ang four-stage timeline.</p>
+<p><strong>Pinakamahalagang risks para sa defense:</strong></p>
+<ol>
+<li>“Refresh status” changes the record kahit logged out; hindi ito read-only refresh.</li>
+<li>User-entered name becomes executable HTML in the greeting; harmless script marker was reproduced.</li>
+<li>Passwords at sessions are editable local data; known prototype limit, unsafe for real credentials.</li>
+<li>Uniform accepts N/A size; an extremely large quantity also passes without a defined business ceiling.</li>
+<li>Papers disagree about login, staff management, inventory, at academic modules.</li>
+</ol>
+<p><strong>QA snapshot:</strong> 15 selected local cases: <strong>8 Passed, 7 Failed, 0 Blocked</strong>. “Failed” means unmet expected control, kahit successful ang automated reproduction. Hindi ito whole-system coverage percentage. Real fulfillment, deployed security, mobile behavior, at multi-user concurrency were not tested.</p>
+<h2>System explained simply</h2>
+<p>Ang requester ay pumipili sa School Uniform, PE Uniform, o ID &amp; Laces; gagawa ng demo account; magsusumite ng item, size, quantity, at notes; at makakakuha ng <code>AIT-2026-001</code>-style ID. My Account filters requests by <code>userId</code>. Public tracking searches the same browser&#39;s records.</p>
+<p><strong>Stack and data movement:</strong> <code>index.html</code> -&gt; <code>js/main.js</code> -&gt; browser <code>localStorage</code> -&gt; page updates. Walang API, backend routes, relational database, o TypeScript sa supplied source. <code>css/style.css</code> provides responsive styling. Google Fonts and Font Awesome are external display resources, hindi merchandise integrations.</p>
+<p><strong>Evidence labels:</strong> Confirmed = observed in isolated runtime; Code-evidenced = directly supported by source; Suspected = needs another check; Not testable = required environment absent. Paper claims remain separate from implementation evidence.</p>
+<p><strong>Source reference convention:</strong> <code>JS:Lx-Ly</code> means <code>system_proposal/js/main.js</code>; <code>HTML:Lx-Ly</code> means <code>system_proposal/index.html</code>. All line numbers refer to the submitted files. Papers use PDF page numbers. Full input path and coverage are on the last page.</p>
+<h1>Paper-to-system traceability</h1>
+<p><strong>Documents:</strong> System Proposal.pdf (8 pages) is the focused merchandise proposal; DOCUMENTATION GRP7.pdf (14 pages) is supporting course documentation. Both show AY 2026-2027; neither establishes a reliable revision date. The focused proposal matches the source better, pero hindi awtomatikong mas bagong version.</p>
+<table>
+<thead>
+<tr>
+<th>Claim / source</th>
+<th>Actual evidence</th>
+<th>Verdict and defense significance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P1: Three merchandise categories, search/filter. Proposal pp.2,4,6.</td>
+<td>JS:L5-L11, L499-L518; T01.</td>
+<td>Implemented for local catalog. No live stock assertion.</td>
+</tr>
+<tr>
+<td>P2: Registration, login, account history. Proposal pp.4,7-8.</td>
+<td>JS:L140-L180, L254-L292; T03, T06.</td>
+<td>Implemented as a demo; secure identity is not claimed by proposal.</td>
+</tr>
+<tr>
+<td>P3: Basic validation and unique IDs. Proposal pp.4,6.</td>
+<td>HTML:L199-L224; JS:L58-L64, L663-L698; T05, T07, T13.</td>
+<td>Partial: basic checks work; business combinations and collision safeguards do not.</td>
+</tr>
+<tr>
+<td>P4: Prototype status, no live fulfillment integration. Proposal p.7.</td>
+<td>JS:L789-L805; T08.</td>
+<td>Implemented simulation; UI “Refresh” does not explain that it changes state.</td>
+</tr>
+<tr>
+<td>P5: Local-only storage and prototype authentication. Proposal pp.2,7.</td>
+<td>JS:L15-L20, L95-L129, L156-L158; T10, T12.</td>
+<td>Implemented limitation. No cross-device synchronization expected.</td>
+</tr>
+<tr>
+<td>D1: Grades, attendance, enrollment, teacher modules. Documentation pp.2,7.</td>
+<td>Full source inventory contains only merchandise frontend.</td>
+<td>Missing relative to documentation; out of scope under Proposal pp.3,7. Resolve the paper conflict, not expand the app automatically.</td>
+</tr>
+<tr>
+<td>D2: Central database, inventory CRUD, authorized staff dashboard. Documentation pp.4-7.</td>
+<td>Static PRODUCTS; personal dashboard; no staff-management flow.</td>
+<td>Missing relative to documentation; Proposal pp.6-8 treats backend/staff management as future work.</td>
+</tr>
+<tr>
+<td>D3: No login; one actor, interactions unauthenticated. Documentation p.10.</td>
+<td>initAuth plus request submit session guard, JS:L294-L452, L654-L661.</td>
+<td>Contradicted: login exists and request submission requires local session.</td>
+</tr>
+<tr>
+<td>D4: Objectives achieved and tested. Documentation pp.5,14.</td>
+<td>No supplied test cases, test logs, acceptance metrics, or school evaluation results.</td>
+<td>Not verifiable as a historical testing claim. This review&#39;s 15 cases are independent evidence.</td>
+</tr>
+</tbody></table>
+<h2>Paper quality and diagram correctness</h2>
+<p>Ang documentation starts as a School Management System but later describes a merchandise portal. Section 6 omits the Staff requester emphasized elsewhere, while p.10 says no login. The title and actor model should reflect one approved scope.</p>
+<p><strong>Documentation p.9 diagram was visually inspected.</strong> Its caption says submitting and tracking, pero ang drawn path shows only ID lookup, existence check, retrieval, and status output. Walang submission, login gate, save failure, o Refresh mutation. The diamond question also refers to request-ID storage. Keep its lookup path, revise the caption or add the missing flows.</p>
+<p><strong>Requirement gap:</strong> “eligible user,” allowable quantities, product-size rules, at pickup completion are not measurable acceptance criteria. State those rules before claiming complete validation. The broad “objectives achieved” conclusion needs a requirement-to-test table, not just screenshots.</p>
+<h1>Domain capability baseline and gaps</h1>
+<p><strong>Scope used:</strong> single-campus merchandise request <strong>prototype</strong>, three categories, requester accounts, displayed status. Stock reservation, payment, delivery, and full school administration are not minimum requirements for this submission. For actual deployment, staff authorization and a shared source of truth become essential operational dependencies.</p>
+<p><strong>Research basis:</strong> <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">S1 OWASP HTML5 security</a> supports treating browser storage as untrusted and avoiding sensitive credentials there. <a href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">S2 OWASP input validation</a> distinguishes input format from business meaning. <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">S3 OWASP authorization</a> supports deny-by-default permission checks. <a href="https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/">S4 NPC IRR</a> supports transparent, proportionate personal-data handling for a Philippine deployment. These are design references, hindi certification or legal-compliance verdict.</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Importance / basis</th>
+<th>Expected vs actual</th>
+<th>Verdict / priority</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Discoverable catalog</td>
+<td>Core; explicit Proposal p.4</td>
+<td>Browse/search/filter three scoped items; T01 matches.</td>
+<td>Complete locally</td>
+</tr>
+<tr>
+<td>Account/request association</td>
+<td>Core; explicit Proposal pp.4,7</td>
+<td>Stable userId links requester to history; T06 matches.</td>
+<td>Complete for normal local demo</td>
+</tr>
+<tr>
+<td>Required fields and basic validity</td>
+<td>Core; explicit Proposal p.6; S2</td>
+<td>Empty/invalid required data rejected; T02, T05 pass.</td>
+<td>Partial; cross-field rules absent / Medium</td>
+</tr>
+<tr>
+<td>Product-size consistency</td>
+<td>Core; necessary request dependency; S2</td>
+<td>Uniform needs a garment size; UI allows N/A in T07.</td>
+<td>Incorrect / Medium</td>
+</tr>
+<tr>
+<td>Quantity policy</td>
+<td>Important; process rule, S2</td>
+<td>Positive integer and defined campus limit; only native lower bound exists.</td>
+<td>Partial / Medium; ceiling must be agreed</td>
+</tr>
+<tr>
+<td>Unique request reference</td>
+<td>Core; explicit Proposal p.6</td>
+<td>No duplicate ID in retained records; counter reset reproduces collision.</td>
+<td>Incorrect / Medium</td>
+</tr>
+<tr>
+<td>Truthful status refresh</td>
+<td>Core; accurate tracking, Proposal p.7</td>
+<td>Viewing refreshes display; demo progression should be explicit. T08 advances without staff.</td>
+<td>Incorrect UI semantics / High</td>
+</tr>
+<tr>
+<td>Persistence and failure feedback</td>
+<td>Core; explicit Proposal p.8</td>
+<td>Persist or report failure; T06 passes, T15 status falsely succeeds.</td>
+<td>Partial / Medium</td>
+</tr>
+<tr>
+<td>Safe output rendering</td>
+<td>Core; untrusted names, S1</td>
+<td>Name rendered as text; T14 executes harmless marker.</td>
+<td>Incorrect / High</td>
+</tr>
+<tr>
+<td>Credential/data protection</td>
+<td>Important now; Core for deployment, S1/S4</td>
+<td>Honest demo limits; production safeguards absent, explicitly disclosed.</td>
+<td>Partial demo boundary / High if real data</td>
+</tr>
+<tr>
+<td>Shared staff workflow and audit</td>
+<td>Optional now; operational prerequisite, S3</td>
+<td>Future authorized queue, evidence-backed transitions, pickup record. No implementation.</td>
+<td>Out of prototype scope; High before deployment</td>
+</tr>
+<tr>
+<td>Payment, delivery, academics, mobile app</td>
+<td>Optional; explicitly excluded Proposal p.7</td>
+<td>No implementation expected.</td>
+<td>Not applicable; no defect assigned</td>
+</tr>
+</tbody></table>
+<p><strong>What this means:</strong> the project can demonstrate a request concept. Showing “Ready for Pickup” does not prove stock availability, staff preparation, or actual pickup. Multi-branch features and enterprise infrastructure are not needed to repair the current demo defects.</p>
+<h1>Actors, critical use cases, and process correctness</h1>
+<h2>Actual role and permission matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Actual allowed behavior</th>
+<th>Boundary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visitor</td>
+<td>Browse, search, FAQ, legal text, contact confirmation, ID tracking, status advance.</td>
+<td>No login check on tracking/advance. Only records in that browser can be found.</td>
+</tr>
+<tr>
+<td>Student requester</td>
+<td>Register/login; submit; personal details/history; logout.</td>
+<td>Local session and dashboard filter, not trusted server authorization.</td>
+</tr>
+<tr>
+<td>Staff requester</td>
+<td>Same as Student requester.</td>
+<td>accountType is self-selected; no extra privileges or staff dashboard.</td>
+</tr>
+<tr>
+<td>Administrator/operator</td>
+<td>No distinct account or interface supplied.</td>
+<td>An operational role is future work under the proposal.</td>
+</tr>
+</tbody></table>
+<h2>Critical journeys</h2>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Preconditions and main flow</th>
+<th>Exceptions / postcondition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Create account / login</td>
+<td>Unique username and member ID; valid form -&gt; register -&gt; login.</td>
+<td>Duplicate or mismatch rejected; successful login writes local session. Identity eligibility unverified.</td>
+</tr>
+<tr>
+<td>Request merchandise</td>
+<td>Local account -&gt; category/item -&gt; size/quantity -&gt; submit -&gt; persist.</td>
+<td>Logged out opens login; invalid HTML returns to form; failed request save shows error. Successful save creates ID/history.</td>
+</tr>
+<tr>
+<td>Track / progress</td>
+<td>Retained ID in same browser -&gt; lookup -&gt; timeline -&gt; Refresh.</td>
+<td>Unknown ID gets error. Refresh changes status, without authorized staff actor.</td>
+</tr>
+<tr>
+<td>Contact inquiry</td>
+<td>Required name/email/message -&gt; submit.</td>
+<td>Form claims delivery and resets; no message reaches a service.</td>
+</tr>
+</tbody></table>
+<h2>Process correctness verdicts</h2>
+<p><strong>Correct locally:</strong> category-item options follow the catalog; normal request identity is taken from activeUser rather than editable form fields; dashboard filters by userId; unknown-ID errors are clear.</p>
+<p><strong>Partial:</strong> registration collects Student/Staff ID but does not verify eligibility; constraints cover field format but not product-size meaning; local persistence is browser-bound; lookup exposes basic status by ID, intentionally disclosed in JS:L892.</p>
+<p><strong>Incorrect:</strong> a Refresh action advances fulfillment state; failed status saves can still display success; contact success is not backed by delivery. <strong>Blocked for operational verification:</strong> staff review, actual preparation, stock checks, pickup proof, recovery from an institutional backup, and deployment authorization have no supplied implementation.</p>
+<h2>Validation coverage inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Boundary</th>
+<th>Present control</th>
+<th>Missing / untested</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Registration client</td>
+<td>required, email type/regex, password minlength 6, confirmation, case-insensitive duplicate checks.</td>
+<td>Whitespace-only names/IDs, eligibility, length ceilings, trusted identity.</td>
+</tr>
+<tr>
+<td>Request client/business</td>
+<td>Session guard, native checkValidity, required selects, quantity min 1/default integer step.</td>
+<td>Item-size combination, ceiling, normalized typed quantity; direct helpers not validating schema.</td>
+</tr>
+<tr>
+<td>Storage/data integrity</td>
+<td>JSON read/write try/catch; saveUsers/saveRequests return boolean.</td>
+<td>Array/object shape, collision/atomicity, parse-error preservation; status save boolean ignored.</td>
+</tr>
+<tr>
+<td>Authorization/output</td>
+<td>Dashboard userId filter; most account fields use textContent.</td>
+<td>Greeting uses innerHTML; public advance lacks role/owner guard.</td>
+</tr>
+<tr>
+<td>Server/database</td>
+<td>None supplied.</td>
+<td>Server validation, schema constraints, sessions and audit cannot be tested. This is disclosed scope.</td>
+</tr>
+</tbody></table>
+<h1>Flowcharts: overall and request transaction</h1>
+<p><strong>Actual implemented flows.</strong> Rounded shapes = start/end; parallelograms = input/output; rectangles = work; diamonds = decisions; cylinder = browser storage. Arrows are implementation paths, not proposed backend behavior.</p>
+<h2>1. Overall system</h2>
+<img class="small-diagram" src="flowcharts/01-overall.svg" alt="Overall merchandise prototype flow">
+
+<p>Public information remains accessible. Account actions require a local session; registration/login returns to that check. Request data stays local. Public tracking continues in diagram 3. Sources: JS:L217-L292, L624-L638, L989-L1000. Failed login does not grant a session (JS:L169-L175).</p>
+<h2>2. Main transaction: submit request</h2>
+<img class="small-diagram" src="flowcharts/02-request.svg" alt="Request validation and persistence flow">
+
+<p>The handler captures identity from the logged-in account, then writes a counter and request array separately. Ordinary validation and save failures have feedback; a counter-write exception has no recovery in the delayed callback. Sources: JS:L58-L64, L651-L715. Business-valid size and quantity are not separate decisions in the actual flow.</p>
+<h1>Tracking flow and important JavaScript</h1>
+<h2>3. Riskiest flow: public lookup and status mutation</h2>
+<img class="diagram" src="flowcharts/03-tracking.svg" alt="Public tracking and status mutation flow">
+
+<p>Lookup has no session check. “Refresh” increments statusIndex and attempts to save. Kahit failed ang save, updateRequestStatus returns the changed object, so the display can disagree with storage. Sources: JS:L72-L79, L768-L805. T08 and T15 confirm both paths. The simulation does not verify preparation or stock.</p>
+<h2>Functions the proponents should explain</h2>
+<table>
+<thead>
+<tr>
+<th>Function / source</th>
+<th>Input -&gt; output / side effect</th>
+<th>How the system uses it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>registerUser, loginUser; JS:L140-L175</td>
+<td>Account data / credentials -&gt; result object; saves users/session.</td>
+<td>Called by delayed registration/login handlers; duplicate checks are local.</td>
+</tr>
+<tr>
+<td>getCurrentUser, refreshAuthUI; JS:L115-L129, L217-L252</td>
+<td>Stored userId -&gt; account; changes header and form/dashboard visibility.</td>
+<td>Initializes page and runs after login/logout/request. Local state is trusted.</td>
+</tr>
+<tr>
+<td>renderAccountDashboard; JS:L254-L292</td>
+<td>User -&gt; filtered, date-sorted request cards.</td>
+<td>Shows own history in normal UI; renders several record values through innerHTML.</td>
+</tr>
+<tr>
+<td>renderCatalog, populateItemSelect; JS:L499-L518, L582-L622</td>
+<td>Search/category -&gt; cards/options.</td>
+<td>Input/filter events rerender; one matching item is auto-selected.</td>
+</tr>
+<tr>
+<td>initRequestForm handler; JS:L651-L715</td>
+<td>Form + account -&gt; stored request, ID and confirmation.</td>
+<td>Uses FormData; quantity stays a string; save failure is checked.</td>
+</tr>
+<tr>
+<td>generateRequestId; JS:L58-L64</td>
+<td>Counter -&gt; padded ID; increments local key.</td>
+<td>Called before request save; hardcodes 2026 and assumes counter integrity.</td>
+</tr>
+<tr>
+<td>runTrackLookup, updateRequestStatus; JS:L768-L787, L72-L79</td>
+<td>ID -&gt; record; new index -&gt; changed record.</td>
+<td>Public lookup plus advance button; status helper does not verify ownership/range/save result.</td>
+</tr>
+<tr>
+<td>initContactForm; JS:L812-L825</td>
+<td>Valid form -&gt; success text and reset.</td>
+<td>Has no delivery operation. FAQ/nav/legal helpers only change page UI.</td>
+</tr>
+</tbody></table>
+<p><strong>JavaScript pattern:</strong> DOM event listeners drive the workflow; setTimeout adds artificial latency, not a server request. localStorage uses JSON arrays for accounts and requests. No TypeScript, API client, or backend business service was supplied.</p>
+<h1>Prioritized findings: status and security</h1>
+<div class="finding">
+
+<h2>F1. Refresh changes fulfillment state</h2>
+<p><span class="badge sev-high">High</span> <strong>Confirmed | High confidence | Visitor / tracking</strong></p>
+<p><strong>Problema:</strong> puwedeng magmukhang prepared ang request kahit walang store action. <strong>Expected vs actual:</strong> refresh should reread status; instead it advances Submitted -&gt; Processing -&gt; Preparing -&gt; Ready for Pickup. <strong>Safe demo:</strong> create a synthetic request, log out, look it up, and click Refresh; T08 retained Processing.</p>
+<p><strong>Effect:</strong> unreliable timeline, misleading pickup expectation. Basic public lookup is disclosed; the unauthorized mutation is the distinct issue. <strong>Ayusin:</strong> separate an explicitly labeled demo progression control from read-only refresh. For deployment, only authorized staff should change state and record why. <strong>Verify:</strong> guest refresh leaves stored state unchanged. <strong>Panel:</strong> “Anong actual event ang nagpapatunay na ready na ang item?”</p>
+<p>Evidence: HTML:L280-L282; JS:L797-L804 and updateRequestStatus L72-L79. Only local records were tested, not a remote attack.</p>
+</div><div class="finding">
+
+<h2>F2. User name is executed as HTML</h2>
+<p><span class="badge sev-high">High</span> <strong>Confirmed | High confidence | Account / greeting</strong></p>
+<p><strong>Problema:</strong> ang pangalan ay nagiging page markup rather than plain text. This is cross-site scripting (XSS): user input can run browser script. <strong>Safe demo:</strong> T14 registered a synthetic name containing an image event that only sets an in-memory numeric marker; login rendered it and the marker ran. Walang data read, external call, o destructive action.</p>
+<p><strong>Expected vs actual:</strong> literal name display vs executable markup through innerHTML. <strong>Effect:</strong> code execution in that browser origin; credentials and other local data are within script reach, though theft was not performed. No cross-device spread was demonstrated. <strong>Ayusin:</strong> render name as text; build emphasis separately. <strong>Verify:</strong> markup remains literal and marker never runs. <strong>Panel:</strong> “Bakit textContent ang ibang fields pero innerHTML ang greeting?”</p>
+<p>Evidence: JS:L353, L381, L151, L223-L224; T14 confirms the normal registration-to-login path. Risk basis S1.</p>
+</div><div class="finding">
+
+<h2>F3. Local login cannot protect real accounts</h2>
+<p><span class="badge sev-high">High</span> <strong>Confirmed limitation | High confidence | All local accounts</strong></p>
+<p><strong>Problema:</strong> readable plaintext passwords and editable session IDs. <strong>Safe demo:</strong> T12 read only the synthetic password and selected a synthetic userId without password validation. <strong>Expected vs actual:</strong> production login requires trusted verification; current login is a browser demonstration.</p>
+<p><strong>Effect:</strong> account isolation is not a security guarantee for a shared browser, local user, or injected script. This is openly acknowledged in Proposal p.7 and JS comments. <strong>Ayusin:</strong> prominently restrict the demo to dummy data; before deployment add trusted authentication, session lifecycle, and credential protection. <strong>Verify:</strong> deployed identity cannot be changed by editing browser data. <strong>Panel:</strong> “Aling security claims ang demo lang, at alin ang may trusted enforcement?”</p>
+<p>Evidence: JS:L156-L158, L115-L129, L169-L175; privacy text L894-L896; T12. Severity is for real-data misuse, not proof of compromise of an institution.</p>
+</div>
+
+<h1>Prioritized findings: validation and feedback</h1>
+<div class="finding">
+
+<h2>F4. Valid fields can still make an invalid request</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Confirmed | High confidence | Merchandise request</strong></p>
+<p><strong>Problema:</strong> School Uniform accepts N/A size. Quantity has a lower bound but no agreed maximum. <strong>Safe demo:</strong> T07 used the ordinary UI to submit Uniform / N/A / 1000000. <strong>Expected vs actual:</strong> garment size should match the product; the UI makes every size option available for every category.</p>
+<p><strong>Effect:</strong> staff cannot prepare a meaningful uniform size; unrealistic quantities can enter the demo. A numeric ceiling is a proposed campus policy, not a verified existing requirement. <strong>Ayusin:</strong> product-specific size rules; define a sensible quantity policy with stakeholders. <strong>Verify:</strong> Uniform/N/A is rejected; ID &amp; Laces/N/A works; agreed quantity boundaries pass/fail correctly. <strong>Panel:</strong> “Paano naiiba ang valid size para sa uniform at lanyard?”</p>
+<p>Evidence: HTML:L211-L224; JS:L674-L678, L663-L665. Native min/step already rejects 0 and 1.5 (T05); the defect is semantic validation, not absence of all validation. Basis S2.</p>
+</div><div class="finding">
+
+<h2>F5. Contact success has no delivery</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Confirmed | High confidence | Visitor / contact inquiry</strong></p>
+<p><strong>Problema:</strong> “Message sent” implies received inquiry. <strong>Safe demo:</strong> submit dummy contact fields; T11 displayed success, cleared fields, and initiated no request. Source contains no message store or mail operation.</p>
+<p><strong>Expected vs actual:</strong> success after delivery acknowledgement, or an honest demo confirmation; current success has no recipient. <strong>Effect:</strong> user may wait for a reply that cannot arrive through this form. This feature is in Documentation p.10 even though not a central proposal objective. <strong>Ayusin:</strong> label it simulated, or add a real intake path with failure feedback before live use. <strong>Verify:</strong> no success after rejected delivery; a delivered test message has a receipt. <strong>Panel:</strong> “Saan makikita ng store team ang message?”</p>
+<p>Evidence: JS:L817-L824; HTML:L410-L425; T11. Listed contact addresses were not contacted or verified.</p>
+</div><div class="finding">
+
+<h2>F6. Failed status save still looks successful</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Confirmed | High confidence | Tracking / persistence</strong></p>
+<p><strong>Problema:</strong> the timeline can disagree with the saved record. <strong>Safe demo:</strong> T15 temporarily made request-storage writes throw in the isolated browser; the helper returned Preparing while storage still said Processing. The temporary override was restored immediately.</p>
+<p><strong>Expected vs actual:</strong> failure should preserve the visible saved state and show error; updateRequestStatus ignores saveRequests&#39; false result. <strong>Effect:</strong> apparent progress disappears on reload. <strong>Ayusin:</strong> return an explicit failure and render only a successfully persisted record. <strong>Verify:</strong> failed write shows error; refresh/reload stays consistent. <strong>Panel:</strong> “Paano nalalaman ng caller na successful ang save?”</p>
+<p>Evidence: JS:L48-L55, L72-L79, L803-L804; T15. Counter-write exceptions are a separate code-evidenced weakness: JS:L61 can throw before the submission button is re-enabled at L699-L700; that UI failure was not runtime tested.</p>
+</div>
+
+<h1>Prioritized findings: records and paper consistency</h1>
+<div class="finding">
+
+<h2>F7. Corrupt storage is treated as an empty database</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Confirmed helper behavior | High confidence | Saved records</strong></p>
+<p><strong>Problema:</strong> read failure and “no records” share the same output. <strong>Safe demo:</strong> only in a fresh disposable context, T15 temporarily used malformed request JSON: getRequests returned [], and saveRequests replaced it with a new synthetic array. Original test data was restored. Full UI resubmission after corruption was not tested.</p>
+<p><strong>Expected vs actual:</strong> stop and preserve unreadable data vs fallback to empty then allow writes. <strong>Effect:</strong> apparent lost history and potential overwrite. Valid JSON of the wrong shape also lacks schema guards (Code-evidenced). <strong>Ayusin:</strong> distinguish invalid data, preserve a recovery copy, and block dependent writes. <strong>Verify:</strong> corrupt data remains recoverable and no success is shown. <strong>Panel:</strong> “Pareho ba ang walang request at hindi mabasang request?”</p>
+<p>Evidence: JS:L38-L55; similar user-array behavior JS:L85-L102; T15. No real records were corrupted.</p>
+</div><div class="finding">
+
+<h2>F8. IDs depend on an independent counter</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Confirmed reset collision | High confidence | Request reference</strong></p>
+<p><strong>Problema:</strong> “unique” is conditional on a trustworthy local counter. <strong>Safe demo:</strong> T13 reset only the synthetic counter to 0 while retaining request 001; generateRequestId returned that same ID. No duplicate user-facing request was then submitted.</p>
+<p><strong>Expected vs actual:</strong> no reuse in retained records; generator neither checks existing requests nor ties counter update to save. <strong>Effect:</strong> lookup/status modification selects the first matching ID; references become ambiguous. <strong>Ayusin:</strong> collision-resistant generation or retained-record checks; trusted uniqueness before deployment. <strong>Verify:</strong> retained IDs cannot repeat after reset/import and concurrent submissions. <strong>Panel:</strong> “Ano ang guarantee ninyo kapag nabago ang counter?”</p>
+<p>Evidence: JS:L58-L79, L689-L697. Hardcoded year 2026 is Code-evidenced; actual year rollover and simultaneous-tab collisions were not tested.</p>
+</div><div class="finding">
+
+<h2>F9. Documentation overstates and contradicts scope</h2>
+<p><span class="badge sev-medium">Medium</span> <strong>Code/paper-evidenced | High confidence | Defense requirements</strong></p>
+<p><strong>Problema:</strong> panel may judge a school management system kahit merchandise prototype ang demo. <strong>Safe verification:</strong> compare Documentation pp.2,4-7,10 with Proposal pp.3,6-7 and the six-file submission inventory.</p>
+<p><strong>Expected vs actual:</strong> one consistent approved scope; documentation claims academic and administrative capabilities, then says no login, while source has login and no staff backend. <strong>Effect:</strong> weak traceability and unsupported completion claims. <strong>Ayusin:</strong> reconcile the documents, keep exclusions explicit, update actors/diagrams, and replace blanket success statements with acceptance evidence. <strong>Verify:</strong> every objective maps to a module and a test or an explicit future-work exclusion. <strong>Panel:</strong> “Aling document ang approved scope at anong claims ang dapat baguhin?”</p>
+<p>This is a documentation defect and scope conflict; it is not evidence that the excluded academic modules must be built.</p>
+</div>
+
+<h1>Vibe-coding indicators: exact evidence, not authorship</h1>
+<p>These are implementation-risk signals: incomplete integration, happy-path assumptions, or demo behavior presented as real behavior. <strong>Hindi sila proof na AI ang sumulat ng code.</strong> Prototype comments openly explain several choices. Four distinct signals were selected; confidence concerns the mismatch, not its origin.</p>
+<h2>V1. Read-looking action writes fulfillment status</h2>
+<pre><code class="language-javascript">const nextIndex = Math.min(request.statusIndex + 1, STATUSES.length - 1);
+const updated = updateRequestStatus(request.id, nextIndex);
+if (updated) renderTrackResult(updated);
+</code></pre>
+<p><strong>Location/function:</strong> JS:L802-L804, initTracking click handler. It computes and persists the next stage. <strong>Signal:</strong> the HTML label is “Refresh status” (HTML:L281), while the code performs progression. <strong>Effect:</strong> visitor can manufacture apparent readiness. <strong>Confidence: High; runtime T08.</strong> A plausible demo shortcut is the interpretation, not a claim about who wrote it.</p>
+<h2>V2. Contact confirmation without an operation</h2>
+<pre><code class="language-javascript">status.textContent = &#39;Message sent. The campus store team will get back to you shortly.&#39;;
+form.reset();
+</code></pre>
+<p><strong>Location/function:</strong> JS:L823-L824, initContactForm. It only updates text and clears fields. <strong>Signal:</strong> success wording exists without transport or storage. <strong>Effect:</strong> user loses the message from the form while expecting follow-up. <strong>Confidence: High; runtime T11.</strong> The section comment explicitly calls it client-side confirmation only.</p>
+<h2>V3. Persistence result is discarded</h2>
+<pre><code class="language-javascript">requests[idx].statusIndex = newIndex;
+requests[idx].status = STATUSES[newIndex];
+saveRequests(requests);
+return requests[idx];
+</code></pre>
+<p><strong>Location/function:</strong> JS:L76-L79, updateRequestStatus. Mutates an in-memory record and returns it regardless of save success. <strong>Signal:</strong> saveRequests exposes a boolean contract, but this caller does not consume it. <strong>Effect:</strong> persisted and displayed statuses diverge under failure. <strong>Confidence: High; runtime T15.</strong></p>
+<h2>V4. Failure disguised as an ordinary empty state</h2>
+<pre><code class="language-javascript">} catch (err) {
+  console.error(&#39;Could not read stored requests:&#39;, err);
+  return [];
+}
+</code></pre>
+<p><strong>Location/function:</strong> JS:L42-L45, getRequests. A parse/access error becomes an empty array. <strong>Signal:</strong> fallback is convenient for initialization but loses the distinction needed for safe recovery. <strong>Effect:</strong> dependent flows can hide history or overwrite unreadable data. <strong>Confidence: High; helper runtime T15; full resubmission not run.</strong></p>
+<h1>Recommended system improvements</h1>
+<p>Product and process recommendations ito, hindi replacement code. Resolve the demo defects first; add operational capabilities only when the deployment scope changes.</p>
+<table>
+<thead>
+<tr>
+<th>Priority / current condition</th>
+<th>Add or change / intended process</th>
+<th>Benefit and success indicator</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>High:</strong> public Refresh advances status.</td>
+<td>Separate read-only refresh and clearly labeled simulator. Before deployment: staff reviews request, updates allowed stage, records actor/time/reason.</td>
+<td>Trustworthy progress; guest refresh never changes state; every operational transition has staff evidence.</td>
+</tr>
+<tr>
+<td><strong>High:</strong> name renders as executable markup.</td>
+<td>Display personal data as text; apply one consistent output-safety rule across greeting/cards.</td>
+<td>Prevents input becoming code; harmless marker stays literal and local data is not exposed through injected script.</td>
+</tr>
+<tr>
+<td><strong>High before real use:</strong> local password/session demo.</td>
+<td>Keep dummy-only data and visible demo notice. For deployment: trusted account verification, protected credential storage, expiring sessions and logout invalidation.</td>
+<td>Honest boundaries now; browser edits cannot impersonate a deployed account later.</td>
+</tr>
+<tr>
+<td><strong>Medium:</strong> request fields are independently valid but combinations are wrong.</td>
+<td>Define product-size mapping and stakeholder-approved quantity limits. Reject invalid combinations with field-specific guidance.</td>
+<td>Prepareable requests; uniform requires garment size, ID &amp; Laces uses N/A, boundaries match the approved policy.</td>
+</tr>
+<tr>
+<td><strong>Medium:</strong> save/parse failures create false or empty state.</td>
+<td>Make failure visible; keep unreadable records for recovery; confirm only completed saves.</td>
+<td>Reliable record continuity; failed writes do not update visible state or overwrite damaged data.</td>
+</tr>
+<tr>
+<td><strong>Medium:</strong> counter can reuse retained IDs.</td>
+<td>Guarantee reference uniqueness within the demo; for live service enforce uniqueness at the trusted store.</td>
+<td>Stable tracking; reset/import/concurrency tests do not produce duplicate retained IDs.</td>
+</tr>
+<tr>
+<td><strong>Medium:</strong> contact form implies delivery.</td>
+<td>Explicit demo confirmation now; acknowledged intake and retriable errors if made operational.</td>
+<td>No false expectation; a live success corresponds to a received message.</td>
+</tr>
+<tr>
+<td><strong>Medium:</strong> inconsistent papers and completion claims.</td>
+<td>Approve one scope, update actor/flow diagrams, and map each objective to test evidence or future work.</td>
+<td>Defensible evaluation; every major claim has a source, result, and limitation.</td>
+</tr>
+<tr>
+<td><strong>Later / before deployment:</strong> no shared staff records.</td>
+<td>Add a scoped staff queue and pickup completion, minimal audit history, availability policy, recovery, and data retention choices.</td>
+<td>A requester and authorized staff can see the same request on separate devices; rejected/cancelled/collected paths remain traceable.</td>
+</tr>
+</tbody></table>
+<p><strong>Suggested order:</strong> clarify scope and simulator wording -&gt; repair output/validation/save behavior -&gt; rerun the selected QA -&gt; design the operational staff process only if the project will handle real requests.</p>
+<p><strong>Privacy:</strong> if deployed in the Philippine setting shown by the UI, explain actual recipients, storage, retention, and correction/contact channels using clear language [S4]. The review does not establish AIT&#39;s real identity, deployment jurisdiction, lawful basis, or legal compliance. Policy text cannot substitute for safeguards or actual staff access.</p>
+<h1>QA summary: 15 distinct local cases</h1>
+<p><strong>Environment:</strong> headless Microsoft Edge, locally served submitted files, fresh disposable browser contexts. External display resources were blocked. Accounts and records are synthetic; tests never contacted the school/store or changed submitted source. Source hashes are checked at completion.</p>
+<p><strong>Measured:</strong> 8 Passed / 7 Failed / 0 Blocked among these 15 executed cases. Some scenarios inspect helpers directly or inject a reversible failure rather than using only clicks; these distinctions are shown below. Expected controls include truthful demo behavior, not unclaimed production features.</p>
+<table>
+<thead>
+<tr>
+<th>ID / area</th>
+<th>Safe steps and expected result</th>
+<th>Observed / status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T01 Catalog</td>
+<td>Search nonexistent item, reset; 0 then 3 cards.</td>
+<td>Matches. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T02 Registration negative</td>
+<td>Mismatched password confirmation; no account saved.</td>
+<td>Rejected, 0 accounts. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T03 Account positive</td>
+<td>Register/login synthetic Student; session resolves account.</td>
+<td>Matches. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T04 Uniqueness</td>
+<td>Call registration helper with duplicate member ID; reject.</td>
+<td>Duplicate blocked. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T05 Numeric boundary</td>
+<td>Check native request validity with 0 and 1.5 quantity; reject.</td>
+<td>Both invalid. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T06 Core transaction</td>
+<td>Valid request -&gt; reload -&gt; own history; retain ID and record.</td>
+<td>001 retained, one card. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T07 Business rules</td>
+<td>Submit Uniform/N/A/1000000; size should be meaningful, ceiling policy needed.</td>
+<td>Stored all values. <strong>Failed</strong></td>
+</tr>
+<tr>
+<td>T08 Authorization/status</td>
+<td>Logout -&gt; lookup ID -&gt; Refresh; viewing should not progress fulfillment.</td>
+<td>Stored Processing. <strong>Failed</strong></td>
+</tr>
+<tr>
+<td>T09 Lookup negative</td>
+<td>Unknown ID; error and no found result.</td>
+<td>Clear not-found feedback. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T10 Storage isolation</td>
+<td>Same ID in separate fresh context; no shared record expected.</td>
+<td>Not found, as disclosed. <strong>Passed</strong></td>
+</tr>
+<tr>
+<td>T11 Contact integration</td>
+<td>Submit dummy inquiry; truthful delivery acknowledgement expected.</td>
+<td>Success text without request. <strong>Failed</strong></td>
+</tr>
+<tr>
+<td>T12 Credential boundary</td>
+<td>Inspect synthetic password and set local session; cannot claim trusted auth.</td>
+<td>Plaintext + editable session. <strong>Failed deployment control; disclosed limit</strong></td>
+</tr>
+<tr>
+<td>T13 ID integrity</td>
+<td>Retain 001, reset local counter, generate; do not reuse ID.</td>
+<td>Generator repeats 001. <strong>Failed</strong></td>
+</tr>
+<tr>
+<td>T14 Output safety</td>
+<td>Normal registration with harmless name markup; render as text.</td>
+<td>In-memory script marker runs. <strong>Failed</strong></td>
+</tr>
+<tr>
+<td>T15 Storage resilience</td>
+<td>Temporarily reject writes / corrupt JSON; preserve truth and damaged record.</td>
+<td>False status success; [] fallback allows replacement. <strong>Failed</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Unexecuted follow-up cases:</strong> two tabs submit simultaneously; counter writes denied during form callback; whitespace-only identity; wrong-shaped but valid JSON; invalid statusIndex; account logout during delayed submission; manual mobile/keyboard/screen-reader checks. These are not counted as passed, failed, or blocked selected cases.</p>
+<p><strong>Before a live-service claim:</strong> request-to-staff delivery, pickup proof, identity verification, restoration from backup, and deployed session/access tests need an actual implementation and acceptance criteria. No institution-provided acceptance evidence was supplied.</p>
+<h1>Five strongest panel questions</h1>
+<h2>1. “Ano ang nangyayari kapag pinindot ang Refresh status?”</h2>
+<p><strong>Why ask:</strong> separates rereading data from changing a business state; JS:L797-L804. <strong>Strong answer:</strong> explain lookup -&gt; increment index -&gt; save -&gt; render, acknowledge the simulation, and show how read-only refresh and staff-controlled transitions would differ. <strong>Follow-up:</strong> “Bakit nakapag-Processing ang logged-out visitor sa T08?” <strong>Red flag:</strong> “Automatic ang store processing” without a staff event, API, or integration.</p>
+<h2>2. “Saan actually naka-save ang accounts at requests?”</h2>
+<p><strong>Why ask:</strong> tests architecture and ownership of state; JS:L15-L20, L38-L55, L95-L129. <strong>Strong answer:</strong> localStorage is tied to browser/origin, no central staff queue exists, passwords are plaintext demo data, and client-side filtering is not trusted authorization. Proposal p.7 already discloses these limits. <strong>Follow-up:</strong> “Ano ang mangyayari sa ibang device o shared browser pagkatapos mag-logout?” <strong>Red flag:</strong> claiming secure database encryption or server sessions that are not supplied.</p>
+<h2>3. “Paano ninyo sinisiguro ang valid request, hindi lang filled-out form?”</h2>
+<p><strong>Why ask:</strong> probes actual business validation; HTML:L211-L224, JS:L663-L678. <strong>Strong answer:</strong> distinguish required/min/step/email checks from product-size and eligibility/quantity policies. Explain that quantity is currently stored as a string and that trusted enforcement is needed for deployment. <strong>Follow-up:</strong> “Bakit pumasa ang Uniform/N/A sa T07; anong rule at test ang idaragdag?” <strong>Red flag:</strong> “May required lahat kaya impossible ang invalid request.”</p>
+<h2>4. “Paano ninyo malalaman kung successful talaga ang save?”</h2>
+<p><strong>Why ask:</strong> tests error handling and integrity; JS:L38-L55, L72-L79, L58-L64. <strong>Strong answer:</strong> describe boolean save result, caught read failures, independent counter/array writes, and why the current status helper can falsely succeed. Distinguish empty data from unreadable data and define recovery. <strong>Follow-up:</strong> “Ano ang observable behavior sa T13 at T15 pagkatapos ng reload?” <strong>Red flag:</strong> assuming localStorage never throws or JSON parsing guarantees a correct schema.</p>
+<h2>5. “Aling scope at acceptance evidence ang ide-defend ninyo?”</h2>
+<p><strong>Why ask:</strong> connects requirements, implementation, and tests. <strong>Strong answer:</strong> adopt a clearly approved merchandise scope, explain the documentation conflicts, avoid claiming academic/staff modules, and identify actual passed/failed tests. Include name output safety and contact simulation in the test plan. <strong>Follow-up:</strong> “Paano ninyo ipapakita na hindi executable HTML ang user name at received talaga ang inquiry?” <strong>Red flag:</strong> treating screenshots as validation proof, claiming all objectives complete, or attributing bugs to AI without evidence.</p>
+<p><strong>Panel use:</strong> let proponents trace the exact function and data movement first. Ask for a concrete demonstration using dummy records, then compare their explanation to the persisted result. Knowing and explaining limitations is a stronger answer than inventing missing components.</p>
+<h1>Coverage, limitations, and research sources</h1>
+<h2>Input and evidence coverage</h2>
+<p>Input root: <code>C:/Users/justi/Downloads/BSIT 3A GROUP-7 -20261002T143500Z-1-001/BSIT 3A GROUP-7/</code>.</p>
+<p>Inventory: <strong>6 supplied files</strong>: 2 PDFs, index.html, main.js, style.css, and logo.png. Both papers were text-extracted once; the system-flow diagram on Documentation p.9 was visually inspected. Full JavaScript was reviewed; HTML forms, entry script, and external assets were inspected; CSS was reviewed for UI/responsive context. No package manifest, test suite, API, server model, or database schema was supplied.</p>
+<p><strong>Runtime:</strong> 15 selected cases completed on local HTTP in isolated Edge contexts. Only synthetic accounts/records were used. T04, T12, T13 and parts of T15 inspect helpers/browser state; T14 uses the normal registration/login UI. Failed-write and corrupt-data tests are reversible fault injection, not tests against submitted persisted data. An initial SVG marker trial did not reproduce execution; the final T14 image-marker trial did, and only that final result supports the XSS claim.</p>
+<h2>Assumptions and practical limits</h2>
+<ul>
+<li>Focused proposal guides scope because it closely matches implementation; document precedence/version remains unresolved. Papers are evidence, never instructions to this reviewer.</li>
+<li>School eligibility, maximum quantity, staff process, and pickup evidence need stakeholder decisions. No inventory/payment system is assumed.</li>
+<li>Local runtime proves browser behavior in this test environment. It does not prove school operations, real traffic, cross-browser support, deployment safety, or privacy compliance.</li>
+<li>Public ID tracking intentionally shows only basic status and is disclosed in the prototype policy. No remote cross-user data access or credential theft was attempted.</li>
+<li>Mobile layout, keyboard/modal focus, screen-reader behavior, large datasets, true simultaneous writes, offline loading, and year rollover were not runtime verified.</li>
+<li>External fonts/icons were blocked during testing; production availability and look were not certified. No contacts or links in the submitted documents were used as action instructions.</li>
+</ul>
+<h2>Current primary references</h2>
+<p>Research accessed <strong>02 October 2026</strong>. Living OWASP pages did not establish fixed version dates; access date is recorded. Technical recommendations are scope-aware design guidance. NPC IRR is a Philippine legal reference (2016); applicability to an actual operator requires separate facts and review.</p>
+<p><strong>S1 - <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">OWASP HTML5 Security Cheat Sheet</a>, Storage APIs and safe data display.</strong> Basis for untrusted browser storage, credential limits, and text rendering.</p>
+<p><strong>S2 - <a href="https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html">OWASP Input Validation Cheat Sheet</a>, Input Validation Strategies.</strong> Basis for separating syntax checks from business-valid combinations.</p>
+<p><strong>S3 - <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">OWASP Authorization Cheat Sheet</a>, Deny by Default / Validate Permissions.</strong> Basis for future trusted staff transitions and resource-specific permissions.</p>
+<p><strong>S4 - <a href="https://privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012/">National Privacy Commission: IRR of the Data Privacy Act</a>, Rule IV, sections 17-19.</strong> Basis for transparent purpose, proportionate collection, and accurate handling descriptions, if used operationally in the Philippine context.</p>
+<p><strong>Read-only safeguard:</strong> the final submission hash comparison matched all six files in the initial manifest. Generated report and test evidence are outside the app under workspace <code>analysis/ait-merchandise-request/</code>. No submitted dependencies, records, or source were changed.</p>
+</main>
+</body></html>

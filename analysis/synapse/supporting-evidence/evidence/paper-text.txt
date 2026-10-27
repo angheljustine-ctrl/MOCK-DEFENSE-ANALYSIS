@@ -1,0 +1,699 @@
+=== PDF PAGE 1 ===
+ 
+1 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+- 
+SynapseTen Clothing  
+Inventory Management and Point of Sale (POS) System 
+ 
+ 
+ 
+ 
+Prepared By: 
+ 
+Antone, Dindo 
+Flores, Rasha Jane 
+Lasprillas, Sherben Lei 
+Macapobre, Justin 
+Mangarin, Eunice 
+Nepomuceno, Justin 
+Real, Jasper 
+Serrano, Ronel 
+Tapit, Althea 
+Velasco, Christian 
+ 
+ 
+ 
+BSIT – 3B 
+Web System Technologies with JavaScript 
+Mr. Emman Gumayagay 
+2026 – 2027 
+=== PDF PAGE 2 ===
+ 
+2 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+Table of Contents  
+Introduction ................................................................................................................................. 3  
+Project Overview ........................................................................................................................ 5 
+Project Goal and Objectives ....................................................................................................... 7 
+Project Scope .............................................................................................................................. 8 
+Project Limitations...................................................................................................................... 9 
+Target Users................................................................................................................................ 10 
+System Features ......................................................................................................................... 11  
+System Requirements.................................................................................................................. 11 
+System Flowchart.........................................................................................................................12 
+Use Case Diagram........................................................................................................................16 
+System Flow.................................................................................................................................18 
+User Interface Design ..................................................................................................................23 
+Conclusion ...................................................................................................................................32 
+  
+=== PDF PAGE 3 ===
+ 
+3 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+INTRODUCTION 
+This project is a web-based Clothing Inventory Management and Point of Sale (POS) System that we 
+created for our subject Web System Technologies with JavaScript. We developed it for SynapseTen 
+Inc., a clothing line business that started in 2022 in Valenzue la, Metro Manila. SynapseTen focuses 
+on making high-quality, durable, and stylish clothing such as shirts, caps, pants, shorts, joggers, and 
+other apparel. They also accept custom printing and bulk orders for schools, businesses, and events. 
+The company wa s established after the pandemic because the founders noticed that people kept 
+buying the same brands, and they wanted to offer something fresher and more reliable. 
+Many small clothing stores still depend on notebooks or simple spreadsheets to track their products. 
+This becomes a big problem because clothes come in different sizes and colors, so it is easy to lose 
+track of what is still available. Sometimes the record ed stock does not match what is actually on the 
+shelves, which can lead to overselling or running out of popular items. Updating records after every 
+sale also takes time and can cause errors, especially when the store is busy. Doing calculations and 
+writing receipts by hand also slows down the checkout process for customers. 
+Because of these challenges, we decided to create a system that can help clothing store staff manage 
+products and process sales more easily and accurately. Our system allows users to add, edit, delete, 
+and search for clothing items. It also has a Point-of-Sale feature where staff can process transactions, 
+apply discounts, accept payments, and generate receipts. The inventory is automatically updated 
+every time a product is sold, so there is less chance of mistakes. We used JavaScript to make the 
+system inte ractive, especially for form validation, real -time stock updates, calculating totals, and 
+saving data using the browser’s Local Storage. 
+ 
+=== PDF PAGE 4 ===
+ 
+4 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+This system is mainly intended for the staff of SynapseTen Inc. and other small to medium clothing 
+businesses. Store owners and managers can monitor overall performance, cashiers can process sales 
+faster, and inventory staff can keep track of stocks more a ccurately. At the same time, this project 
+also serves as a learning experience for us as students because it shows how web technologies can be 
+used to solve real business problems in a simple and practical way. 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 5 ===
+ 
+5 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+PROJECT OVERVIEW 
+2.1 SynapseTen Clothing Inventory Management and Point of Sale (POS) System 
+ 
+2.2 This is a web -based system that helps clothing stores manage their products and process sales 
+more efficiently. Users can add, edit, delete, and search for clothing items, including different sizes 
+and colors. The system has a Point -of-Sale feature where s taff can process transactions, apply 
+discounts, handle payments, and generate receipts. It also automatically updates the inventory every 
+time a product is sold. A dashboard is included to show important information such as total products, 
+critical stocks, and top-selling items. All data is stored using the browser’s Local Storage, so there is 
+no need for an external database. 
+ 
+2.3 Small and medium clothing stores often face problems with inventory control. Because products 
+come in multiple sizes and colors, it becomes hard to keep accurate records when using only paper or 
+simple spreadsheets. Sometimes the recorded stock does not ma tch what is actually available on the 
+shelves, which can lead to overselling or running out of items. Updating the records after every sale 
+also takes time and is prone to errors, especially during busy hours. Doing calculations and writing 
+receipts ma nually also slows down the checkout process. Many small businesses cannot afford 
+expensive commercial POS systems or complicated database setups, so they need a simpler solution. 
+ 
+ 
+=== PDF PAGE 6 ===
+ 
+6 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+2.4 To address these issues, we developed a web -based Inventory Management and Point of Sale 
+System. The system automatically updates stock levels whenever a product is sold. It supports 
+tracking of sizes and colors, processes sales with discounts and payments , generates receipts, and 
+provides sales and inventory reports. Since it uses Local Storage, the system can work without a 
+constant internet connection or an external database. This makes it practical for small to medium 
+clothing stores like SynapseTen Inc. and also useful as a learning project for students. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 7 ===
+ 
+7 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+PROJECT GOAL AND OBJECTIVES 
+3.1 The main goal of this project is to develop a simple, efficient, and user -friendly web -based 
+Inventory Management and Point of Sale System for SynapseTen Inc. The system should help staff 
+manage clothing products, monitor inventory in real time, process sa les transactions, and keep 
+organized records using HTML, CSS, JavaScript, and the browser’s Local Storage. 
+ 
+3.2 Specific Objectives  
+• To design and develop a web-based Inventory Management and POS System with a clean 
+and organized interface for a clothing business.  
+• To allow users to easily add, edit, delete, and search for clothing products.  
+• To automatically update stock quantities whenever a product is sold or adjusted.  
+• To record sales transactions and keep a history of completed sales.  
+• To store product and sales data using the browser’s Local Storage so that no external 
+database is needed.  
+• To organize inventory and sales records in order to reduce errors from manual recording.  
+• To generate sales and inventory reports that can help in monitoring business performance 
+and deciding when to restock.  
+• To provide a practical system that can be used by clothing businesses and also serve as a  
+learning tool for students. 
+ 
+ 
+=== PDF PAGE 8 ===
+ 
+8 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+4. PROJECT SCOPE 
+This system covers the important functions needed to manage inventory and sales in a clothing store. 
+It is designed for the staff of SynapseTen Inc. and other similar small to medium clothing businesses. 
+The system handles product information such as name,  code, category, brand, size, color, price, and 
+stock quantity, as well as sales records and user accounts. 
+The main modules include Login, Dashboard, Product Management, Point of Sale, Stock In and 
+Adjustment, Reports, and Settings. We used JavaScript for form validation, real -time updates, sales 
+calculations, and saving data in Local Storage. 
+ 
+4.1 Included Features: 
+• Secure login with different user roles (Admin and Staff)  
+• Dashboard that shows total products, critical stocks, sales summary, and top-selling items  
+• Product management (add, view, edit, delete, and search products with size and color options)  
+• Point of Sale for processing transactions, applying discounts, handling payments, and 
+generating receipts  
+• Stock-in, recording of damaged products, and stock adjustment  
+• Sales reports, damage reports, and out-of-stock reports  
+• Settings for managing user accounts, product discounts, and backup/restore  
+• Automatic inventory update after every sale  
+• Form validation and dynamic content using JavaScript 
+ 
+=== PDF PAGE 9 ===
+ 
+9 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+5. PROJECT LIMITATIONS 
+ 
+• The system only works on web browsers and does not have a mobile application version.  
+• All data is saved in the browser’s Local Storage, so it is not connected to an external database.  
+• The system is best suited for small to medium clothing stores and may not be enough for very 
+large businesses.  
+• Some features, like full system settings, are only available to Admin users.  
+• Core functions can work without internet, but accessing the system from different devices or 
+locations may have limitations because of Local Storage.  
+• The system does not support advanced features found in commercial POS software. 
+ 
+  
+=== PDF PAGE 10 ===
+ 
+10 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+6. TARGET USERS 
+The people who will mainly use this system are: 
+• Store Owners and Managers  – They can check overall inventory levels, monitor sales 
+performance, and make better decisions for the business. 
+• Cashiers and Sales Staff  – They will use the Point of Sale module to process customer 
+transactions quickly and accurately. 
+• Inventory Staff  – They are responsible for adding products, updating stocks, recording 
+damaged items, and making adjustments. 
+• Administrators – They manage user accounts, system settings, discounts, and data backup. 
+This system can also help students and beginners who want to learn how a basic inventory and POS 
+system works using web technologies. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 11 ===
+ 
+11 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+7. SYSTEM FEATURES 
+- List and explain the major features of the system. 
+- For every feature, provide the Feature Name and a Description explaining what it does. 
+Examples:  
+• User Login — allows registered users to enter credentials and access functions according to 
+their account.  
+• Form Validation — uses JavaScript to check user input before submission.  
+• Search Function — allows users to search for specific records.  
+• Dynamic Content — uses JavaScript to change or display page content based on user 
+actions. 
+8. SYSTEM REQUIREMENTS 
+• Hardware Requirements — List the minimum hardware needed to run or develop the 
+system: computer/laptop, processor, RAM, storage, and internet connection if required. 
+• Software Requirements — Operating system, web browser, code editor, database, and web 
+server as applicable. 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 12 ===
+ 
+12 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+9.  SYSTEM DESIGN 
+ADMIN 
+
+=== PDF PAGE 13 ===
+ 
+13 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+The Staff flowchart begins with a login page where credentials are verified before granting access. 
+Once authenticated, the user reaches the Main Menu and can select from five operational modules. 
+The Dashboard displays key metrics such as revenue, total p roducts, low stocks, gross profit, sales 
+overview, inventory status, and low-stock alerts. Point of Sale handles product selection, adding items 
+to cart, payment, change calculation, checkout confirmation, and receipt generation. Products, Sales 
+History, and Return & Exchange allow staff to manage items, view or cancel transactions, and process 
+returns or exchanges with audit logging before the process ends. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 14 ===
+ 
+14 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+                      
+STAFF 
+ 
+
+=== PDF PAGE 15 ===
+ 
+15 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+The Admin flowchart also starts with a login page and credentials check leading to the Main Menu. 
+It includes every module available to staff for complete operational coverage. Additional sections 
+provide Inventory management with stock in/out actions and low-stock monitoring. Reports allow 
+exporting inventory and sales data as PDF or CSV files. User Management and Audit Logs enable 
+adding or editing users, toggling status, resetting passwords, deleting accounts, and reviewing all 
+system actions before the session ends. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 16 ===
+ 
+16 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+Use Case Diagram  
+ 
+ 
+The Customer starts the transaction by selecting the clothing products they want to purchase. The 
+POS (Point of Sale) System records the selected products, calculates the total amount, and allows 
+the customer to choose Cash or GCash as the payment method. Once payment is completed, the 
+POS records the transaction and automatically updates the product stock. 
+The Staff uses the POS to process and manage customer orders. They can view the products, check 
+the available stock, process payments, update the order status, and assist customers during checkout. 
+The POS helps the staff reduce manual recording and keeps sales and inventory information 
+organized. 
+ 
+ 
+
+=== PDF PAGE 17 ===
+ 
+17 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+The Admin monitors and manages the overall system. The admin can manage products and 
+inventory, view customer orders and completed POS transactions, generate sales reports, and 
+manage user accounts. The information recorded by the POS helps the admin monitor sales and 
+inventory. 
+ 
+ 
+ 
+ 
+ 
+ 
+=== PDF PAGE 18 ===
+ 
+18 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+System Flow 
+ 
+This diagram shows how the SYNAPSETEN Point of Sale and Inventory Management System is 
+broken down into its main parts. It starts with the overall system and then splits into eight key 
+modules like Login, Product, Inventory, POS, Return & Exchange, Report & Analytics, User 
+Management, and System Settings. Under each module, it lists the specific tasks the system can do, 
+such as adding products, checking stock, processing sales, handling returns, generating reports, and 
+managing users or settings. Overall, it gives a clear picture of everything the system is designed to 
+handle in a simple hierarchical layout 
+ 
+
+=== PDF PAGE 19 ===
+ 
+19 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+Main Function: SYNAPSETEN Point of Sale & Inventory Management System 
+1. LOGIN 
+- Enter username & password   
+- Validate credentials   
+- Redirect by role   
+- Forgot password → security Q&A   
+- Reset password   
+- Sign In   
+ 
+2. PRODUCT 
+- Add product   
+- Auto-generate SKU & barcode   
+- Upload product image   
+- Define variants (size/color)   
+- Generate & print QR code   
+- Edit / deactivate product   
+ 
+=== PDF PAGE 20 ===
+ 
+20 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+3. INVENTORY 
+- View current stock by variant   
+- Stock in (add qty + reason)   
+- Stock out (deduct qty + reason)   
+- Set minimum stock threshold   
+- Auto-flag OK / Low / Out of stock   
+ 
+4. POS 
+- Select product   
+- Add item to cart   
+- Compute subtotal, VAT, discount   
+- Select payment method   
+- Process checkout   
+- Print digital receipt   
+- Deduct sold stock   
+ 
+ 
+=== PDF PAGE 21 ===
+ 
+21 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+5. RETURN & EXCHANGE   
+- Select original transaction   
+- Choose item & reason   
+- Process return → refund amount   
+- Process exchange → swap variant   
+- Adjust stock accordingly   
+ 
+6. REPORT & ANALYTICS  
+- View revenue & transaction totals   
+- View top-selling products   
+- View sales trend chart   
+- View inventory summary   
+- Export sales CSV   
+- Export inventory CSV   
+- Download PDF report   
+ 
+ 
+=== PDF PAGE 22 ===
+ 
+22 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+7. USER MANAGEMENT 
+- Add user (username, role)   
+- Set security question & answer   
+- Edit user role   
+- Activate / deactivate user   
+- Reset user password   
+ 
+8. SYSTEM SETTINGS   
+- Upload profile picture   
+- Upload store logo   
+- View audit logs   
+- Clear audit logs 
+ 
+ 
+ 
+=== PDF PAGE 23 ===
+ 
+23 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+10. USER INTERFACE DESIGN 
+Login Page - Modern dark-themed login screen for SYNAPSETEN with logo, “Welcome Back” 
+form, username/password fields, “Remember me”, and a purple “Sign In” button. 
+ 
+Dashboard - Main overview showing today’s revenue (₱11,289), total products, low stock alerts, 
+gross profit, a weekly sales bar chart, inventory status donut chart, and a low-stock alerts table. 
+
+=== PDF PAGE 24 ===
+ 
+24 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+Point Of Sale (POS) - Product grid with clothing items (oversized tees, hoodies, shorts) filterable 
+by category, plus a shopping cart panel for checkout, payments, and discounts. 
+Products - Product management table listing items with images, SKU, category, price, variants, 
+stock, QR codes, status, and action buttons (edit/print/delete). Includes “Add Product” and “Print 
+All QR”. 
+
+=== PDF PAGE 25 ===
+ 
+25 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+Inventory - Detailed stock table by product, size, color, and SKU, showing current stock levels, 
+minimums, status (OK / Low Stock / Out of Stock), plus Stock In / Stock Out buttons. 
+Sales History - Transaction list with ID, date, cashier, customer, items, total, payment method, 
+status, and actions. Filterable by date range. 
+
+=== PDF PAGE 26 ===
+ 
+26 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+Return & Exchange - Empty returns and exchanges sections with “New Return” and “New 
+Exchange” buttons for processing customer returns and swaps. 
+Reports - Summary cards (total revenue, transactions, average sale, gross profit), top-selling 
+products table, sales trend line chart, and inventory summary with export options (PDF/CSV). 
+
+=== PDF PAGE 27 ===
+ 
+27 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+User Management - User list showing usernames, roles (Admin/Staff/Inventory Staff), status 
+(Active/Inactive), creation date, and action buttons. Includes “Add User”. 
+ 
+Audit Logs - Activity log of logins, logouts, sales, and user status changes with timestamps, users, 
+roles, actions, and descriptions. Has a “Clear Logs” button. 
+
+=== PDF PAGE 28 ===
+ 
+28 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+Settings - Profile picture upload/remove section and system settings for store logo (currently 
+uploaded). 
+Staff dashboard - overview showing today’s revenue (₱11,289), total products, low stock alerts, 
+gross profit, weekly sales bar chart, inventory status donut chart, and low-stock alerts table. Sidebar 
+menu is limited (no Inventory, Reports, User Management, or Audit Logs). 
+
+=== PDF PAGE 29 ===
+ 
+29 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+ 
+Point of Sale (POS) - Product grid with clothing items (oversized tees, hoodies, shorts) filterable by 
+category, plus a shopping cart panel for checkout, payments, discounts, and walk-in customer 
+selection. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 30 ===
+ 
+30 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Products - Product management table listing items with images, SKU, category, price, variants, 
+stock, QR codes, status, and action buttons. Includes “Add Product” and “Print All QR” options. 
+ 
+Sales History - Transaction list with ID, date, cashier, customer, items, total, payment method, 
+status, and actions. Filterable by date range. 
+
+=== PDF PAGE 31 ===
+ 
+31 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+ 
+Returns & Exchange - Empty returns and exchanges sections with “New Return” and “New 
+Exchange” buttons for processing customer returns and swaps. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Settings - Profile picture section only — allows staff to upload or remove their own profile picture 
+displayed in the sidebar and top bar. No system/logo settings available. 
+
+=== PDF PAGE 32 ===
+ 
+32 
+ 
+Datamex College of Saint Adeline 
+Information Technology Department 
+ 
+ 
+11.  CONCLUSION 
+Overall, we were able to create a working web -based Inventory and POS System for SynapseTen 
+Clothing. The system helps the store manage their products better, especially since clothes come in 
+different sizes and colors, which makes tracking stock harder when done manually. 
+With this system, staff can add and update products, process sales quickly, see low stock alerts, and 
+keep a record of transactions. We also added different access levels so Admin and Staff have different 
+permissions. Everything runs using HTML, CSS, and JavaScript, and data is saved in Local Storage 
+so there’s no need for a complicated database. 
+We think we achieved most of our goals. The system is simple to use, updates stock automatically 
+after every sale, and has basic reports that can help the store monitor their performance. Working on 
+this project helped us understand how JavaScript can make a website more interactive and useful for 
+real businesses. 
+Of course, the system still has some limitations. Since it only uses Local Storage, the data stays on 
+one browser, and it’s not yet ready for bigger stores. In the future, it would be better if we could 
+connect it to a real database, add barcode scanning, or even make a mobile version. 
+Still, for a student project, we are satisfied with what we finished. It showed us how web technologies 
+can solve everyday problems in a clothing business like SynapseTen. 
+ 

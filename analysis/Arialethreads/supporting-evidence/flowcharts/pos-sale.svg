@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#294861"/></marker></defs>
+  <style>.t{font:17px Arial;fill:#17283f}.s{fill:#eef7fb;stroke:#125e8a;stroke-width:3}.d{fill:#fff6db;stroke:#b37a00;stroke-width:3}.e{fill:#fff0f0;stroke:#a61b1b;stroke-width:3}.l{stroke:#294861;stroke-width:3;fill:none;marker-end:url(#a)}.r{stroke:#a61b1b;stroke-width:3;stroke-dasharray:9 7;fill:none}.b{font:15px Arial;fill:#4b5968;font-weight:bold}.n{font:15px Arial;fill:#a61b1b;font-weight:bold}</style>
+  <rect x="60" y="30" width="180" height="54" rx="27" class="s"/><text x="150" y="63" text-anchor="middle" class="t">Start POS</text>
+  <polygon points="310,25 600,25 580,90 290,90" class="s"/><text x="445" y="54" text-anchor="middle" class="t"><tspan x="445">Select product index</tspan><tspan x="445" dy="22">and quantity</tspan></text>
+  <polygon points="750,20 880,57 750,94 620,57" class="d"/><text x="750" y="52" text-anchor="middle" class="t"><tspan x="750">Valid and</tspan><tspan x="750" dy="21">within stock?</tspan></text>
+  <rect x="850" y="125" width="220" height="58" class="e"/><text x="960" y="159" text-anchor="middle" class="t">Show error</text>
+  <rect x="585" y="130" width="330" height="65" class="s"/><text x="750" y="157" text-anchor="middle" class="t"><tspan x="750">Store array index + quantity</tspan><tspan x="750" dy="22">in cart</tspan></text>
+  <polygon points="750,235 875,290 750,345 625,290" class="d"/><text x="750" y="285" text-anchor="middle" class="t"><tspan x="750">Complete</tspan><tspan x="750" dy="21">sale?</tspan></text>
+  <rect x="560" y="390" width="380" height="70" class="s"/><text x="750" y="417" text-anchor="middle" class="t"><tspan x="750">Resolve saved index against</tspan><tspan x="750" dy="22">current products array</tspan></text>
+  <polygon points="750,495 900,555 750,615 600,555" class="d"/><text x="750" y="550" text-anchor="middle" class="t"><tspan x="750">Exists and enough</tspan><tspan x="750" dy="21">current stock?</tspan></text>
+  <rect x="70" y="515" width="280" height="80" class="e"/><text x="210" y="546" text-anchor="middle" class="t"><tspan x="210">No product identity check</tspan><tspan x="210" dy="22">after index shifts</tspan></text>
+  <rect x="560" y="650" width="380" height="70" class="s"/><text x="750" y="676" text-anchor="middle" class="t"><tspan x="750">Deduct current item, make ref,</tspan><tspan x="750" dy="22">save aggregate sale</tspan></text>
+  <line x1="240" y1="57" x2="290" y2="57" class="l"/><line x1="600" y1="57" x2="620" y2="57" class="l"/><line x1="750" y1="94" x2="750" y2="130" class="l"/><text x="765" y="118" class="b">Yes</text>
+  <path d="M880 57 L960 57 L960 125" class="l"/><text x="910" y="45" class="b">No</text><path d="M1070 154 L1085 154 L1085 8 L445 8 L445 25" class="l"/>
+  <line x1="750" y1="195" x2="750" y2="235" class="l"/><path d="M625 290 L445 290 L445 90" class="l"/><text x="525" y="278" class="b">No</text><line x1="750" y1="345" x2="750" y2="390" class="l"/><text x="765" y="372" class="b">Yes</text>
+  <line x1="750" y1="460" x2="750" y2="495" class="l"/><line x1="750" y1="615" x2="750" y2="650" class="l"/><text x="765" y="637" class="b">Yes</text>
+  <line x1="600" y1="555" x2="350" y2="555" class="r"/><text x="460" y="540" class="n">Index can now identify another product</text>
+</svg>

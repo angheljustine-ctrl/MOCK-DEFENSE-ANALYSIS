@@ -1,0 +1,10 @@
+{
+  "pages": 14,
+  "qa": {
+    "passed": 4,
+    "failed": 9,
+    "not_run": 1
+  },
+  "diagrams": 3,
+  "required_sections": "present"
+}

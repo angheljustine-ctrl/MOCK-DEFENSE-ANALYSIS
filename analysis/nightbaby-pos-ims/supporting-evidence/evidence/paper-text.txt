@@ -1,0 +1,928 @@
+PDF PAGE 1
+ 
+WEB SYSTEM TECHNOLOGIES WITH JAVASCRIPT  
+SYSTEM DOCUMENTATION  
+ 
+NIGHTBABY POINT-OF-SALE AND INVENTORY 
+MANAGEMENT SYSTEM 
+ 
+Prepared by:  
+Adriano, Adrian C. 
+Arag, Andrey B.  
+Aron, Abdulrahmen S.  
+Flores, Dreidel V.  
+Laguitan, John Patrick B.  
+Lopez, Von Ivan D.  
+Navarrete, Antoinette G.  
+Recto, Aljon M.  
+Ricaplaza, Bianca Jane  
+ 
+Third Year - A 
+Bachelor of Science in Information Technology 
+ 
+Submitted to: 
+Mr. Emmanuel B. Gumayagay  
+ 
+ 
+ 
+2026-2027 
+ 
+ 
+PDF PAGE 2
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+Table of Contents 
+1. INTRODUCTION ................................................................................................................. 1 
+2. PROJECT OVERVIEW ........................................................................................................ 3 
+2.1 System Name ................................................................................................................... 3 
+2.2 System Description .......................................................................................................... 3 
+2.3 Problem Statement ........................................................................................................... 3 
+2.4 Proposed Solution ............................................................................................................ 4 
+3. PROJECT GOAL AND OBJECTIVES ................................................................................ 5 
+3.1 Project Goal ..................................................................................................................... 5 
+3.2 Specific Objectives .......................................................................................................... 5 
+4. PROJECT SCOPE ................................................................................................................. 6 
+4.1 Included Functions ........................................................................................................... 6 
+5. PROJECT LIMITATIONS .................................................................................................... 7 
+6. TARGET USERS .................................................................................................................. 7 
+7. SYSTEM FEATURES........................................................................................................... 7 
+8. SYSTEM REQUIREMENT .................................................................................................. 9 
+8.1 HARDWARE REQUIREMENT ..................................................................................... 9 
+8.2 SOFTWARE REQUIREMENT ...................................................................................... 9 
+8.3 VERSION CONTROL .................................................................................................... 9 
+9. SYSTEM DESIGN .............................................................................................................. 10 
+9.1 System Flowchart........................................................................................................... 10 
+9.2 Role-Based Use Case Diagram ...................................................................................... 16 
+9.3 System Flow .................................................................................................................. 16 
+10. USER INTERFACE DESIGN ........................................................................................... 18 
+10.1 Super Admin ................................................................................................................ 18 
+10.2 Admin .......................................................................................................................... 22 
+10.3 Cashier ......................................................................................................................... 31 
+11. CONCLUSION .................................................................................................................. 36 
+12. REFERENCES .................................................................................................................. 37 
+ 
+ 
+ 
+PDF PAGE 3
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+1 
+ 
+1. INTRODUCTION 
+The Nightbaby Point -of-Sale (POS) and Inventory Management System is a 
+proposed web -based retail management system designed for a business engaged in 
+fashion, clothing, and perfume products. The system focuses on two main functions: 
+processing sales transactions and managing inventory records. A POS system records 
+and processes transactions when products are sold, while inventory management 
+involves monitoring the quantity and movement of products available for sale. IBM 
+explains that inventory management h elps businesses maintain visibility of their 
+products, determine when stock should be replenished, and maintain appropriate 
+inventory levels (IBM, n.d.). These functions are closely connected because each 
+completed sale affects the remaining quantity of products in inventory. 
+POS technology has developed from traditional cash registers into 
+computerized systems that can record detailed transaction information and support 
+other retail operations. IBM explains that early POS systems were designed to automate 
+transaction recording , identify products, determine prices, and generate sales 
+information. The development of centralized POS systems also allowed sales 
+information to support inventory and restocking decisions (IBM, n.d.). This shows that 
+POS systems can serve not only as a means of recording sales but also as a source of 
+information for managing products. 
+The importance of organized sales and inventory processes is also evident in the 
+Philippine retail sector. The Philippine Statistics Authority reported that the 2022 
+Annual Survey of Philippine Business and Industry recorded 125,257 formal -sector 
+establishments engaged in wholesale and retail trade and related activities. Of these, 
+34,280 establishments belonged to the industry group for retail sale of other goods in 
+specialized stores (Philippine Statistics Authority [PSA], 2025). These figures 
+demonstrate the significant presence of retail activities in the country's formally 
+recorded business sector. 
+PDF PAGE 4
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+2 
+Accurate inventory records are important because they should correspond with 
+the actual quantity of products available. IBM notes that accurate inventory information 
+helps businesses determine when and how much stock should be ordered, while 
+insufficient o r excessive inventory can create operational problems (IBM, n.d.). 
+Research by DeHoratius and Raman (2008) also found inventory record inaccuracies 
+in a study involving nearly 370,000 inventory records from 37 stores. Although the 
+study involved only one r etailer and should not be generalized to all businesses, it 
+provides evidence that differences between recorded and physical inventory can occur. 
+The proposed Nightbaby system connects POS and inventory functions within 
+one platform. Oracle's retail documentation explains that POS transactions can be used 
+to update inventory positions based on sales and other transactions (Oracle, n.d.). In the 
+proposed system, the POS component is intended to record product orders and sales, 
+including products, quantities, prices, payment information, and transaction records. 
+The inventory component is intended to maintain product information and stock 
+quantities. Connecting these functions allows sales information and inventory records 
+to be managed together in an organized manner. 
+JavaScript is included in the web -system technology requirement because it 
+supports interactive behavior on web pages. The Mozilla Developer Network (MDN) 
+explains that JavaScript can respond to user actions, modify webpage content, and 
+provide client -side form validation (MDN Web Docs, n.d.). These capabilities are 
+applicable to product selection, transaction forms, quantity fields, search functions, 
+buttons, and inventory forms. JavaScript can therefore provide immediate feedback and 
+interaction while users perform sales and inventory-related tasks. 
+Overall, the Nightbaby Point -of-Sale and Inventory Management System is 
+proposed as a centralized web-based system that connects product sales and inventory 
+management. The system is intended to organize product orders and sales, maintain 
+transaction records, and monitor product quantities. By connecting these functions, the 
+system aims to support more organized and accurate sales and inventory records. 
+JavaScript will support the interactive features of the web interface, including user 
+input, dynamic behavior, and form validation. 
+PDF PAGE 5
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+3 
+2. PROJECT OVERVIEW 
+The Point-of-Sale (POS) and Inventory Management System (IMS) provides a 
+centralized platform for managing the main retail operations of the business. The POS 
+focuses on sales transactions and customer service activities, while the IMS focuses on 
+product and inventory management. The system also provides supporting functions for 
+transaction history, reports, discounts, user management, and Backup and Restore . A 
+Product Display Website is also provided for customers to browse products and 
+services. 
+2.1 System Name 
+Nightbaby Point-of-Sale and Inventory Management System 
+2.2 System Description 
+The system combines Point-of-Sale (POS) and Inventory Management System 
+(IMS) functions into one platform. The POS manages sales transactions, product 
+selection, and discounts, while the IMS manages product information, inventory 
+records, product searching , and stock adjustments. The system has three main user 
+roles: Administrator, Cashier, and Super Admin. It also provides transaction history, 
+reports, discount management, user management, Backup and Restore, and a Product 
+Display Website for customers to browse products and services. 
+. 
+2.3 Problem Statement 
+The manual retail processes of Nightbaby result in several operational 
+problems. First, sales transactions are processed manually, which slows down service 
+and increases the risk of computation errors in subtotal, total, and change. Similarly, 
+some micro, small, and medium enterprises still rely on manual recording methods, 
+which create risks of human error, inefficiency, and poor decision -making capacity 
+(Yuniarto et al., 2025). Second, inventory records for clothing  and perfumes are not 
+consistently updated, making it difficult to track actual stock levels or notice low-stock 
+and expiring perfume items in time. Third, because sales and inventory records are kept 
+separately, preparing business reports takes additional time and is prone to 
+inconsistencies. Finally, there is no organized way to manage different levels of user 
+access or to protect business data from loss. 
+PDF PAGE 6
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+4 
+2.4 Proposed Solution 
+To address these problems, the proposed system provides an integrated Point -
+of-Sale (POS) and Inventory Management System (IMS). The POS module automates 
+the sales process by computing the subtotal, total, and change automatically, reducing 
+manual errors a nd speeding up transactions. The IMS module centralizes inventory 
+records and provides low-stock and perfume-expiry alerts, allowing stock levels to be 
+monitored more accurately. The Reports module consolidates sales and inventory data 
+with filtering and PDF export, reducing the time needed to prepare business reports. 
+Lastly, role-based access for the Administrator, Cashier, and Super Admin, together 
+with Backup and Restore functionality, provides organized and secure management of 
+the system and its data. 
+ 
+PDF PAGE 7
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+5 
+3. PROJECT GOAL AND OBJECTIVES 
+3.1 Project Goal 
+The main goal of the project is to develop a web -based Point -of-Sale and 
+Inventory Management System with a Product Display Website that improves the 
+accuracy, speed, and organization of Nightbaby's sales transactions and inventory 
+records. 
+3.2 Specific Objectives 
+To automate sales transactions and reduce computation errors through an 
+integrated POS module. 
+To centralize and monitor inventory records, including low-stock and perfume-
+expiry alerts. 
+To generate consolidated sales and inventory reports with filtering and PDF 
+export for faster business reporting. 
+To implement role-based user management (Administrator, Cashier, and Super 
+Admin) and backup and restore functionality for secure data management. 
+To test the system based on its required functions. 
+ 
+ 
+PDF PAGE 8
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+6 
+4. PROJECT SCOPE 
+The project focuses on developing a Point of Sale (POS) and  Inventory 
+Management System (IMS) for Nightbaby™ Incorporated. The system is designed to 
+support the business's daily operations by managing sales transactions, product 
+information, inventory, customer records, and basic reports. It is intended to help 
+authorized staff organize records, process transact ions, and efficiently manage the 
+business's products and sales.  
+4.1 Included Functions 
+Point of Sale (POS) – Processes customer purchases and records completed sales  
+transactions.  
+Product Management – Allows authorized users to add, update, delete,  search, and 
+view product information.  
+Inventory Management – Tracks product quantities and updates stock records.  
+Sales Management – Stores and organizes previous sales transactions.  
+Report Generation – Provides basic sales and inventory reports.  
+Search and Filtering – Helps users quickly find specific products and sales records.  
+Security Features – Uses user authentication, backend authorization, and password 
+salting and hashing to protect user accounts and system data.  
+Backup and Restore  – Provides data preservation by allowing users to back up the 
+system data and restore it when needed.  
+ 
+ 
+PDF PAGE 9
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+7 
+5. PROJECT LIMITATIONS 
+The system is primarily designed for the current operations of Nightbaby ™ 
+Incorporated and may require modifications if used by other businesses. The system 
+does not include other payment methods such as debit cards and bank accounts, and 
+only supports e-wallets and cash. It also does not include advanced business analytics, 
+automated supplier management, or direct shipping and delivery management . 
+Nationwide shipping may still be offered by the business through its regular processes, 
+but shipping and delivery transactions are not managed directly within the system. The 
+accuracy of inventory records also depends on the information entered by authorized 
+users. Additionally, the system is limited to browser’s “localStorage” that can only hold 
+~5MB Shared across tabs and windows (Tomita, 2025). Due to this, the system is not 
+capable of handling online controls and it is self-contained within its own system, and 
+the system is limited to desktop set up only. 
+6. TARGET USERS 
+Super Admin – Manages users, system settings, and backup and restore. 
+Admin – Manages users, products, inventory, sales, customers , system reports  and 
+monitors product stocks and updates inventory records  
+Cashier – Processes customer purchases and records sales transactions.   
+Customers – Purchase products and provide necessary information for transactions. 
+7. SYSTEM FEATURES 
+User Login - A login screen where a user enters a username and password to access 
+the system. 
+Role-Based Access (Super Admin/Admin/Cashier) - A role switch that changes the 
+view between Super Admin, Admin and Cashier. When someone tried to bypass via 
+URL, they will be thrown out by route guard of the system. 
+Dashboard Overview - Shows key numbers such as Total Sales, Total Orders, Low 
+Stock items, and Recent Activity, along with a live clock and date that update 
+automatically. 
+ 
+PDF PAGE 10
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+8 
+Low Stock and Perfume Expiry Alerts  - Flags products that are low in stock or out 
+of stock, and separately flags perfume items that are close to or past their expiration 
+date.  
+Point of Sale (POS) - Lets the cashier browse products by category, add items to a cart, 
+and complete a sale, with the receipt ID, subtotal, and total computed automatically.  
+Product Search & Filter - Lets users search products by name and filter by category 
+or stock status on the POS and Inventory pages.  
+Shopping Cart Management  - Lets users add, remove, or clear cart items, with the 
+item count and total updating right away.  
+Sales Receipt & Change Computation  - Generates a receipt showing the items 
+bought, subtotal, and total, and automatically computes the change based on the 
+payment entered.  
+Inventory Management - Lets admins add, edit, or delete products, and adjust stock 
+levels (Stock In/Stock Out) with a reason such as Restock, Damaged, or Customer 
+Return.  
+Product Image Upload - Lets admins upload a product photo when adding or editing 
+a product.  
+Transaction History - Shows a list of past sales with search, filter, and pagination for 
+reviewing prior orders. 
+Discount Management – Allow user to create, track, and automate discount duration 
+and coverage. 
+Backup and Restore – Store and Import data by allowing users to back up the system 
+data and restores it when needed.  
+PDF PAGE 11
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+9 
+8. SYSTEM REQUIREMENT 
+As technologies progress in time, we recommend a long -term solution for this 
+system in order to keep up to the pace of advancement and further system updates. 
+8.1 HARDWARE REQUIREMENT 
+Processor (CPU): Intel i5 - i7 (Quad-Core) or AMD equivalent 
+Memory (RAM): 8GB to 16GB RAM minimum 
+Storage 256GB: - 1TB+ Solid State Drive (SSD) 
+Display: Atleast 19’ Display Monitor 
+Barcode Scanner: 2D / QR Omnidirectional USB 
+Receipt Printer: High-speed Thermal Printer 
+Cash Drawer: Heavy-duty steel drawer driven 
+8.2 SOFTWARE REQUIREMENT 
+Operating System (OS): Windows 11. 
+Web Browser: Google Chrome. 
+Development Tools: Visual Studio Code (1.138.0) 
+8.3 VERSION CONTROL 
+For this system we utilized Git  by Linus Torvalds to keep our system version 
+controls, keeping it organized and works independently across our system, and avoid 
+losing important functions in the system. 
+ 
+ 
+PDF PAGE 12
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+10 
+9. SYSTEM DESIGN 
+9.1 System Flowchart 
+The detailed flowchart below illustrates the Nightbaby workflow based on the 
+Company Proposal and System Proposal . It separates the three internal user roles to 
+clearly show their respective access and responsibilities within the system. The 
+Administrator oversees the dashboard, transaction history, inventory management, 
+discount management, staff management, and reports. The Super Admin is responsible 
+for user management, system settings, importing and exporting data, and backup and 
+restore functions. The Cashier handles point -of-sale transactions, viewing transaction 
+records, applying discounts, processing payments, and printing receipts. The Customer 
+Display is shown separately as a customer -facing interface connected to the POS, 
+displaying the current order, total price, and updating in real-time. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LOG IN PAGE 
+PDF PAGE 13
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ADMIN DASHBOARD 
+ADMIN TRANSACTION 
+PDF PAGE 14
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ADMIN INVENTORY 
+ADMIN DISCOUNT 
+PDF PAGE 15
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ADMIN STAFF MANAGEMENT 
+PDF PAGE 16
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+14 
+ 
+ 
+ 
+ 
+ 
+
+PDF PAGE 17
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+15 
+ 
+ 
+ 
+CASHIER  
+SUPER ADMIN 
+PDF PAGE 18
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+16 
+9.2 Role-Based Use Case Diagram 
+The role-based use case diagram shows the access and responsibilities of the 
+Super Admin, Admin, Cashier, and Customer within the Nightbaby Management 
+System. The Super Admin has access to user management, system settings, 
+import/export data, and backup an d restore functions. The Admin  has management 
+access to the dashboard, transaction history, inventory management, discount 
+management, staff management, reports, and backup and restore. The Cashier handles 
+point-of-sale operations, viewing transactions, applying discounts, processing 
+payments, and printing receipts. The Customer is connected only to the customer 
+display for viewing the order and total. 
+ 
+ 
+9.3 System Flow 
+The system validates the credentials. If invalid, the user is prompted to try again. 
+If valid, the system identifies the user role and provides access to the appropriate 
+functions. 
+The Super Admin has access to User Management, System Settings, 
+Import/Export Data, and Backup & Restore. 
+The Admin has management access to the Dashboard, Transaction History, 
+Inventory Management, Discount Management, Staff Management, and Reports. 
+The Cashier handles Point of Sale operations, including viewing transactions, 
+applying discounts, processing payments, and printing receipts. 
+
+PDF PAGE 19
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+17 
+The Customer uses the Customer Display to view the current order and total. 
+After system operations are performed, the relevant information is saved or 
+updated in the browser's localStorage. No database is used. The user can return to the 
+Dashboard to continue using the system or log out to end the session. 
+ 
+PDF PAGE 20
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+18 
+ 
+ 
+10. USER INTERFACE DESIGN 
+This section presents screenshots of the Nightbaby Point-of-Sale and Inventory 
+Management System's major pages. For every page, a screenshot is shown together 
+with a short description of the page's purpose and its available controls, organized 
+according to the system's three user roles: Super Admin, Admin, and Cashier. The UI 
+design is directly anchored to our Company Branding. 
+10.1 Super Admin 
+Figure 10.1. Login Page 
+ 
+The Login Page is the entry point of the system. It displays the Nightbaby logo 
+alongside a Username field, a Password field, a Login button, and a “Forgot Password?” link. 
+Users must enter valid credentials to proceed to the Dashboard. 
+Figure 10.2. Login Page — Invalid Credentials 
+
+PDF PAGE 21
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+19 
+ 
+This screen shows the Login Page's error state, displayed when invalid credentials are 
+entered. An inline error message appears near the password field, prompting the user to re-enter 
+the correct username and password. 
+Figure 10.3. Reset Password Modal 
+ 
+The Reset Password modal lets a user recover access to their account. It verifies identity 
+by asking for the Username, the registered Security Question, and the correct Security Answer, 
+before allowing a New Password and Confirm New Password to be set. Can cel and Reset 
+Password buttons are provided to close or confirm the action. 
+The avatar dropdown menu, accessed from the top -right corner of the interface, 
+displays the logged -in Super Admin's name together with two options — Preferences and 
+Account Settings. Account Settings is marked with a notification indicator when required setup, 
+such as a security question, is still pending. 
+Figure 10.5. Preferences Panel   Figure 10.6. Account Settings 
+
+PDF PAGE 22
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+20 
+ 
+ 
+The Account Settings page allows the Super Admin to update personal account details. 
+It includes fields for Name, Username, Current Password, New Password, Confirm New 
+Password, a Security Question dropdown, and a Security Answer field, along with an option to 
+upload or take a profile photo. 
+The Preferences panel, opened from the avatar menu, lets the Super Admin customize 
+the interface. It includes a Dark Mode toggle and a Font Size dropdown with Small, Default, 
+and Large options. 
+Figure 10.7. User Management 
+ 
+The User Management page lists all registered internal accounts, showing each user's 
+Name, Role, and Status (e.g., Enabled). From this page the Super Admin can view existing 
+Admin and Cashier accounts and access controls for adding new ones. 
+Figure 10.8. Add User Modal 
+
+PDF PAGE 23
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+21 
+ 
+The Add User modal lets the Super Admin create a new internal account. It includes 
+fields for Username, Account Holder Name, a Role dropdown (e.g., Cashier), Password, 
+Security Question, and Security Answer, along with Cancel and Save User buttons. 
+Figure 10.9. System Settings 
+ 
+The System Settings page, under System Controls and Maintenance, gives the Super 
+Admin access to system -level functions such as Backup System, Import Data, System Reset, 
+Reset Users to Default, and a System Down toggle for placing the system under maintenance. 
+Figure 10.10. System Reset Confirmation Modal 
+
+PDF PAGE 24
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+22 
+ 
+The System Reset confirmation modal warns the Super Admin that resetting the system 
+will delete all products, sales, discounts, and charts, while user accounts are kept. To prevent 
+accidental resets, the user must type “RESET” to continue, with OK and Canc el options 
+available. 
+Figure 10.11. Backup Download Confirmation 
+ 
+This screen shows the completed download of a system backup file, generated in 
+.NBData format through the Backup System function, confirming that the Super Admin's data-
+protection action was successful. 
+10.2 Admin 
+Figure 10.12. Dashboard — Overview 
+
+PDF PAGE 25
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+23 
+ 
+The Dashboard is the Admin's main landing page. It displays Live Stat Cards 
+summarizing Total Sales, Total Orders, Low Stock Items, and Revenue, alongside a Top Selling 
+Products list. A Revenue Overview chart visualizes sales trends over a selectable perio d (e.g., 
+This Week), and an Export PDF button lets the Admin generate a report. 
+ 
+
+PDF PAGE 26
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+24 
+Figure 10.13. Dashboard — Export PDF Modal 
+The Export PDF modal lets the Admin generate a dashboard report for a specific period. It 
+provides From and To date fields, with Cancel and Generate PDF buttons to close the modal or 
+produce the report. 
+Figure 10.14. Dashboard — Alerts and Recent Activity 
+ 
+Further down the Dashboard, the Low Stock Alert table lists products nearing depletion 
+with their size, remaining stock, and status, while the Perfume Expire Alert table tracks perfume 
+items by expiration date and days left. The Recent Activity panel shows  a live feed of recent 
+cashier transactions with amounts, receipt codes, and timestamps. 
+ 
+
+PDF PAGE 27
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+25 
+Figure 10.15. Transactions — List 
+ 
+The Transactions page lists all sales records with summary counters for Total 
+Transactions, Total Sales, Items Sold, and Total Refunds. It provides filters for Type, Status, 
+and Date, plus a search bar, and displays each transaction's ID, date and time, ty pe, cashier, 
+item count, total, status, and available actions. 
+Figure 10.16. Transactions — Transaction Detail Modal 
+ 
+Selecting a transaction opens a detail modal showing the assigned Cashier, the itemized 
+list of products purchased with quantity, unit price, and line total, and the Grand Total, with a 
+Close button to dismiss the view. 
+ 
+
+PDF PAGE 28
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+26 
+Figure 10.17. Transactions — Partially Refunded Status 
+ 
+This view of the Transactions page shows a transaction marked as Partially Refunded, 
+reflecting an update to the transaction's status and the store's Total Sales and Items Sold figures 
+after a refund has been processed through the Cashier's Process Refund function. 
+Figure 10.18. Inventory — Product List 
+ 
+The Inventory page lets the Admin  manage the product catalog. It shows summary 
+counters for Total Products, In Stock, Low Stock, and Out of Stock items, along with a search 
+bar, Category and Status filters, and controls for Adjust Stock, Add Product, Print Barcodes, 
+and Export PDF. The pr oduct table lists each item's name, category, SKU, size, price, stock 
+level, status, and row-level actions for viewing, editing, deleting, or generating a barcode. 
+ 
+
+PDF PAGE 29
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+27 
+Figure 10.19. Inventory — Print Barcodes Dialog 
+ 
+Selecting Print Barcodes opens the browser's print dialog with a preview of barcode 
+labels for every inventory item, each showing the product name, a scannable barcode, and its 
+code, ready to be printed for labeling stock. 
+Figure 10.20. Inventory — Barcode PDF Download Confirmation 
+ 
+This screenshot shows the completed download of the generated barcode sheet as a 
+PDF file, confirming that the Print/Export Barcodes action was successful. 
+ 
+
+PDF PAGE 30
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+28 
+Figure 10.21. Discount Management — List 
+ 
+The Discount page lets the Admin schedule and manage promotions across products 
+and categories. It lists each discount's Name, applicable Product/Category, Percent, Start and 
+End dates, and Status (e.g., Scheduled), along with an Add Discount button and row-level edit 
+and delete actions. 
+Figure 10.22. Discount Management — Add Discount Modal 
+ 
+The Add Discount modal lets the Admin create a new promotion. It includes fields for 
+Name, Product or Category, Percent, Start date, and End date, with Cancel and Save Discount 
+buttons to close or confirm the new discount. 
+ 
+
+PDF PAGE 31
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+29 
+Figure 10.23. Staff Management — Accounts and Remittance Status 
+ 
+The Staff Management page lists all internal accounts under Accounts, showing each 
+user's Name, Role, and Status, with edit, disable, and remove actions. The Cashier Remittance 
+Status table below tracks each cashier's remittance Status, Expected amount, Remitted amount, 
+and Difference. 
+Figure 10.24. Staff Management — Remittance Record Modal 
+ 
+Clicking a cashier's remittance status opens the Remittance Record modal, showing 
+that cashier's remittance history for the past two weeks, including Date, Status, Expected, 
+Remitted, Difference, and number of transactions (TXs), with a Close button to dis miss the 
+view. 
+Figure 10.25. Staff Management — Edit User Modal 
+
+PDF PAGE 32
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+30 
+ 
+The Edit User modal lets the Admin update an existing staff account. It includes fields 
+for Username, Account Holder Name, a Role dropdown, and an optional Password field (left 
+blank to keep the current password), along with Cancel and Save Staff buttons. 
+Figure 10.26. Staff Management — Remittance Status Updated 
+ 
+This later view of the Staff Management page shows the Cashier Remittance Status 
+table updated after a remittance was recorded, with the cashier's Status marked Over, along 
+with the Expected, Remitted, and Difference amounts reflecting the completed cash turnover. 
+
+PDF PAGE 33
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+31 
+10.3 Cashier 
+Figure 10.27. Point of Sale Main Page 
+The Point of Sale main page is the Cashier's primary workspace. It shows quick-glance 
+counters for Cart Items, Available stock, total Products, and Sales Transactions, along with a 
+product search bar, category filters (All, Clothing, Perfume ), and a scrollable product 
+grid for adding items to the cart. The Sales Receipt panel on the right shows the running 
+subtotal, tax, and total, transaction type options (Purchase), and action buttons for Complete 
+Sale, Clear Cart, and Process Refund. The t op bar also provides quick access to Remit and 
+Customer Display. 
+Figure 10.28. Customer Display — Idle State 
+ 
+
+PDF PAGE 34
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+32 
+The Customer Display is a separate, customer -facing screen shown on a secondary 
+monitor during checkout. In its idle state, it shows the Nightbaby logo with a welcome message 
+and a rotating featured banner, along with a prompt indicating that the order wil l appear once 
+items are scanned. 
+Figure 10.29. Customer Display — Order View 
+ 
+When items are added to the cart, the Customer Display updates in real time to show 
+the customer's order — item name, quantity, and price — together with the subtotal, discounts, 
+VAT, and total, allowing the customer to review the purchase as it is being processed. 
+Figure 10.30. Confirm Sale Modal 
+ 
+ 
+
+PDF PAGE 35
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+33 
+The Confirm Sale modal summarizes the transaction before it is finalized. It lists the 
+items in the cart with their subtotal, discount, tax, and total, and lets the Cashier select a 
+Payment Method (e.g., Cash) and enter the Payment Amount, with the Change computed 
+automatically. Cancel and Confirm Sale buttons are provided to abort or finalize the transaction. 
+Figure 10.31. Sale Completed / Receipt Modal 
+ 
+Once a sale is confirmed, the system displays a success notification (e.g., “Sale 
+completed! Change: ₱195.00”) along with a Receipt modal containing the store name, receipt 
+number, date and time, cashier name, purchased items, subtotal, discount, tax, tota l, payment 
+method, amount paid, and change. Done, Export PDF, and Print buttons are available for 
+closing or saving the receipt. 
+Figure 10.32. Printed / Exported Receipt 
+ 
+
+PDF PAGE 36
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+34 
+This screenshot shows the printable version of the sales receipt, generated through the 
+Print or Export PDF option. It presents the same transaction details — receipt number, date, 
+cashier, purchased item, subtotal, discount, tax, total, payment, and chang e — formatted for a 
+physical or PDF copy of the receipt. 
+Figure 10.33. Process Refund Modal 
+ 
+The Process Refund modal lets the Cashier issue a refund for a completed transaction. 
+It requires the Receipt/Transaction Code to look up the original sale, then lets the Cashier select 
+the Product to Refund, the Quantity to Refund, and the Reason for Refu nd (e.g., Defective 
+Item), with the Refund Amount computed automatically. Cancel and Confirm Refund buttons 
+finalize the action. 
+Figure 10.34. Remit Cash Modal 
+ 
+
+PDF PAGE 37
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+35 
+The Remit Cash modal is used by the Cashier to turn over cash sales to the Admin. It 
+displays the number of un -remitted cash sales, the expected remittance amount, and a table 
+listing each cash transaction with its transaction code, date, and amount. The Cashier enters the 
+Amount Remitted, and the system computes any Difference, before confirming with the 
+Confirm Remittance button. 
+PDF PAGE 38
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+36 
+11. CONCLUSION 
+The Nightbaby Point -of-Sale and Inventory Management System was 
+developed to address the operational challenges brought about by Nightbaby's manual 
+retail processes. The completed system integrates a Point-of-Sale (POS) module and an 
+Inventory Management S ystem (IMS) into a single platform, allowing sales 
+transactions, inventory records and business reports to be managed in one place. Role-
+based access for the Administrator, Cashier, and Super Admin was implemented to 
+organize system responsibilities, while Backup and Restore functionality was added to 
+support data protection. 
+Throughout development, the project's specific objectives were achieved: sales 
+transactions are now automated, with subtotal, total, and change computed 
+automatically; inventory records are centralized with low -stock and perfume -expiry 
+alerts; and consolidated sales and inventory reports with filtering and PDF export are 
+available for faster business reporting. 
+JavaScript played a central role in making the system interactive and responsive. 
+It was used to validate user input on forms such as login and account settings, to 
+dynamically update the shopping cart and totals in real time, to handle role -based 
+interface changes between the Administrator, Cashier, and Super Admin views, and to 
+manage data persistence through the browser's localStorage, since the system operates 
+fully local without a database or web server. 
+Developing this system allowed the team to apply concepts learned in Web 
+System Technologies with JavaScript to a practical, real -world retail scenario, 
+strengthening skills in front -end scripting, form validation, user interface design, and 
+role-based access control. For future improvements, the system may be enhanced by 
+migrating from localStorage to a proper database for multi-device access, adding online 
+payment processing. 
+ 
+PDF PAGE 39
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+37 
+12. REFERENCES 
+DeHoratius, N., & Raman, A. (2008). Inventory record inaccuracy: An empirical 
+analysis. Management Science, 54 (4), 627 –641. 
+https://doi.org/10.1287/mnsc.1070.0789 
+IBM. (n.d.). Retail and point -of-sale systems. https://www.ibm.com/history/point-of-
+sale 
+IBM. (n.d.). What is inventory management?  
+https://www.ibm.com/think/topics/inventory-management 
+MDN Web Docs. (n.d.). Client-side form validation . Mozilla.  
+https://developer.mozilla.org/en-
+US/docs/Learn_web_development/Extensions/Forms/Form_validation 
+MDN Web Docs. (n.d.). Introduction to events . Mozilla.  
+https://developer.mozilla.org/en-
+US/docs/Learn_web_development/Core/Scripting/Events 
+Oracle. (n.d.). Sales integration . Oracle Retail Store Inventory Management.  
+https://docs.oracle.com/en/industries/retail/store-inventory-op-
+cloud/latest/reiob/sales-integration.htm 
+Philippine Statistics Authority. (2025, September 15). 2022 Annual Survey of 
+Philippine Business and Industry (ASPBI) – Wholesale and retail trade; repair 
+of motor vehicles and motorcycles section: Final results . 
+https://psa.gov.ph/content/2022-annual-survey-philippine-business-and-
+industry-aspbi-wholesale-and-retail-trade-0 
+Rekik, Y., Oliva, R., Syntetos, A. A., & Glock, C. H. (2026). Inventory record 
+inaccuracy in grocery retailing: Impact of promotions and product 
+perishability, and targeted effect of audits. Journal of Business Logistics, 47 , 
+e70079. https://doi.org/10.1111/jbl.70079 
+U.S. Census Bureau. (n.d.). Monthly retail trade: Definitions . 
+https://www.census.gov/retail/definitions.html 
+Tomita, K. (2025) Testing storage limits of localstorage and sessionstorage in Chrome, 
+DEV Community . Available at: https://dev.to/tommykw/testing -storage-
+limits-of-localstorage-and-sessionstorage-in-chrome-21ab (Accessed: 23 
+September 2026).  
+PDF PAGE 40
+                Datamex College of Saint Adeline, INC. 
+                 32 Gotaco Bldg. II McArthur Highway Marulas, Valenzuela, Philippines  
+ 
+ 
+38 
+(2026) Journal of Scientific insights. Available at: 
+https://journal.scitechgrup.com/index.php/jsi (Accessed: 23 September 2026).  
+ 

@@ -1,0 +1,15 @@
+flowchart LR
+    A([Start]) --> B[/Admin, HR, or Employee uses browser/]
+    B --> C[Static HTML and JavaScript]
+    C --> D{Client-side role check passes?}
+    D -- No --> E[/Redirect to login/]
+    E --> Z([End])
+    D -- Yes --> F[Run payroll, attendance, leave, or admin logic]
+    F --> G[(Browser localStorage)]
+    G --> H{Sync library connected?}
+    H -- No --> I[/Only this browser sees change/]
+    H -- Yes --> J[Publish whole key/value]
+    J --> K[(Public MQTT broker/topic)]
+    K --> L[Other client accepts update]
+    L --> G
+    I --> Z

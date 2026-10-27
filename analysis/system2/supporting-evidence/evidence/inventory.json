@@ -1,0 +1,152 @@
+[
+  {
+    "path": "register.html",
+    "bytes": 309,
+    "sha256": "e5ce3af6d6177fc73a481bbfdacf0fe629f97bba524238c491d19b61d956cb8a"
+  },
+  {
+    "path": "css/style.css",
+    "bytes": 5410,
+    "sha256": "09b14cce762aa8f4e592f35c3b21a8246f61e4c545513a4dd7e2950397b8dfb1"
+  },
+  {
+    "path": "images/logo.png",
+    "bytes": 18003,
+    "sha256": "afd0b7cf0ed53d4478db64699a2a37b5d5e50edf6e9082a2e458d4f13bddddd5"
+  },
+  {
+    "path": "images/avatar-placeholder.png",
+    "bytes": 1177,
+    "sha256": "5b81a9035e5e49946b8fa4820fe80058b8d56ebe3561899f2e8ad2151e9fa7fe"
+  },
+  {
+    "path": "images/bg.jpg",
+    "bytes": 96095,
+    "sha256": "a8ac923388547644157124ed6c021a56c8a0a39f75f6e557dcec3896d61cdb21"
+  },
+  {
+    "path": "js/script.js",
+    "bytes": 28231,
+    "sha256": "2cd9f2fba9a6dc4438b150cbcba22a8c0e928a1e9d93039899677bd554b46e37"
+  },
+  {
+    "path": "404.html",
+    "bytes": 299,
+    "sha256": "4bd041185d4988d28d1ac84d12e396e0327e063d0d4f9ceae5f35acd0f052076"
+  },
+  {
+    "path": "about.html",
+    "bytes": 303,
+    "sha256": "eef1019fc2c792d1f00cc04a0a4baa068233a71b523bdd9bd7f61251375da679"
+  },
+  {
+    "path": "admin_add_employee.html",
+    "bytes": 329,
+    "sha256": "1cf5c7e61e30e66f0e2cbcd91c0830848c1de44ad570bc7b13c7d5a6d5b78619"
+  },
+  {
+    "path": "admin_attendance.html",
+    "bytes": 325,
+    "sha256": "df5c8655eb0aac5d9be2485ffe2ff8e7734780e1830eebfead132bd09223e48c"
+  },
+  {
+    "path": "admin_dashboard.html",
+    "bytes": 323,
+    "sha256": "ebbe59e97d6769631196e9278456539fdaab67e9ccea617243fad9e619c007c6"
+  },
+  {
+    "path": "admin_department.html",
+    "bytes": 325,
+    "sha256": "cae7106a70eb16bfd800cb04262fc6992f8a7f0d6355384193b102059607a147"
+  },
+  {
+    "path": "admin_edit_employee.html",
+    "bytes": 331,
+    "sha256": "68aa66f44786ba949edb3a9ad951ea1fd411af402ff82dea63e6ffacab2cbe23"
+  },
+  {
+    "path": "admin_employee_list.html",
+    "bytes": 331,
+    "sha256": "556c7a71b6a58343a0b5215102c0a9ebf3d3f65e5615420fd165edf3a9111f17"
+  },
+  {
+    "path": "admin_leave_requests.html",
+    "bytes": 333,
+    "sha256": "5d46792497fa103f046dae662d7530124197248f3c3969863bb18f467988aab7"
+  },
+  {
+    "path": "admin_payroll.html",
+    "bytes": 319,
+    "sha256": "45d385db641d52fd6e0ce953765f486560f25a2e52619804d8d388e0be95ee74"
+  },
+  {
+    "path": "admin_payslip.html",
+    "bytes": 319,
+    "sha256": "95411f3408ea321f4320ff171b6128cc39adc92bb57d394ea4229561e04d39d7"
+  },
+  {
+    "path": "admin_reports.html",
+    "bytes": 319,
+    "sha256": "1f2de7213597c5d20bebbe31d4fdb3b991afc914c6c130293478936fe30c3764"
+  },
+  {
+    "path": "admin_settings.html",
+    "bytes": 321,
+    "sha256": "01061cd1dfbab59edc6705b90b1041df72c333178359adb2bcb969efe2e6adbd"
+  },
+  {
+    "path": "admin_user_roles.html",
+    "bytes": 325,
+    "sha256": "c3f4e79ba566255d13a802287a386b3cd297d7db2cfce224088588d5d156a420"
+  },
+  {
+    "path": "employee_attendance.html",
+    "bytes": 331,
+    "sha256": "543595b3f8ea9aed776d0df8891e517e94a7a7b49c1ffcfac9bd347dea2a3fdd"
+  },
+  {
+    "path": "employee_dashboard.html",
+    "bytes": 329,
+    "sha256": "8cd67792545222105c12793bfded049719b249cc09b6f26a20527cb07a525430"
+  },
+  {
+    "path": "employee_leave_request.html",
+    "bytes": 337,
+    "sha256": "584f86a5f4fed2328ed30002d83f636165122ad84c5b7d02640d27ff3c2344ff"
+  },
+  {
+    "path": "employee_payslip.html",
+    "bytes": 325,
+    "sha256": "095750a40d6b9bc585a86cc6d20fc3126b6a30d7bdf459c34f299bba2d9c7d26"
+  },
+  {
+    "path": "employee_payslip_history.html",
+    "bytes": 341,
+    "sha256": "3ca9b0dcc822034a7661ff19f6d4a7a39f564a15701611f22224b3de0f046b35"
+  },
+  {
+    "path": "employee_profile.html",
+    "bytes": 325,
+    "sha256": "888cbe8db5e3cdd772ca2a7c99fae0d8b42032584a301045ed65f0976e6ab8e1"
+  },
+  {
+    "path": "forgot_password.html",
+    "bytes": 323,
+    "sha256": "e4e5ae402ae1dc502fc76b71f507be25b93f5349bab48fe066fbeb2a04fc69d4"
+  },
+  {
+    "path": "index.html",
+    "bytes": 303,
+    "sha256": "5e74e21e9e0f44177b46960de6802b3308e75281e51d8d8eac3ec6c095e5b480"
+  },
+  {
+    "path": "login.html",
+    "bytes": 303,
+    "sha256": "0980b9cd82e2d0d8c2bcbbef49da33f924b023fafc981610ce068deac1722f18"
+  },
+  {
+    "path": "logout.html",
+    "bytes": 305,
+    "sha256": "2e13e3630e6671d4bc08415f0efe1f779713e3af23dec94c158be140d6dbf93a"
+  }
+]

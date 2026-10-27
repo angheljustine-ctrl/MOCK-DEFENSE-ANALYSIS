@@ -1,0 +1,194 @@
+   1: document.addEventListener("DOMContentLoaded", () => {
+   2:     const { STORAGE, get, money, escapeHTML, icon } = DD;
+   3: 
+   4:     let reportType = "summary";
+   5:     let startDate = "";
+   6:     let endDate = "";
+   7: 
+   8:     const pageActions = document.getElementById("pageActions");
+   9:     const pageContent = document.getElementById("pageContent");
+  10: 
+  11:     function records() {
+  12:         return {
+  13:             employees: get(STORAGE.employees, []),
+  14:             attendance: get(STORAGE.attendance, []),
+  15:             leave: get(STORAGE.leave, []),
+  16:             payroll: get(STORAGE.payroll, [])
+  17:         };
+  18:     }
+  19: 
+  20:     function inRange(date) {
+  21:         if (!date) return !startDate && !endDate;
+  22:         if (startDate && date < startDate) return false;
+  23:         if (endDate && date > endDate) return false;
+  24:         return true;
+  25:     }
+  26: 
+  27:     function employeeName(id, employees) {
+  28:         const e = employees.find(x => x.id === id);
+  29:         return e ? `${e.firstName || ""} ${e.lastName || ""}`.trim() : id || "—";
+  30:     }
+  31: 
+  32:     function periodMatches(p) {
+  33:         if (!startDate && !endDate) return true;
+  34:         const start = p.startDate || "";
+  35:         const end = p.endDate || start;
+  36:         if (!start && !end) return false;
+  37:         if (startDate && end < startDate) return false;
+  38:         if (endDate && start > endDate) return false;
+  39:         return true;
+  40:     }
+  41: 
+  42:     function filteredData() {
+  43:         const all = records();
+  44:         return {
+  45:             ...all,
+  46:             attendance: all.attendance.filter(a => inRange(a.date)),
+  47:             leave: all.leave.filter(l => {
+  48:                 const s = l.startDate || l.from || l.date || "";
+  49:                 const e = l.endDate || l.to || s;
+  50:                 if (!startDate && !endDate) return true;
+  51:                 if (startDate && e < startDate) return false;
+  52:                 if (endDate && s > endDate) return false;
+  53:                 return true;
+  54:             }),
+  55:             payroll: all.payroll.filter(periodMatches)
+  56:         };
+  57:     }
+  58: 
+  59:     function buildSummary(data) {
+  60:         const active = data.employees.filter(e => e.status === "Active").length;
+  61:         const present = data.attendance.filter(a => a.status === "Present").length;
+  62:         const late = data.attendance.filter(a => a.status === "Late").length;
+  63:         const absent = data.attendance.filter(a => a.status === "Absent").length;
+  64:         const onLeave = data.attendance.filter(a => a.status === "On Leave").length;
+  65:         const approvedLeave = data.leave.filter(l => l.status === "Approved").length;
+  66:         const pendingLeave = data.leave.filter(l => l.status === "Pending").length;
+  67:         const payrollTotal = data.payroll.reduce((s,p) => s + Number(p.netPay || 0), 0);
+  68:         const paidTotal = data.payroll.filter(p => p.status === "Paid").reduce((s,p) => s + Number(p.netPay || 0), 0);
+  69:         const pendingTotal = data.payroll.filter(p => p.status !== "Paid").reduce((s,p) => s + Number(p.netPay || 0), 0);
+  70: 
+  71:         const cards = [
+  72:             ["Total Employees", data.employees.length, "users"],
+  73:             ["Active Employees", active, "users"],
+  74:             ["Present Records", present, "clock"],
+  75:             ["Late Records", late, "clock"],
+  76:             ["Absent Records", absent, "users"],
+  77:             ["On Leave Records", onLeave, "calendar"],
+  78:             ["Approved Leave", approvedLeave, "calendar"],
+  79:             ["Pending Leave", pendingLeave, "calendar"],
+  80:             ["Total Payroll", money(payrollTotal), "wallet"],
+  81:             ["Paid Payroll", money(paidTotal), "wallet"],
+  82:             ["Pending Payroll", money(pendingTotal), "wallet"]
+  83:         ];
+  84: 
+  85:         return `<div class="stat-grid">${cards.map(c => `
+  86:             <article class="stat-card">
+  87:                 <div class="stat-top"><span class="stat-label">${c[0]}</span><span class="stat-icon">${icon(c[2])}</span></div>
+  88:                 <div class="stat-value">${escapeHTML(c[1])}</div>
+  89:                 <div class="stat-note">Based on current report filter</div>
+  90:             </article>`).join("")}</div>`;
+  91:     }
+  92: 
+  93:     function employeeTable(data) {
+  94:         return table(
+  95:             ["Employee ID","Employee","Position","Department","Monthly Salary","Status","Date Hired"],
+  96:             data.employees.map(e => [e.id, `${e.firstName || ""} ${e.lastName || ""}`.trim(), e.position || "—", e.department || "—", money(e.salary), e.status || "—", e.dateHired || "—"]),
+  97:             "No employee records found."
+  98:         );
+  99:     }
+ 100: 
+ 101:     function attendanceTable(data) {
+ 102:         return table(
+ 103:             ["Date","Employee","Status","Time In","Time Out","Late","Overtime"],
+ 104:             data.attendance.map(a => [a.date || "—", employeeName(a.employee, data.employees), a.status || "—", a.timeIn || "—", a.timeOut || "—", `${Number(a.late || 0)} min`, `${Number(a.overtime || 0)} min`]),
+ 105:             "No attendance records found for this period."
+ 106:         );
+ 107:     }
+ 108: 
+ 109:     function leaveTable(data) {
+ 110:         return table(
+ 111:             ["Employee","Leave Type","From","To","Reason","Status"],
+ 112:             data.leave.map(l => [employeeName(l.employee, data.employees), l.type || l.leaveType || "—", l.startDate || l.from || "—", l.endDate || l.to || "—", l.reason || "—", l.status || "Pending"]),
+ 113:             "No leave records found for this period."
+ 114:         );
+ 115:     }
+ 116: 
+ 117:     function payrollTable(data) {
+ 118:         return table(
+ 119:             ["Employee","Pay Period","Days Worked","Basic Pay","Overtime","Allowance","Deductions","Net Pay","Status"],
+ 120:             data.payroll.map(p => [employeeName(p.employee, data.employees), p.period || `${p.startDate || "—"} – ${p.endDate || "—"}`, Number(p.days || 0), money(p.basic), money(p.overtimePay), money(p.allowance), money(p.deductionsTotal), money(p.netPay), p.status || "Pending"]),
+ 121:             "No payroll records found for this period."
+ 122:         );
+ 123:     }
+ 124: 
+ 125:     function table(headers, rows, emptyText) {
+ 126:         return `<section class="panel table-panel"><div class="table-scroll"><table class="data-table">
+ 127:             <thead><tr>${headers.map(h => `<th>${escapeHTML(h)}</th>`).join("")}</tr></thead>
+ 128:             <tbody>${rows.length ? rows.map(row => `<tr>${row.map(v => `<td>${escapeHTML(v)}</td>`).join("")}</tr>`).join("") : `<tr><td colspan="${headers.length}"><div class="empty-state"><strong>${escapeHTML(emptyText)}</strong><span>Try changing the report type or date range.</span></div></td></tr>`}</tbody>
+ 129:         </table></div></section>`;
+ 130:     }
+ 131: 
+ 132:     function selectedReport(data) {
+ 133:         if (reportType === "employees") return employeeTable(data);
+ 134:         if (reportType === "attendance") return attendanceTable(data);
+ 135:         if (reportType === "leave") return leaveTable(data);
+ 136:         if (reportType === "payroll") return payrollTable(data);
+ 137:         return `${buildSummary(data)}<div style="height:16px"></div>${attendanceTable(data)}<div style="height:16px"></div>${leaveTable(data)}<div style="height:16px"></div>${payrollTable(data)}`;
+ 138:     }
+ 139: 
+ 140:     function reportTitle() {
+ 141:         return ({summary:"Management Summary",employees:"Employee Report",attendance:"Attendance Report",leave:"Leave Report",payroll:"Payroll Report"})[reportType] || "Reports";
+ 142:     }
+ 143: 
+ 144:     function render() {
+ 145:         const data = filteredData();
+ 146:         pageActions.innerHTML = `<button class="primary-button" id="printReport">${icon("report")} Print Report</button>`;
+ 147:         pageContent.innerHTML = `
+ 148:             <section class="panel" style="margin-bottom:16px">
+ 149:                 <div class="table-toolbar">
+ 150:                     <div class="toolbar-left" style="flex-wrap:wrap">
+ 151:                         <select id="reportType" class="filter-select">
+ 152:                             <option value="summary">Management Summary</option>
+ 153:                             <option value="employees">Employee Report</option>
+ 154:                             <option value="attendance">Attendance Report</option>
+ 155:                             <option value="leave">Leave Report</option>
+ 156:                             <option value="payroll">Payroll Report</option>
+ 157:                         </select>
+ 158:                         <div class="field" style="min-width:160px"><label>From</label><div class="input-wrap"><input id="reportStart" type="date" value="${escapeHTML(startDate)}"></div></div>
+ 159:                         <div class="field" style="min-width:160px"><label>To</label><div class="input-wrap"><input id="reportEnd" type="date" value="${escapeHTML(endDate)}"></div></div>
+ 160:                         <button class="secondary-button" id="clearReportFilter" type="button">Clear Dates</button>
+ 161:                     </div>
+ 162:                 </div>
+ 163:             </section>
+ 164:             <div class="panel" style="margin-bottom:16px;padding:18px 20px">
+ 165:                 <span class="eyebrow">${escapeHTML(reportTitle())}</span>
+ 166:                 <h2 style="margin:5px 0 4px">${escapeHTML(reportTitle())}</h2>
+ 167:                 <p style="margin:0;color:var(--muted)">${startDate || endDate ? `Period: ${escapeHTML(startDate || "Beginning")} to ${escapeHTML(endDate || "Present")}` : "All available records"}</p>
+ 168:             </div>
+ 169:             <div id="reportBody">${selectedReport(data)}</div>`;
+ 170: 
+ 171:         document.getElementById("reportType").value = reportType;
+ 172:         document.getElementById("reportType").addEventListener("change", e => { reportType = e.target.value; render(); });
+ 173:         document.getElementById("reportStart").addEventListener("change", e => { startDate = e.target.value; if (endDate && startDate > endDate) endDate = startDate; render(); });
+ 174:         document.getElementById("reportEnd").addEventListener("change", e => { endDate = e.target.value; if (startDate && endDate < startDate) startDate = endDate; render(); });
+ 175:         document.getElementById("clearReportFilter").addEventListener("click", () => { startDate = ""; endDate = ""; render(); });
+ 176:         document.getElementById("printReport").addEventListener("click", printReport);
+ 177:     }
+ 178: 
+ 179:     function printReport() {
+ 180:         const data = filteredData();
+ 181:         const generated = new Date().toLocaleString("en-PH", {dateStyle:"medium",timeStyle:"short"});
+ 182:         const body = selectedReport(data);
+ 183:         const popup = window.open("", "_blank", "width=1200,height=800");
+ 184:         if (!popup) { DD.toast("Please allow pop-ups to print the report.", "error", "Print Blocked"); return; }
+ 185:         popup.document.write(`<!DOCTYPE html><html><head><title>${escapeHTML(reportTitle())}</title><style>
+ 186:             *{box-sizing:border-box} body{font-family:Arial,sans-serif;color:#222;margin:28px;font-size:12px} .head{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #222;padding-bottom:12px;margin-bottom:18px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:55px;height:55px;object-fit:contain}.brand h1{font-size:20px;margin:0}.brand p,.meta p{margin:3px 0;color:#555}.meta{text-align:right}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.stat-card{border:1px solid #bbb;padding:10px}.stat-label,.stat-note,.stat-icon{display:none}.stat-value{font-size:17px;font-weight:bold}.panel{margin-top:16px}.table-scroll{overflow:visible}table{width:100%;border-collapse:collapse;margin-top:8px}th,td{border:1px solid #999;padding:7px;text-align:left;vertical-align:top}th{background:#eee;font-size:11px}.empty-state span{display:none}.empty-state{padding:12px}.print-footer{margin-top:28px;border-top:1px solid #aaa;padding-top:10px;color:#666}@media print{body{margin:12mm}.no-print{display:none}@page{size:A4 landscape;margin:10mm}}
+ 187:         </style></head><body><div class="head"><div class="brand"><img src="img/logo.png"><div><h1>DOUGHNUT DISTURB</h1><p>Management System</p><strong>${escapeHTML(reportTitle())}</strong></div></div><div class="meta"><p>${startDate || endDate ? `Period: ${escapeHTML(startDate || "Beginning")} to ${escapeHTML(endDate || "Present")}` : "All available records"}</p><p>Generated: ${escapeHTML(generated)}</p></div></div>${body}<div class="print-footer">Generated from Doughnut Disturb Management System.</div><script>window.onload=()=>{window.print()}<\/script></body></html>`);
+ 188:         popup.document.close();
+ 189:     }
+ 190: 
+ 191:     window.addEventListener("dd:sync", render);
+ 192:     window.addEventListener("storage", render);
+ 193:     render();
+ 194: });

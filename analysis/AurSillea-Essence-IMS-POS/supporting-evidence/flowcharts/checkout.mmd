@@ -1,0 +1,13 @@
+flowchart TD
+ A([Cart and review payment]) --> B{Payment valid?}
+ B -- No --> C[/Show error; stay in review/]
+ C --> A
+ B -- Yes --> D[Clear persisted review state]
+ D --> E{Each line has stock?}
+ E -- No --> F[/Error; return false/]
+ F --> A
+ E -- Yes --> G[Deduct products and materials]
+ G --> H[(Separate writes: stock, movements, promo, sale, log)]
+ H --> I{All writes succeed?}
+ I -- No --> J[/Uncaught write error; partial state possible/]
+ I -- Yes --> K([Clear cart and show receipt])

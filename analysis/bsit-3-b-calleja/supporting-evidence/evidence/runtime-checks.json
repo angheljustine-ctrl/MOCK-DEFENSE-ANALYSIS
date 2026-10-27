@@ -1,0 +1,17 @@
+{
+  "reviewDate": "2026-09-28",
+  "source": "E:\\3rdYEAR WEBSITE 100%\\BSIT 3-B CALLEJA",
+  "environment": "Local HTTP on 127.0.0.1 with clean headless Microsoft Edge contexts",
+  "checks": [
+    {"id":"E-01","name":"Inline JavaScript syntax","status":"Confirmed","result":"PASS","detail":"index 1/1, admin 2/2, teacher 1/1 scripts parsed"},
+    {"id":"E-02","name":"Default admin login","status":"Confirmed","result":"PASS","detail":"admin/admin123 opened admin dashboard"},
+    {"id":"E-03","name":"Admin without session","status":"Confirmed","result":"PASS","detail":"direct admin route redirected to login"},
+    {"id":"E-04","name":"Forged admin role-only session","status":"Confirmed","result":"FAIL","detail":"admin dashboard opened with only role=admin"},
+    {"id":"E-05","name":"Teacher without session","status":"Confirmed","result":"FAIL","detail":"demo teacher dashboard opened"},
+    {"id":"E-06","name":"Blank grade submission","status":"Confirmed","result":"FAIL","detail":"2 blank records entered Pending Review with null averages"},
+    {"id":"E-07","name":"Partial attendance","status":"Confirmed","result":"FAIL","detail":"1 of 2 students submitted and UI showed 100 percent"},
+    {"id":"E-08","name":"Unassigned teacher scope","status":"Confirmed","result":"FAIL","detail":"dashboard count 0 but Class Record exposed unassigned section and student"},
+    {"id":"E-09","name":"Browser isolation","status":"Confirmed","result":"FAIL","detail":"context A had one student while context B had zero"},
+    {"id":"E-10","name":"Storage clearing","status":"Confirmed","result":"FAIL","detail":"student data disappeared; only default admin was reseeded"}
+  ]
+}

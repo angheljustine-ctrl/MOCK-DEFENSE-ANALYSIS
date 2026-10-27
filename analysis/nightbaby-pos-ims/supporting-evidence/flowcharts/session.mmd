@@ -1,0 +1,10 @@
+flowchart TD
+ A([Protected page]) --> B[(Read nb_session)]
+ B --> C{Session exists and not expired?}
+ C -- No --> H[/Logout or redirect login/]
+ C -- Yes --> D[Refresh expiry eight hours]
+ D --> J[No current user or token validation]
+ D --> E{Stored role allows page?}
+ E -- No --> I[/Redirect allowed page/]
+ E -- Yes --> F[/Allow page/]
+ F --> G([Continue])

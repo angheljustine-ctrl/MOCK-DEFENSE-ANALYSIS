@@ -10,7 +10,17 @@ Use the sections relevant to the requested scope. For a full review, cover every
 - State transitions and whether invalid transitions can be forced through direct requests.
 - Failure behavior: retry, rollback, partial writes, duplicate submission, and recovery.
 
-## 2. JavaScript and TypeScript
+## 2. Domain capability baseline and gap critique
+
+- Declared system type, users, operating setting, central transaction, scope boundaries, and claimed maturity.
+- Current authoritative or credible sources supporting the applicable domain expectations.
+- Core, Important, and Optional/Advanced capability classification with an explicit basis.
+- Complete, Partial, Incorrect, Missing, Not verifiable, and Not applicable implementation verdicts.
+- Functional gaps, quality/control gaps, and enhancements kept separate.
+- Real-world effect, safe verification, priority, and tailored panel question for each material gap.
+- Applicable jurisdiction and date checked before making regulatory or compliance claims.
+
+## 3. JavaScript and TypeScript
 
 For each important `.js`, `.jsx`, `.mjs`, `.cjs`, `.ts`, or `.tsx` area, identify:
 
@@ -21,7 +31,7 @@ For each important `.js`, `.jsx`, `.mjs`, `.cjs`, `.ts`, or `.tsx` area, identif
 - Security-sensitive behavior: unsafe HTML, dynamic code execution, client-held secrets, token storage, redirects, and trust in client values.
 - Dead, duplicated, unreachable, placeholder, or inconsistent code.
 
-## 3. Validation coverage matrix
+## 4. Validation coverage matrix
 
 Inventory each input and mutation path across these layers:
 
@@ -39,7 +49,7 @@ Check where applicable:
 - Encoding and injection risks: XSS, SQL/NoSQL injection, command/path injection, unsafe deserialization, CSRF, and open redirects.
 - Error messages, logging, sensitive-data exposure, retry behavior, and rate/abuse controls.
 
-## 4. QA design and execution
+## 5. QA design and execution
 
 Prioritize critical journeys and risky boundaries. Include:
 
@@ -53,13 +63,13 @@ Prioritize critical journeys and risky boundaries. Include:
 
 Do not mark a test Passed without observable evidence. Use Blocked when prerequisites are unavailable and Not Run when execution was outside scope.
 
-## 5. Loopholes and process weaknesses
+## 6. Loopholes and process weaknesses
 
 Look for bypassable approvals, editable trusted values, predictable identifiers, missing ownership checks, client-only rules, unprotected endpoints, insecure defaults, duplicate transactions, inconsistent state, hidden-but-callable features, exposed secrets, excessive permissions, and weak recovery logic.
 
 For each issue record the precondition, safe reproduction, expected versus actual behavior, impact, affected roles/data, evidence, severity, confidence, and smallest effective remediation.
 
-## 6. Vibe-coding indicators
+## 7. Vibe-coding indicators
 
 Treat these as maintainability or correctness signals, never authorship proof:
 
@@ -71,11 +81,10 @@ Treat these as maintainability or correctness signals, never authorship proof:
 
 Explain the function of the affected code, the observable effect, why it is a signal, how to verify it, and how to improve it. Assign Low/Medium/High confidence.
 
-## 7. Additional quality checks
+## 8. Additional quality checks
 
 - Role-permission matrix and trust boundaries.
 - Sensitive-data lifecycle, retention, privacy, logs, exports, and backups.
 - Dependency and secret exposure checks using already available tools; do not install scanners into the submitted project by default.
 - Accessibility, usability, performance, resilience, observability, and maintainability when relevant.
 - Traceability from requirement to feature, code, validation, test, and finding.
-

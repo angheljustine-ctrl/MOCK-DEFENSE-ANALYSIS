@@ -1,0 +1,6 @@
+flowchart TD
+A([Open index.html]) --> B[(Parse localStorage)] --> C{Parse succeeds?}
+C -- No --> D([Stop on parse error])
+C -- Yes --> E[/Enter password/]
+E -- Match --> F[Login toggles visibility] --> G([Dashboard / records])
+E -- Mismatch --> E

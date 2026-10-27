@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "id": "E-01",
+      "name": "JavaScript syntax",
+      "status": "Confirmed",
+      "result": "Passed",
+      "detail": "node --check passed for all 12 JavaScript files."
+    },
+    {
+      "id": "E-02",
+      "name": "Teacher login",
+      "status": "Confirmed",
+      "result": "Passed",
+      "detail": "The displayed teacher credential opened the Teacher Dashboard."
+    },
+    {
+      "id": "E-03",
+      "name": "Direct Reports route as teacher",
+      "status": "Confirmed",
+      "result": "Failed authorization expectation",
+      "detail": "reports.html opened and exposed editable Student Status controls. No data was changed."
+    },
+    {
+      "id": "E-04",
+      "name": "Direct Voucher route as teacher",
+      "status": "Confirmed",
+      "result": "Failed authorization expectation",
+      "detail": "voucher.html?studentId=101 opened with an enabled Record Payment button. No payment was submitted."
+    },
+    {
+      "id": "E-05",
+      "name": "Automated test suite",
+      "status": "Not testable",
+      "result": "No suite found",
+      "detail": "No package manifest, test configuration, or test files were supplied."
+    }
+  ]
+}

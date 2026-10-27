@@ -1,0 +1,81 @@
+{
+  "environment": "Headless Edge, isolated ephemeral contexts, local HTTP, external resources blocked",
+  "results": [
+    {
+      "id": "T01",
+      "status": "Passed",
+      "actual": "3 catalog cards; nonexistent search shows 0; reset restores 3."
+    },
+    {
+      "id": "T02",
+      "status": "Passed",
+      "actual": "Password mismatch rejected without storing an account."
+    },
+    {
+      "id": "T03",
+      "status": "Passed",
+      "actual": "Synthetic registration/login works; local session resolves an account."
+    },
+    {
+      "id": "T04",
+      "status": "Passed",
+      "actual": "Duplicate member ID blocked by registerUser."
+    },
+    {
+      "id": "T05",
+      "status": "Passed",
+      "actual": "HTML validity rejects quantity 0 and fractional 1.5."
+    },
+    {
+      "id": "T06",
+      "status": "Passed",
+      "actual": "Request AIT-2026-001 persists on reload and appears in owner's dashboard."
+    },
+    {
+      "id": "T07",
+      "status": "Failed",
+      "actual": "Uniform with size N/A and quantity 1000000 accepted by normal UI; no scoped business ceiling."
+    },
+    {
+      "id": "T08",
+      "status": "Failed",
+      "actual": "Logged-out visitor looks up request and Refresh status persists Processing without staff action."
+    },
+    {
+      "id": "T09",
+      "status": "Passed",
+      "actual": "Unknown request ID returns a clear error."
+    },
+    {
+      "id": "T10",
+      "status": "Passed",
+      "actual": "Independent browser context cannot see first context request; matches proposal local-only limitation."
+    },
+    {
+      "id": "T11",
+      "status": "Failed",
+      "actual": "Contact claims Message sent; no request initiated by submission. Code has no delivery/persistence path."
+    },
+    {
+      "id": "T12",
+      "status": "Failed",
+      "actual": "Synthetic password recoverable as plaintext; local session set without password (acknowledged prototype limit)."
+    },
+    {
+      "id": "T13",
+      "status": "Failed",
+      "actual": "Resetting only synthetic counter regenerates an existing request ID; no collision check."
+    },
+    {
+      "id": "T14",
+      "status": "Failed",
+      "actual": "Harmless image error marker runs via greeting innerHTML from normal registration Full Name input. No external traffic or data access."
+    },
+    {
+      "id": "T15",
+      "status": "Failed",
+      "actual": "Status helper returns Preparing when save fails but stored status stays Processing; malformed JSON treated as empty and replaceable."
+    }
+  ],
+  "pageErrors": []
+}

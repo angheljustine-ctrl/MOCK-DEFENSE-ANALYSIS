@@ -1,0 +1,9 @@
+flowchart TD
+ A[/Enter credentials/] --> B{Fields and lock OK?}
+ B -- No --> C[/Error and retry/]
+ C --> A
+ B -- Yes --> D[Verify active user hash]
+ D -- Failed --> C
+ D -- Success --> E[(Save logged user object)]
+ E --> F[Read stored role]
+ F --> G([Role-based UI])

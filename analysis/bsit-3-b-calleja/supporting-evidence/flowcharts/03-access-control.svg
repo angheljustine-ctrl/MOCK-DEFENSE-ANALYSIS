@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#315b78"/></marker>
+    <marker id="redarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#b83232"/></marker>
+    <style>
+      .bg{fill:#f7fafc}.node{fill:#fff;stroke:#315b78;stroke-width:3}.decision{fill:#fff8df;stroke:#b7791f;stroke-width:3}.risk{fill:#fff1f1;stroke:#b83232;stroke-width:3}.ok{fill:#edf8f4;stroke:#25745a;stroke-width:3}.line{fill:none;stroke:#315b78;stroke-width:3;marker-end:url(#arrow)}.riskline{fill:none;stroke:#b83232;stroke-width:4;marker-end:url(#redarrow)}.label{font:600 18px Arial,sans-serif;fill:#183247;text-anchor:middle}.small{font:600 15px Arial,sans-serif;fill:#475569;text-anchor:middle}.branch{font:700 15px Arial,sans-serif;fill:#315b78}.title{font:700 30px Arial,sans-serif;fill:#12344d}.subtitle{font:18px Arial,sans-serif;fill:#516173}.lane{font:700 22px Arial,sans-serif;fill:#125e8a}.warn{font:700 16px Arial,sans-serif;fill:#a61b1b;text-anchor:middle}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="900" rx="20"/>
+  <text class="title" x="45" y="50">Riskiest access-control flow</text>
+  <text class="subtitle" x="45" y="82">Confirmed runtime paths are shown in red. Both routes can end in a dashboard without valid authentication.</text>
+  <line x1="600" y1="110" x2="600" y2="860" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="10 8"/>
+  <text class="lane" x="250" y="125">Admin route</text><text class="lane" x="850" y="125">Teacher route</text>
+  <rect class="node" x="115" y="155" width="270" height="62" rx="31"/><text class="label" x="250" y="193">Open admin dashboard</text>
+  <polygon class="decision" points="250,255 390,325 250,395 110,325"/><text class="label" x="250" y="318">Session role</text><text class="small" x="250" y="342">equals admin?</text>
+  <polygon class="node" points="15,295 95,295 75,355 -5,355"/><text class="small" x="43" y="329">Login</text>
+  <polygon class="decision" points="250,440 410,510 250,580 90,510"/><text class="label" x="250" y="503">Matching admin</text><text class="small" x="250" y="527">account exists?</text>
+  <rect class="ok" x="40" y="635" width="250" height="70" rx="12"/><text class="label" x="165" y="667">Use matching admin</text><text class="small" x="165" y="691">Expected path</text>
+  <rect class="risk" x="325" y="625" width="250" height="90" rx="12"/><text class="label" x="450" y="658">Use first admin or</text><text class="label" x="450" y="683">hardcoded default</text><text class="warn" x="450" y="706">Confirmed bypass</text>
+  <rect class="risk" x="180" y="770" width="280" height="72" rx="36"/><text class="label" x="320" y="802">Admin dashboard opens</text><text class="small" x="320" y="826">even with role-only session</text>
+  <rect class="node" x="715" y="155" width="270" height="62" rx="31"/><text class="label" x="850" y="193">Open teacher dashboard</text>
+  <rect class="node" x="715" y="270" width="270" height="70" rx="12"/><text class="label" x="850" y="302">Read session and</text><text class="small" x="850" y="326">teacher list</text>
+  <polygon class="decision" points="850,390 1000,460 850,530 700,460"/><text class="label" x="850" y="453">Matching teacher</text><text class="small" x="850" y="477">account exists?</text>
+  <rect class="ok" x="630" y="595" width="230" height="70" rx="12"/><text class="label" x="745" y="627">Use matching teacher</text><text class="small" x="745" y="651">Expected path</text>
+  <rect class="risk" x="900" y="575" width="260" height="110" rx="12"/><text class="label" x="1030" y="607">Use first teacher</text><text class="small" x="1030" y="632">or demo teacher</text><text class="warn" x="1030" y="661">Confirmed without session</text>
+  <rect class="risk" x="740" y="770" width="280" height="72" rx="36"/><text class="label" x="880" y="802">Teacher dashboard opens</text><text class="small" x="880" y="826">without valid session</text>
+  <path class="line" d="M250 217 L250 255"/><path class="line" d="M110 325 L95 325"/><text class="branch" x="91" y="307">No</text>
+  <path class="line" d="M250 395 L250 440"/><text class="branch" x="265" y="423">Yes</text>
+  <path class="line" d="M200 560 L165 635"/><text class="branch" x="150" y="595">Yes</text><path class="riskline" d="M330 560 L450 625"/><text class="branch" x="395" y="586">No</text>
+  <path class="line" d="M165 705 C165 750 240 750 290 770"/><path class="riskline" d="M450 715 C450 755 390 755 350 770"/>
+  <path class="line" d="M850 217 L850 270"/><path class="line" d="M850 340 L850 390"/>
+  <path class="line" d="M800 510 L745 595"/><text class="branch" x="735" y="555">Yes</text><path class="riskline" d="M930 510 L1030 575"/><text class="branch" x="980" y="542">No</text>
+  <path class="line" d="M745 665 C745 730 815 745 850 770"/><path class="riskline" d="M1030 685 C1030 740 950 750 915 770"/>
+</svg>
