@@ -1,7 +1,0 @@
-flowchart LR
-A([Start]) --> B[Initialize local data] --> C[/Role + credentials/] --> D{Match?}
-D -- No --> E[/Show login error/] --> C
-D -- Yes --> F[(Save currentUser)] --> G[Role dashboard] --> H[Select / use module]
-H --> I[(Local record stores)] --> J[/Update UI / notice/] --> K{Logout?}
-K -- No: continue --> H
-K -- Yes --> L[Remove session] --> M([End])

@@ -1,5 +1,0 @@
-flowchart LR
-A([Open role page]) --> B[(Read currentUser)] --> C{Null or wrong role?}
-C -- Yes --> D[Redirect to login]
-C -- No --> E[Continue page code] --> F[UI filters local data] --> G([Rendered role page])
-H[/Altered role value passes comparison/] -- Local bypass path --> B

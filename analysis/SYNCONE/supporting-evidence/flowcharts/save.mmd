@@ -1,6 +1,0 @@
-flowchart TD
-A([Start Add / Edit]) --> B[/Enter fields/] --> C{Form valid?}
-C -- No --> D[/Errors; correct fields/] --> B
-C -- Yes --> E[Read images; mutate array] --> F[(localStorage write)]
-F -- Saved --> G[/Success and refresh/]
-F -- Write fails --> H([Unhandled error])
